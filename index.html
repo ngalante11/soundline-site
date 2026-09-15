@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soundline School — A school on the Sound</title>
+<meta name="description" content="Soundline is a small school for grades 6–9 opening September 2027 in Miller Place, New York. Two hours of practice. Four hours of making. Every adult knows your kid.">
+<meta property="og:title" content="Soundline School">
+<meta property="og:description" content="A school on the Sound. Grades 6–9, opening September 2027, Miller Place NY.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soundlineschool.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2312222B'/%3E%3Cpath d='M32 10 L36 26 L52 30 L36 34 L32 50 L28 34 L12 30 L28 26 Z' fill='%23F2C14E'/%3E%3Cpath d='M6 50 Q16 42 26 50 T46 50 T66 50' stroke='%237FE0C9' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- ============================================================
+     EDIT THESE THREE THINGS, NOTHING ELSE NEEDS TOUCHING
+     1. SURVEY_URL  — the Google Form link (Before Sixteen Desks)
+     2. Info-night times/places in the <ol class="nights"> below
+     3. Nothing else. Really.
+     ============================================================ -->
+<script>const SURVEY_URL = "#";</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --deep:#12222B; --beacon:#F2C14E; --channel:#1B4B6E; --shallows:#5FB4E6;
+    --glow:#7FE0C9; --paper:#F7F5F0; --paper-dim:rgba(247,245,240,.72);
+    --shout:"Bricolage Grotesque", "Arial Black", Impact, sans-serif;
+    --reassure:"Newsreader", Georgia, "Times New Roman", serif;
+    --read:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    --measure:38rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--deep); color:var(--paper);
+    font-family:var(--read); font-size:clamp(1.05rem,1rem + .3vw,1.2rem); line-height:1.55;
+  }
+  a{color:inherit}
+  a:focus-visible, button:focus-visible{outline:3px solid var(--beacon); outline-offset:4px}
+  .wrap{width:min(100% - 2.5rem, 68rem); margin-inline:auto}
+
+  /* ---------- top ---------- */
+  header{padding:1.6rem 0 0}
+  .top{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+  .mark{display:flex; align-items:center; gap:.7rem; text-decoration:none}
+  .mark svg{width:2.4rem; height:2.4rem; flex:none}
+  .mark span{font-family:var(--shout); font-weight:800; font-size:1.35rem; letter-spacing:-.02em}
+  .top a.mail{font-size:.95rem; color:var(--paper-dim); text-decoration:none; border-bottom:1px solid rgba(247,245,240,.25); padding-bottom:1px}
+  .top a.mail:hover{color:var(--paper); border-color:var(--glow)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2.5rem,5vw,4rem)}
+  .hero h1{
+    font-family:var(--shout); font-weight:800; letter-spacing:-.035em; line-height:.92;
+    font-size:clamp(3.2rem, 9.5vw, 8.5rem); margin:0 0 1.4rem; max-width:12ch;
+  }
+  .hero .lede{
+    font-family:var(--reassure); font-style:italic; font-weight:400;
+    font-size:clamp(1.35rem, 1.1rem + 1.2vw, 2rem); line-height:1.35;
+    max-width:var(--measure); margin:0; color:var(--paper-dim);
+  }
+
+  /* ---------- the line (the one memorable thing) ---------- */
+  .horizon{position:relative; height:clamp(90px,14vw,180px); margin:clamp(1rem,3vw,2.5rem) 0 0; overflow:hidden}
+  .horizon svg{position:absolute; inset:0; width:100%; height:100%}
+
+  /* ---------- promise ---------- */
+  .promise{padding:clamp(3rem,7vw,6rem) 0 clamp(2rem,4vw,3rem)}
+  .promise p{
+    font-family:var(--shout); font-weight:700; letter-spacing:-.025em; line-height:1.02;
+    font-size:clamp(2rem, 1.2rem + 4vw, 4.6rem); margin:0; max-width:16ch;
+  }
+  .promise p + p{margin-top:.35em}
+  .promise p:nth-child(1){color:var(--shallows)}
+  .promise p:nth-child(2){color:var(--glow)}
+  .promise p:nth-child(3){color:var(--beacon)}
+
+  /* ---------- what it is ---------- */
+  .what{padding:clamp(1.5rem,3vw,2.5rem) 0 clamp(3rem,6vw,5rem); display:grid; gap:clamp(2rem,5vw,4rem); grid-template-columns:1fr}
+  @media(min-width:52rem){ .what{grid-template-columns:minmax(0,var(--measure)) 1fr; align-items:start} }
+  .what p{margin:0 0 1.1em; max-width:var(--measure)}
+  .what p:last-child{margin-bottom:0}
+  .facts{font-family:var(--read); font-size:1rem; line-height:1.45; border-left:3px solid var(--channel); padding-left:1.1rem; color:var(--paper-dim); align-self:start}
+  .facts dt{color:var(--paper); font-weight:600; margin-top:.9rem}
+  .facts dt:first-child{margin-top:0}
+  .facts dd{margin:0}
+
+  /* ---------- action ---------- */
+  .act{padding:clamp(2.5rem,5vw,4rem) 0 clamp(3rem,6vw,5rem); border-top:3px solid var(--channel)}
+  .act h2{font-family:var(--shout); font-weight:800; letter-spacing:-.03em; line-height:1; font-size:clamp(2rem,1.4rem+2.5vw,3.6rem); margin:0 0 .6em; max-width:16ch}
+  .act .why{max-width:var(--measure); color:var(--paper-dim); margin:0 0 1.6rem}
+  .btn{
+    display:inline-block; font-family:var(--shout); font-weight:800; font-size:1.2rem; letter-spacing:-.01em;
+    background:var(--beacon); color:var(--deep); text-decoration:none; padding:.95rem 1.5rem; border-radius:.35rem;
+    transition:transform .12s ease, background .12s ease;
+  }
+  .btn:hover{background:#ffd063; transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .btn.disabled{background:rgba(242,193,78,.35); color:rgba(18,34,43,.8); cursor:not-allowed}
+  .aside{margin:1.1rem 0 0; font-size:.95rem; color:var(--paper-dim); max-width:var(--measure)}
+
+  /* ---------- nights ---------- */
+  .nights-wrap{padding:0 0 clamp(3rem,6vw,5rem)}
+  .nights-wrap h2{font-family:var(--reassure); font-style:italic; font-weight:500; font-size:clamp(1.5rem,1.2rem+1.2vw,2.2rem); margin:0 0 1rem; color:var(--paper)}
+  ol.nights{list-style:none; margin:0; padding:0; max-width:var(--measure)}
+  ol.nights li{display:grid; grid-template-columns:8.5rem 1fr; gap:1rem; padding:.85rem 0; border-top:1px solid rgba(247,245,240,.15)}
+  ol.nights li:last-child{border-bottom:1px solid rgba(247,245,240,.15)}
+  ol.nights time{font-family:var(--shout); font-weight:700; font-size:1.15rem; letter-spacing:-.01em; color:var(--beacon)}
+  ol.nights span{color:var(--paper-dim)}
+  @media(max-width:32rem){ ol.nights li{grid-template-columns:1fr; gap:.15rem} }
+
+  /* ---------- footer ---------- */
+  footer{border-top:3px solid var(--channel); padding:1.8rem 0 2.6rem; font-size:.95rem; color:var(--paper-dim)}
+  footer .row{display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; justify-content:space-between; align-items:baseline}
+  footer a{text-decoration:none; border-bottom:1px solid rgba(247,245,240,.25)}
+  footer a:hover{color:var(--paper); border-color:var(--glow)}
+
+  @media (prefers-reduced-motion: reduce){ .btn{transition:none} }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="top">
+    <a class="mark" href="/" aria-label="Soundline School home">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 8 L36.5 25.5 L54 30 L36.5 34.5 L32 52 L27.5 34.5 L10 30 L27.5 25.5 Z" fill="#F2C14E"/>
+        <path d="M4 52 Q14 44 24 52 T44 52 T64 52" stroke="#7FE0C9" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>Soundline</span>
+    </a>
+    <a class="mail" href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <h1>A school on the Sound.</h1>
+    <p class="lede">A small, serious, joyful school for grades 6–9, opening September 2027 in Miller Place, New York.</p>
+  </section>
+
+  <div class="horizon" aria-hidden="true">
+    <svg viewBox="0 0 1600 180" preserveAspectRatio="none">
+      <path d="M-20 120 Q120 70 260 120 T540 120 T820 120 T1100 120 T1380 120 T1660 120" stroke="#7FE0C9" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M-20 150 Q120 105 260 150 T540 150 T820 150 T1100 150 T1380 150 T1660 150" stroke="#1B4B6E" stroke-width="9" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 1600 180" preserveAspectRatio="xMaxYMid meet" style="left:auto;right:0;width:min(100%,1600px)">
+      <path d="M1380 28 L1391 66 L1430 76 L1391 86 L1380 124 L1369 86 L1330 76 L1369 66 Z" fill="#F2C14E"/>
+    </svg>
+  </div>
+
+  <section class="promise wrap" aria-label="The Soundline promise">
+    <p>Two hours of practice.</p>
+    <p>Four hours of making.</p>
+    <p>Every adult knows your kid.</p>
+  </section>
+
+  <section class="what wrap">
+    <div>
+      <p>Mornings are for practice: math, reading, and writing, at each student's own pace, with a teacher in the room. Two hours, done well, and done.</p>
+      <p>The rest of the day is for making. History, literature, and science happen in seminar and lab with a real person, never through an app. Studio time is for building, composing, performing, and finishing things worth showing someone.</p>
+      <p>It stays small on purpose. Sixteen students the first year. Every adult in the building knows every kid by name, by strength, and by what they're working on this week.</p>
+    </div>
+    <dl class="facts">
+      <dt>Who</dt><dd>Grades 6–9 in 2027, adding a grade each year through high school</dd>
+      <dt>When</dt><dd>September 2027. Four days a week, with an optional fifth.</dd>
+      <dt>Where</dt><dd>Miller Place, New York — on the North Shore of Long Island</dd>
+      <dt>Run by</dt><dd>Educators and a family who have spent their careers teaching, coaching teachers, and running things well</dd>
+    </dl>
+  </section>
+
+  <section class="act wrap">
+    <h2>Help us build it right.</h2>
+    <p class="why">Before we open a single classroom, we're asking North Shore families what school should actually be like for their kids. It's eleven questions and about six minutes. Your answers shape what Soundline becomes.</p>
+    <a id="survey" class="btn" href="#">Take the six-minute survey</a>
+    <p class="aside">Prefer to talk? Write to <a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a> and we'll find a time.</p>
+  </section>
+
+  <section class="nights-wrap wrap">
+    <h2>Come meet us.</h2>
+    <ol class="nights">
+      <li><time datetime="2026-11-12">Nov 12</time><span>Information night — details to follow</span></li>
+      <li><time datetime="2026-12-12">Dec 12</time><span>Information night — details to follow</span></li>
+      <li><time datetime="2027-01-14">Jan 14</time><span>Information night — details to follow</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>Soundline School · Miller Place, NY</div>
+    <div><a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var a = document.getElementById('survey');
+    if (SURVEY_URL && SURVEY_URL !== '#') { a.href = SURVEY_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.classList.add('disabled'); a.setAttribute('aria-disabled','true'); a.textContent = 'Survey opens September 21'; a.addEventListener('click', function(e){ e.preventDefault(); }); }
+  })();
+</script>
+</body>
+</html>
