@@ -13,7 +13,7 @@
 
 <!-- ============================================================
      EDIT THESE THINGS, NOTHING ELSE NEEDS TOUCHING
-     1. SURVEY_URL  — the Google Form link (Before Sixteen Desks)
+     1. SURVEY_URL  — the Google Form link
      2. Info-night times/places in the <ol class="nights"> below
      ============================================================ -->
 <script>const SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdPhj68ZqB9abrDj2XdtyPVUB0tiLuUwh85Emi8wqcO5Cqx8w/viewform";</script>
@@ -81,8 +81,8 @@
   .facts dd{margin:.15rem 0 0}
 
   .grid{display:grid; gap:1rem; grid-template-columns:1fr}
-  @media(min-width:40rem){ .grid.two{grid-template-columns:1fr 1fr} .grid.three{grid-template-columns:repeat(3,1fr)} .grid.five{grid-template-columns:1fr 1fr} }
-  @media(min-width:60rem){ .grid.five{grid-template-columns:repeat(5,1fr)} }
+  @media(min-width:40rem){ .grid.two{grid-template-columns:1fr 1fr} .grid.three{grid-template-columns:repeat(3,1fr)} .grid.four{grid-template-columns:1fr 1fr} .grid.five{grid-template-columns:1fr 1fr} }
+  @media(min-width:60rem){ .grid.four{grid-template-columns:repeat(4,1fr)} .grid.five{grid-template-columns:repeat(5,1fr)} }
   .card{background:#fff0; border:3px solid var(--rule); border-radius:.5rem; padding:1.2rem 1.2rem 1.3rem}
   .card p{margin:0; font-size:1rem; color:var(--on-paper-dim)}
   .card .label{display:block; color:var(--channel); margin-bottom:.55rem}
@@ -140,7 +140,7 @@
   <section class="hero wrap">
     <h1><span class="a">Two hours of practice.</span><span class="b">Four hours of making.</span><span class="c">Every adult knows your kid.</span></h1>
     <p class="tagline">A school on the Sound.</p>
-    <p class="lede">A small school for grades 6–9 where kids do real work, finish it, and show it to someone. Opening September 2027 in Miller Place, New York.</p>
+    <p class="lede">Soundline is a small school on the Sound for grades six through nine, opening September 2027 in Miller Place. Kids do real work, finish it, and show it to someone.</p>
   </section>
 
   <div class="horizon" aria-hidden="true">
@@ -163,7 +163,7 @@
         <dt class="label">Who</dt><dd>Grades 6–9 in 2027, adding a grade each year through high school</dd>
         <dt class="label">When</dt><dd>September 2027. Five days a week, or three days for homeschooling families.</dd>
         <dt class="label">Where</dt><dd>Miller Place, New York, on the North Shore of Long Island</dd>
-        <dt class="label">Why</dt><dd>We're a Miller Place family with a sixth grader. We're building the school we want for him and his friends.</dd>
+        <dt class="label">How big</dt><dd>One class per grade, about five or six in each. Small enough there's nowhere to hide, big enough for a real seminar.</dd>
       </dl>
     </div>
   </section>
@@ -197,24 +197,25 @@
 
   <section class="sec wrap" aria-labelledby="who">
     <h2 id="who">Who's building it.</h2>
-    <div class="grid three">
+    <div class="grid four">
       <div class="card"><span class="label">Founder</span><h3>Nicole Galante</h3><p>An educator and program director with twenty years in classrooms and universities.</p></div>
       <div class="card"><span class="label">Lead guide</span><h3>Adam King</h3><p>A musician and teacher who runs music and STEAM programs for Long Island libraries. He'll know your kid by Wednesday.</p></div>
       <div class="card"><span class="label">Operations</span><h3>Gina Dimichino</h3><p>A lifelong business operator. The carline, the calendar, and every detail in between.</p></div>
+      <div class="card"><span class="label">Academic systems</span><h3>Izzy Galante</h3><p>Builds the math sequence and the mastery gates, and teaches the weekly math seminar live. The one who decides what "done" means.</p></div>
     </div>
   </section>
 
   <section class="sec wrap" aria-labelledby="founding">
     <div class="founding">
       <h2 id="founding">Be one of our Founding Families.</h2>
-      <p>The first families help build the school, and it shows. A rate that stays locked for as long as your child is enrolled. A seat on the Family Council. A say in what Soundline becomes.</p>
-      <p class="when">Founding enrollment opens at our first information night, November 12.</p>
+      <p>One class per grade, and we're taking founding families now. The first families help build the school, and it shows: a rate that stays locked for as long as your child is enrolled, a seat on the Family Council, and a say in what Soundline becomes.</p>
+      <p class="when">Founding enrollment opens at our first information night, November 12. Take the survey below and you'll hear from us first.</p>
     </div>
   </section>
 
   <section class="sec wrap">
     <h2>Start here.</h2>
-    <p class="why">Before we open a single classroom, we're asking North Shore families what school should actually be like for their kids. It's eleven questions and about six minutes. Your answers shape what Soundline becomes.</p>
+    <p class="why">Before we open a single classroom, we're asking North Shore families what school should actually be like for their kids. It takes a few minutes, and your answers shape what Soundline becomes.</p>
     <a id="survey" class="btn" href="#">Take the survey</a>
     <p class="aside">Prefer to talk? Write to <a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a> and we'll find a time.</p>
   </section>
