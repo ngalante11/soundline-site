@@ -274,3 +274,16 @@
   .adds h3{font-family:var(--read); font-weight:600; letter-spacing:0; font-size:1.05rem; color:var(--glow)}
   .adds p{margin:0; font-size:1rem}
   .imagined{font-family:var(--reassure); font-style:italic; color:var(--on-paper-dim); margin:1.4rem 0 0}
+
+  /* rev. 10.1: the Oct 25 block */
+  .event{display:grid; gap:1.2rem 2.5rem; grid-template-columns:1fr; align-items:center; border:3px solid var(--beacon); border-radius:1.2rem; padding:clamp(1.4rem,3vw,2.2rem) clamp(1.3rem,3vw,2.4rem); margin:clamp(1.5rem,3vw,2.5rem) auto 0; position:relative; z-index:2; background:rgba(18,34,43,.72); backdrop-filter:blur(6px)}
+  .event.on-page{margin:clamp(1.8rem,4vw,2.8rem) 0 0; background:transparent; backdrop-filter:none}
+  @media(min-width:52rem){ .event{grid-template-columns:minmax(0,1fr) auto} }
+  .event .label{color:var(--beacon)}
+  .event h2{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.5rem); margin:.4rem 0 .5rem; max-width:none}
+  .event p{margin:0; color:var(--on-dark-dim); max-width:var(--measure)}
+  .ev-act{display:flex; flex-direction:column; gap:.6rem; align-items:flex-start}
+  @media(min-width:52rem){ .ev-act{align-items:flex-end; text-align:right; max-width:17rem} }
+  .ev-act .note{font-family:var(--reassure); font-style:italic; color:var(--glow); font-size:1rem; line-height:1.35}
+  .ev-act .btn{white-space:nowrap}
+  .hero-photo .cap{bottom:.6rem}
