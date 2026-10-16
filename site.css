@@ -3,7 +3,7 @@
   
   :root{
     --deep:#12222B; --beacon:#F2C14E; --channel:#1B4B6E; --shallows:#5FB4E6;
-    --glow:#7FE0C9; --paper:#F7F5F0; --making:#F86874; --making-edge:#FF8A47; /* tokens by job: Making + its kids'-pieces edge (Brand Guide v1.6) */
+    --glow:#7FE0C9; --paper:#F7F5F0; --making:#FF5A7A; --making-edge:#FF8A47; /* tokens by job: Making + its kids'-pieces edge (Brand Guide v1.6) */
     --on-dark-dim:rgba(247,245,240,.78); --on-paper-dim:rgba(18,34,43,.78); --rule:rgba(18,34,43,.16); --rule-dark:rgba(247,245,240,.18);
     --shout:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
     --reassure:"Newsreader", Georgia, "Times New Roman", serif;
