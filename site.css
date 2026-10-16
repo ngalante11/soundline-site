@@ -3,7 +3,7 @@
   
   :root{
     --deep:#12222B; --beacon:#F2C14E; --channel:#1B4B6E; --shallows:#5FB4E6;
-    --glow:#7FE0C9; --paper:#F7F5F0; --pink:#FF5A7A; --sundown:#FF8A47;
+    --glow:#7FE0C9; --paper:#F7F5F0; --making:#F86874; --making-edge:#FF8A47; /* tokens by job: Making + its kids'-pieces edge (Brand Guide v1.6) */
     --on-dark-dim:rgba(247,245,240,.78); --on-paper-dim:rgba(18,34,43,.78); --rule:rgba(18,34,43,.16); --rule-dark:rgba(247,245,240,.18);
     --shout:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
     --reassure:"Newsreader", Georgia, "Times New Roman", serif;
@@ -64,7 +64,7 @@
   .day-bar b{font-family:var(--shout); font-weight:800; font-size:clamp(1.15rem,1rem + .6vw,1.6rem); letter-spacing:-.03em; line-height:1.1}
   .day-bar span{font-size:.92rem}
   .day-bar .practice{background:var(--shallows); color:var(--deep)}
-  .day-bar .making{background:var(--pink); border:3px solid var(--sundown); color:var(--deep)}
+  .day-bar .making{background:var(--making); color:var(--deep)}
   .day-bar .extended{border:3px dashed var(--paper); color:var(--paper)}
   @media(max-width:40rem){ .day-bar ol{grid-template-columns:1fr} .day-bar li{min-height:0} .day-bar .ends{display:none} }
 
@@ -89,8 +89,8 @@
   .card p{margin:0; font-size:1rem; color:var(--on-paper-dim)}
   .card .label{display:block; color:var(--channel); margin-bottom:.55rem}
   .chip{display:flex; gap:.35rem; margin-bottom:1rem} .chip i{display:block; height:.6rem; width:3rem; border-radius:.3rem}
-  .chip .s{background:var(--shallows)} .chip .p{background:var(--pink); width:1.5rem} .chip .o{background:var(--sundown); width:1.5rem} .chip .b{background:var(--beacon)}
-  .day.fri{background:var(--pink); border-color:var(--sundown)}
+  .chip .s{background:var(--shallows)} .chip .p{background:var(--making)} .chip .b{background:var(--beacon)}
+  .day.fri{background:var(--making); border-color:var(--making)}
   .day.fri p, .day.fri .label{color:var(--deep)}
 
   /* belonging + ninth grade + founding: Deep Sound plates */
@@ -267,7 +267,7 @@
   .tues h3{font-size:clamp(1.3rem,1.1rem + .8vw,1.7rem); margin-bottom:.3rem}
   .tues p{margin:0; max-width:var(--measure); color:var(--on-paper-dim)}
   .tues .k{display:inline-block; font-family:var(--read); font-weight:600; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; padding:.15rem .5rem; border-radius:.3rem; margin-bottom:.5rem}
-  .tues .k.practice{background:var(--shallows); color:var(--deep)} .tues .k.making{background:var(--pink); color:var(--deep)} .tues .k.out{background:var(--glow); color:var(--deep)} .tues .k.ext{border:2px dashed var(--deep)}
+  .tues .k.practice{background:var(--shallows); color:var(--deep)} .tues .k.making{background:var(--making); color:var(--deep)} .tues .k.out{background:var(--glow); color:var(--deep)} .tues .k.ext{border:2px dashed var(--deep)}
   .adds{display:grid; gap:1rem; grid-template-columns:1fr; margin-top:1.6rem}
   @media(min-width:52rem){ .adds{grid-template-columns:repeat(2,1fr)} }
   .adds div{border-top:3px solid var(--paper); padding-top:1rem}
