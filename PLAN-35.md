@@ -23,11 +23,13 @@ Three structural reasons it was always going to be a hard room to fill, worth na
 1. **Paid is no longer optional.** Organic posts to a new page reach approximately nobody; the nine-card series running 28 Oct – 11 Nov is a drumbeat with no drum. Put $400–600 behind it, geo-fenced to Miller Place, Rocky Point, Mount Sinai, Sound Beach, Shoreham and Port Jefferson, targeted at parents of 10–14 year olds. The survey page already carries the pixel hook and the `?a=h` / `?a=p` track tags — **set `SOUNDLINE_PIXEL_ID` before the first dollar is spent**, or the spend teaches you nothing. (Also move the last social card off 11 Nov; it should land the morning of, not the evening of.)
 2. **Borrow rooms instead of booking them.** The library's own event calendar and newsletter (Adam's relationship), the five town Facebook groups, Gina's dance families, the PTA bulletins. One named ask each, this week.
 
-**And reframe the night itself.** Six families around a table hearing a tuition number in the open is a *good* evening and a better conversion environment than sixty in rows. Plan the 11th for six, not sixty, and it cannot fail twice.
+**And reframe the night itself.** Six families around a table is a *good* evening and a better conversion environment than sixty in rows. Plan the 11th for six, not sixty, and it cannot fail twice.
+
+The one-day gap between the room and the number is an asset, not an accident: it gives everyone who comes on the 11th a reason to leave contact details at the door, and it gives you a second touch on the 12th that is news rather than a nudge. Collect names in the room; send the number the next morning.
 
 ### Where the leverage actually is right now
 
-One phone call converted into a second conversation. That is a 100% hit rate on the only channel being worked, against 0% on events. **Twenty conversations before 14 January will beat three information nights.** Events are for generating conversations; they are not the product. Until there is a list, the funnel in §4 runs on the phone.
+One phone call converted into a second conversation. That is a 100% hit rate on the only channel being worked, against 0% on events. **Twenty conversations before 14 January will beat three information nights.** Events are for generating conversations; they are not the product. Until there is a list, the funnel in §4 runs on the phone — structure, questions and the close are in `CALL-GUIDE.md`.
 
 The §4 benchmarks stay as written — they are what the funnel looks like *once there is traffic*. Treat them as the model to fill, not as a forecast.
 
@@ -149,7 +151,8 @@ $300–600/month across town Facebook groups, once `cost.html` exists to retarge
 | Date | What |
 |---|---|
 | **this week** | Pixel ID set, paid campaign live, six borrowed-audience asks made. Without these the 11th is another empty room. |
-| **11 Nov, 7:00 pm** | Port Jefferson Free Library. Tuition announced, founding enrollment opens. Deposit mechanism must be live — amount, refundability, payment rail. |
+| **11 Nov, 7:00 pm** | Information night, Port Jefferson Free Library. Confirmed. |
+| **12 Nov** | Tuition published, founding enrollment opens. Deposit mechanism must be live — amount, refundability, payment rail. People in the room on the 11th get the number first. |
 | **1 Dec** | SGO partner identified. |
 | **12 Dec** | Information night. Building named, or contingency announced. |
 | **1 Jan** | New York's IRS election due. Watch for it; announce it the day it lands. |
@@ -163,9 +166,9 @@ $300–600/month across town Facebook groups, once `cost.html` exists to retarge
 ## 7. Open questions, in priority order
 
 1. ~~How many came on 25 October?~~ **Answered: nobody.** See §0 — it changes the diagnosis, not the destination.
-2. ~~Nov 12 venue and time.~~ **Answered: Wednesday 11 November, 7:00 pm, Port Jefferson Free Library.** Live across the site. Note it is Veterans Day — confirm the library's evening hours, and expect it to cut either way (people are off work, and people travel).
+2. ~~Nov 12 venue and time.~~ **Answered: Wednesday 11 November, 7:00 pm, Port Jefferson Free Library**, library confirmed open. Tuition and registration follow on the 12th, so the packet's date stands. Both live across the site.
 3. **How many surveys are in, and what do they say?** Now the single most important unknown. Ten real responses would change the channel mix more than anything else in this file.
 4. **35 = 30 + Collaborative, or a raised cap?** §3.
 5. **Lease status.** §5.
 6. **Deposit: how much, refundable, and on what rail?** Needed before 11 November.
-7. **The packet PDF still says 12 November.** Regenerate, or let the site carry the correction — but printed copies in the wild now point a day late.
+7. **How many of the twenty calls are booked?** §0 and `CALL-GUIDE.md`. The phone is the live channel; everything else is still potential.
