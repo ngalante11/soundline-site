@@ -3,12 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soundline School — survey</title>
+<title>Take the survey — Soundline School</title>
+<meta name="description" content="A few minutes, and you hear from us first. Soundline School, grades six through eight, opening September 2027 in Miller Place. Tuition and founding enrollment arrive November 12.">
 <meta name="robots" content="noindex">
-<!-- Printed QR codes point here. To retarget every card in the wild, change the URL below (both places). -->
-<meta http-equiv="refresh" content="0; url=https://docs.google.com/forms/d/e/1FAIpQLSdgsL7xB3SY1YlrK8TdamNscYvDUXZdRA0mM2y_FvSM3c-Kbw/viewform?usp=qr">
-<script>location.replace("https://docs.google.com/forms/d/e/1FAIpQLSdgsL7xB3SY1YlrK8TdamNscYvDUXZdRA0mM2y_FvSM3c-Kbw/viewform?usp=qr");</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#12222B;color:#F7F5F0;font:18px/1.5 Arial,sans-serif}a{color:#F2C14E}</style>
+<meta property="og:title" content="Take the survey — Soundline School">
+<meta property="og:description" content="A few minutes, and you hear from us first. Tuition and founding enrollment arrive November 12.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soundlineschool.com/survey/">
+<meta property="og:image" content="https://soundlineschool.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%2312222B'/%3E%3Cpath d='M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z' fill='%23F2C14E' stroke='%23F7F5F0' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M12 122 H148' stroke='%23F7F5F0' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M14 144 C28 134, 40 154, 54 144 S80 134, 94 144 S120 154, 134 144 L146 136' stroke='%237FE0C9' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+
+<!-- ===================================================================
+     Meta pixel. Paste the pixel ID between the quotes and this page
+     starts reporting. Empty means no pixel code runs at all, and the
+     page still works exactly as it does now.
+     Events it sends:
+       ViewContent  on load
+       Lead         when a family confirms they have sent the survey
+     Ads can tag the track with ?a=h (homeschool) or ?a=p (public
+     school); the tag rides along on the Lead event as content_category.
+     =================================================================== -->
+<script>var SOUNDLINE_PIXEL_ID = "";</script>
+
+<style>
+.form-wrap{max-width:860px;margin:0 auto}
+.survey-lede{max-width:var(--measure,38rem)}
+.form-frame{width:100%;height:1200px;border:1px solid var(--rule,rgba(18,34,43,.16));border-radius:16px;background:#fff;display:block}
+.sent{border-top:1px solid var(--rule,rgba(18,34,43,.16));margin-top:2rem;padding-top:1.6rem;display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
+.sent p{margin:0;max-width:var(--measure,38rem)}
+.thanks{display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+.thanks h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;letter-spacing:-.03em;margin:0}
+.fallback{font-size:15px}
+</style>
 </head>
-<body><p>Taking you to the survey… <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgsL7xB3SY1YlrK8TdamNscYvDUXZdRA0mM2y_FvSM3c-Kbw/viewform?usp=qr">Tap here if it doesn't open.</a></p></body>
+<body>
+
+<div class="dark">
+  <header class="wrap">
+    <div class="top">
+      <a class="lockup" href="/" aria-label="Soundline School home">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <path d="M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z" fill="#F2C14E" stroke="#F7F5F0" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M44 24 L52 32 M116 24 L108 32 M80 6 V12" stroke="#F7F5F0" stroke-width="6" stroke-linecap="round"/>
+          <path d="M12 122 H148" stroke="#F7F5F0" stroke-width="9" stroke-linecap="round"/>
+          <path d="M14 144 C28 134, 40 154, 54 144 S80 134, 94 144 S120 154, 134 144 L146 136" stroke="#7FE0C9" stroke-width="8" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="name"><span class="wordmark">Soundline</span><span class="label">School · Miller Place, NY</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Main">
+        <a class="nav-link" href="/day.html">A day here</a>
+        <a class="nav-link" href="/sample-day.html">A Tuesday</a>
+        <a class="nav-link" href="/vision.html">Our vision</a>
+        <a class="nav-link" href="/about.html">About us</a>
+        <a class="nav-link" href="/join.html">Join</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main>
+  <section class="wrap">
+    <h1>A few minutes, and you hear from us first.</h1>
+    <p class="lede survey-lede">Your answers shape the school. They also put you at the front of the line: tuition and founding enrollment both arrive on <strong>Thursday, November 12</strong>, and everyone who has filled this in hears the time, the place and the number before anyone else does.</p>
+
+    <div class="form-wrap">
+      <iframe class="form-frame" title="Soundline School survey"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdgsL7xB3SY1YlrK8TdamNscYvDUXZdRA0mM2y_FvSM3c-Kbw/viewform?embedded=true"
+        loading="lazy">Loading…</iframe>
+      <p class="fallback">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgsL7xB3SY1YlrK8TdamNscYvDUXZdRA0mM2y_FvSM3c-Kbw/viewform">Open it in a new tab.</a></p>
+
+      <div class="sent" id="sent">
+        <p>Sent it? Tell us and we'll hand you the packet.</p>
+        <button class="btn survey" type="button" id="confirm">I've sent the survey</button>
+        <span class="note">One tap. It's how we know the form reached us.</span>
+      </div>
+
+      <div class="thanks" id="thanks" hidden>
+        <h2>Thank you. You're on the list.</h2>
+        <p>You'll hear from us before November 12, with the time and place for the information night — and tuition, published that evening before anyone is asked to commit.</p>
+        <a class="btn survey" href="/soundline-school-information.pdf">Download the informational packet</a>
+        <p class="note">Questions in the meantime? Write to <a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a>. If we don't know, we'll find out and tell you.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="dark">
+  <div class="wrap row">
+    <div><span class="wordmark">Soundline School</span><span class="tag">Depth with direction.</span></div>
+    <div class="meta">Miller Place, NY<br><a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var id = (typeof SOUNDLINE_PIXEL_ID === 'string' ? SOUNDLINE_PIXEL_ID : '').trim();
+
+  // Which ad track sent them here: ?a=h or ?a=p
+  var track = 'unknown';
+  try {
+    var a = (new URLSearchParams(window.location.search).get('a') || '').toLowerCase();
+    if (a === 'h') track = 'homeschool';
+    else if (a === 'p') track = 'public-school';
+  } catch (e) {}
+
+  if (id) {
+    /* Meta pixel base code */
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id);
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'survey', content_category: track });
+  }
+
+  var KEY = 'soundline.survey.sent';
+  function already() {
+    try { return window.localStorage.getItem(KEY) === '1'; } catch (e) { return false; }
+  }
+  function remember() {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+  }
+
+  var sent = document.getElementById('sent');
+  var thanks = document.getElementById('thanks');
+  var confirmBtn = document.getElementById('confirm');
+
+  function reveal() {
+    sent.hidden = true;
+    thanks.hidden = false;
+  }
+
+  if (already()) reveal();
+
+  confirmBtn.addEventListener('click', function () {
+    if (!already()) {
+      remember();
+      if (id && window.fbq) {
+        fbq('track', 'Lead', { content_name: 'survey', content_category: track });
+      }
+    }
+    reveal();
+    thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</body>
 </html>
