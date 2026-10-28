@@ -5,6 +5,7 @@
 // runs twice is one file used twice, so a date move never orphans artwork.
 //
 //   node tools/social-cards.js 2        → phase two cards into img/social/
+//   node tools/social-cards.js 1        → the November 11 information-night card
 //   node tools/social-cards.js 3 4      → phases three and four
 //   node tools/social-cards.js all      → everything
 //
@@ -135,6 +136,24 @@ const CARDS = {
     foot: ['Someone presents. Something is performed.',
            'Families welcome.'],
   },
+  // The night itself. Phase One art (img/social/01..09) predates this
+  // generator and is not redrawn here; this is the one Phase One card the
+  // generator owns, because the hour and the venue were confirmed late.
+  s4nov: {
+    track: 'shared',
+    head: ['Information night,', 'November 11.'],
+    foot: ['7:00 pm · Port Jefferson Free Library',
+           'Founding enrollment opens the next morning.'],
+  },
+  // The deposit sits with an independent agent, not with us. No other
+  // school says this, and it answers the question a school without a
+  // building gets asked before any other.
+  x1escrow: {
+    track: 'shared',
+    head: ['We do not hold', 'your deposit.'],
+    foot: ['$500, in escrow with an independent agent.',
+           'Refundable in full until we sign a lease.'],
+  },
   s4dec: {
     track: 'shared',
     head: ['Information night,', 'December 12.'],
@@ -154,16 +173,22 @@ const CARDS = {
 // not which date each lands on. Edit freely; the weekday check below keeps
 // an edit from quietly drifting off the wheel.
 const SCHEDULE = {
+  // Phase One ran on hand-drawn art; only the information-night card is
+  // regenerated here, because the venue and the hour were confirmed after
+  // the rest of that set was made.
+  1: { window: 'Oct 28 – Nov 11 · warm', slots: [
+    ['2026-11-08', 'ask',       's4nov'],
+  ]},
   2: { window: 'Nov 12 – Nov 30 · open', slots: [
     ['2026-11-13', 'place',     's2v2'],
     ['2026-11-15', 'ask',       'p9v2'],
     ['2026-11-16', 'mechanism', 'h3'],
     ['2026-11-18', 'mirror',    'p3'],
-    ['2026-11-20', 'place',     's1'],
+    ['2026-11-20', 'place',     'x1escrow'],
     ['2026-11-22', 'ask',       's4dec'],
     ['2026-11-23', 'mechanism', 'p8'],
     ['2026-11-25', 'mirror',    'h5'],
-    ['2026-11-27', 'place',     'p6'],
+    ['2026-11-27', 'place',     's1'],
     ['2026-11-29', 'ask',       'p9v2'],
     ['2026-11-30', 'mechanism', 'p5'],
   ]},
@@ -269,9 +294,9 @@ const page = (c) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
 // ------------------------------------------------------------------ running
 function resolve(argv) {
   const want = argv.length ? argv : ['all'];
-  const phases = want.includes('all') ? [2, 3, 4] : want.map(Number);
+  const phases = want.includes('all') ? [1, 2, 3, 4] : want.map(Number);
   for (const p of phases) {
-    if (!SCHEDULE[p]) throw new Error(`no phase ${p} — known phases are 2, 3, 4`);
+    if (!SCHEDULE[p]) throw new Error(`no phase ${p} — known phases are 1, 2, 3, 4`);
   }
   return phases;
 }
