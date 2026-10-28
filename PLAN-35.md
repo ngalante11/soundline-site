@@ -4,6 +4,35 @@ Working notes, 28 Oct 2026. Companion to the site changes shipped the same day.
 
 ---
 
+## 0. What 25 October told us
+
+**Nobody came.** One phone conversation since, another booked. That is the whole pipeline.
+
+This is the most useful thing that has happened, because it rules out the wrong diagnosis. Everything in §4 below assumed the problem was conversion — getting people from interest to deposit. It isn't. A free, well-designed, well-flyered public talk drew zero. **The problem is distribution: there is no list, and a cold public talk has no mechanism to fill a room.**
+
+Three structural reasons it was always going to be a hard room to fill, worth naming so the next one doesn't inherit them:
+
+- **No list to invite.** Flyers and a share image reach people who already follow you. A school eleven months from opening has nobody to follow it yet.
+- **Sunday at 3:00** competes with every travel-sports schedule on the North Shore. 11 November at 7:00 pm is a materially better slot.
+- **Nothing to act on.** No address, no price, no deadline. A parent who was interested still had no reason to move *that* week. 11 November fixes this: a number, and seats that open the same night.
+
+### What it changes
+
+**Do not run another empty-room event.** 11 November has fourteen days and the same list problem. Two moves, both this week:
+
+1. **Paid is no longer optional.** Organic posts to a new page reach approximately nobody; the nine-card series running 28 Oct – 11 Nov is a drumbeat with no drum. Put $400–600 behind it, geo-fenced to Miller Place, Rocky Point, Mount Sinai, Sound Beach, Shoreham and Port Jefferson, targeted at parents of 10–14 year olds. The survey page already carries the pixel hook and the `?a=h` / `?a=p` track tags — **set `SOUNDLINE_PIXEL_ID` before the first dollar is spent**, or the spend teaches you nothing. (Also move the last social card off 11 Nov; it should land the morning of, not the evening of.)
+2. **Borrow rooms instead of booking them.** The library's own event calendar and newsletter (Adam's relationship), the five town Facebook groups, Gina's dance families, the PTA bulletins. One named ask each, this week.
+
+**And reframe the night itself.** Six families around a table hearing a tuition number in the open is a *good* evening and a better conversion environment than sixty in rows. Plan the 11th for six, not sixty, and it cannot fail twice.
+
+### Where the leverage actually is right now
+
+One phone call converted into a second conversation. That is a 100% hit rate on the only channel being worked, against 0% on events. **Twenty conversations before 14 January will beat three information nights.** Events are for generating conversations; they are not the product. Until there is a list, the funnel in §4 runs on the phone.
+
+The §4 benchmarks stay as written — they are what the funnel looks like *once there is traffic*. Treat them as the model to fill, not as a forecast.
+
+---
+
 ## 1. Why the generic playbook mostly doesn't apply
 
 The standard "increase private school enrollment" advice assumes an operating school. Three of its four pillars are void here:
@@ -119,8 +148,8 @@ $300–600/month across town Facebook groups, once `cost.html` exists to retarge
 
 | Date | What |
 |---|---|
-| **5 Nov** | Nov 12 venue + time must go out. The site now promises "a week ahead." |
-| **12 Nov** | Tuition announced, founding enrollment opens. Deposit mechanism must be live — amount, refundability, payment rail. |
+| **this week** | Pixel ID set, paid campaign live, six borrowed-audience asks made. Without these the 11th is another empty room. |
+| **11 Nov, 7:00 pm** | Port Jefferson Free Library. Tuition announced, founding enrollment opens. Deposit mechanism must be live — amount, refundability, payment rail. |
 | **1 Dec** | SGO partner identified. |
 | **12 Dec** | Information night. Building named, or contingency announced. |
 | **1 Jan** | New York's IRS election due. Watch for it; announce it the day it lands. |
@@ -133,8 +162,10 @@ $300–600/month across town Facebook groups, once `cost.html` exists to retarge
 
 ## 7. Open questions, in priority order
 
-1. **How many came on 25 October, and how many surveys are in?** Every ratio in §4 is a benchmark until it is replaced by your own numbers. This is the one input that changes the plan.
-2. **Nov 12 venue and time.** Due 5 November, now publicly promised.
-3. **35 = 30 + Collaborative, or a raised cap?** §3.
-4. **Lease status.** §5.
-5. **Deposit: how much, refundable, and on what rail?** Needed before 12 November.
+1. ~~How many came on 25 October?~~ **Answered: nobody.** See §0 — it changes the diagnosis, not the destination.
+2. ~~Nov 12 venue and time.~~ **Answered: Wednesday 11 November, 7:00 pm, Port Jefferson Free Library.** Live across the site. Note it is Veterans Day — confirm the library's evening hours, and expect it to cut either way (people are off work, and people travel).
+3. **How many surveys are in, and what do they say?** Now the single most important unknown. Ten real responses would change the channel mix more than anything else in this file.
+4. **35 = 30 + Collaborative, or a raised cap?** §3.
+5. **Lease status.** §5.
+6. **Deposit: how much, refundable, and on what rail?** Needed before 11 November.
+7. **The packet PDF still says 12 November.** Regenerate, or let the site carry the correction — but printed copies in the wild now point a day late.
