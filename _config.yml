@@ -1,0 +1,11 @@
+# GitHub Pages build settings.
+#
+# Jekyll already skips directories whose name starts with an underscore,
+# which is why the working documents live in _internal/. This names them
+# again so the exclusion survives anyone renaming that folder: they are
+# plans, call scripts and draft copy, not pages for families to read.
+exclude:
+  - _internal
+  - print
+  - tools
+  - README.md
