@@ -1,6 +1,6 @@
-# SGO outreach: CSF, ACE, AFC
+# SGO outreach: CSF, ACE, AFC, American GOAL
 
-Drafts, 29 Oct 2026, from `reports/New York SGO partners for Soundline.md`. All three sit in the hello@soundlineschool.com Drafts folder. Send order: CSF, then ACE and AFC the same day.
+Drafts, 29 Oct 2026, from `reports/New York SGO partners for Soundline.md`. All four sit in the hello@soundlineschool.com Drafts folder. Send order: CSF, then ACE, AFC and American GOAL the same day.
 
 ---
 
@@ -104,7 +104,39 @@ www.soundlineschool.com
 - **The AFC email leads with their thesis, not ours.** AFC's public line is that it targets states without choice infrastructure. The email hands them the New York version of that argument with Long Island numbers. "Roughly a million people" is Suffolk County's population rounded down; verify or soften before sending.
 - **Both repeat the CSF donor line and the consortium line.** That is deliberate. Whichever SGO lands first, the pitch is identical: Soundline is offering donors and other schools, not just asking for scholarships.
 - **Neither mentions CSF.** If two of the three respond, the leverage is in the second conversation, not the first email.
-- **Sequence.** CSF first thing Monday, ACE and AFC by Monday afternoon. One follow-up each after seven working days; the AFC follow-up goes through the interest form's confirmation thread if there is one.
+- **Sequence.** CSF first thing Monday, ACE, AFC and American GOAL by Monday afternoon. One follow-up each after seven working days; the AFC follow-up goes through the interest form's confirmation thread if there is one.
+
+---
+
+# 4. American GOAL
+
+**To:** info@goalscholarship.org. Unverified: no address for GOAL or American GOAL surfaced in research. Phone is 770-828-4625 (two sources, third-party). The person is Lisa Kelly, President and co-founder of Georgia GOAL; ask for her or for whoever runs American GOAL's school partnerships. If the phone call yields a direct address, swap it in.
+**Why:** American GOAL is Georgia GOAL's federal arm, markets itself as available in all fifty states, and names independent schools and school associations, not just dioceses, among its partners. It already lists the Waldorf School of Atlanta, a secular independent school, for January 2027. Its model is school-centred: each school designs its own aid process and recommends award amounts under a three-party agreement. That is the right shape for a founding school that wants to keep its own aid judgment. No New York signal yet.
+
+**Subject:** American GOAL in New York: an independent school on Long Island for 2027
+
+Hello,
+
+I run Soundline, an independent, non-sectarian school for grades six through eight opening in Miller Place, on Long Island, New York, in September 2027. I'm writing to ask whether American GOAL will seek a place on New York's scholarship-granting-organization list for 2027, and whether it would take a single independent school as its first New York partner.
+
+Two things drew me to GOAL over the other national organizations. The first is the model: a school that designs its own financial-aid process and recommends awards under a three-party agreement is exactly how we want to run aid, and it is rare. The second is that you already list independent schools, including a Waldorf school, alongside the dioceses. Most of what is organizing in New York is religious by charter. Long Island has no non-sectarian SGO at all, and no SGO of any kind that serves middle schoolers, since the Island's one foundation covers Catholic elementary schools. That gap is still open on the day New York's list goes to Treasury.
+
+What we bring: a physical school with a founding cohort enrolling this winter, founders who wrote New York's statewide virtual-school framework and run STEAM programs in libraries across the Island, and a donor pitch already built into enrollment, since every founding family arrives with neighbors who can give $1,700 at no net cost. We would rather route that through an organization with GOAL's track record than invent one. We can also introduce you to other Long Island independent schools with the same problem, which makes a New York program more than a single-school favor.
+
+Two questions, if you can answer them in writing: what does American GOAL need from a school that opens in the fall of the first credit year, and when; and what would it need from New York, or from us, to be listed by February 15? I'm glad to send a one-page school summary or take a call at your convenience.
+
+Nicole Galante, Founder
+Soundline School - Miller Place, NY
+hello@soundlineschool.com
+www.soundlineschool.com
+(631) 848-1554
+
+## Notes on the American GOAL draft
+
+- **The Waldorf line is the key.** GOAL listing a secular Waldorf school is proof they will take a school like Soundline; the email points at it so they cannot default to "we work with dioceses." Verify the Waldorf School of Atlanta is still on their 2027 list before sending.
+- **The model paragraph is sincere and strategic.** GOAL's three-party, school-recommends-the-award structure is the one most compatible with a founding school keeping its own aid judgment. If GOAL comes through, that structure is a reason to prefer it over ACE's fixed award caps.
+- **Same two closing questions as ACE and AFC**, so the written answers line up side by side.
+- **Address is unverified.** If info@ bounces, the phone call comes first and the email second.
 
 ## One-page dossier (attach as PDF)
 
