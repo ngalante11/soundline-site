@@ -140,7 +140,7 @@ www.soundlineschool.com
 
 ## One-page dossier (attach as PDF)
 
-Build from `print/packet.html` and the school information PDF already in the repo. Headings, no prose:
+Built: `print/Soundline-SGO-Dossier.pdf`, source `print/dossier.html`, regenerate with `node tools/packet.js dossier`. The Legal block says "available on request" until the entity name, EIN and NYSED status are final; replace that line and reprint before the first send. Outline it follows:
 
 1. **School.** Soundline, Miller Place NY. Grades 6–8 from Sept 2027, +1 grade/yr through 12. Ten to twelve per grade. Non-sectarian, independent.
 2. **Legal.** Entity name, formation date, EIN; NYSED nonpublic registration status and the planned BEDS filing date (spring 2027, effective July 1); site and certificate-of-occupancy timing.
