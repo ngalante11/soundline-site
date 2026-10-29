@@ -13,7 +13,7 @@
   Tuition figures are deliberately NOT printed here while cost.html still
   says the number arrives on the 12th. Add the table and reprint that day.
 -->
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" data-tuition="hold"><head><meta charset="utf-8">
 <title>Soundline School — information packet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
@@ -30,6 +30,16 @@
 }
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 body{font-family:var(--read);color:var(--deep);background:var(--paper);font-size:11px;line-height:1.5}
+/* Sheet numbers count themselves, so a page that is switched off does not
+   leave a gap in the numbering. A display:none page increments nothing. */
+body{counter-reset:sheet}
+.page{counter-increment:sheet}
+.pg::after{content:counter(sheet)}
+/* The tuition page waits for the morning of 12 November, because cost.html
+   promises the number that day. To publish it: set data-tuition="show" on
+   <html> above and run node tools/packet.js. The selector keys off "show"
+   alone, so flipping the attribute cannot also flip this rule. */
+html:not([data-tuition="show"]) .page--tuition{display:none}
 .page{width:8.5in;height:11in;padding:.72in .8in .62in;display:flex;flex-direction:column;
       position:relative;overflow:hidden;background:var(--paper);page-break-after:always;break-after:page}
 .page:last-child{page-break-after:auto;break-after:auto}
@@ -129,7 +139,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </div>
 
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 2</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 3 ───────────────────────────────────────────── a day here -->
@@ -154,7 +164,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </table>
 
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 3</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 4 ───────────────────────────────────────────── a Tuesday -->
@@ -195,7 +205,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </div>
   <div class="sp"></div>
   <p style="font-size:9.5px;color:var(--dim)">Imagined. Our first students arrive in September 2027.</p>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 4</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 5 ───────────────────────────────────────────── our vision -->
@@ -226,7 +236,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </div>
 
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 5</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 6 ───────────────────────────────────────────── why it works -->
@@ -249,7 +259,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </div>
 
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 6</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 7 ───────────────────────────────────────────── about us -->
@@ -264,7 +274,7 @@ tr:last-child td,tr:last-child th{border-bottom:0}
     <div class="card"><p class="eyebrow">Academic systems</p><h3 style="font-size:14px;margin-top:4px">Izzy Galante</h3><p>Designs how the school teaches: the sequence, the mastery gates, and how we know it worked. Co-wrote New York's framework and handbook for virtual schools. Teaches a live seminar every week.</p></div>
   </div>
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 7</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 8 ───────────────────────────────────────────── questions -->
@@ -301,7 +311,51 @@ tr:last-child td,tr:last-child th{border-bottom:0}
   </div>
   <div class="sp"></div>
   <p style="font-size:10px;color:var(--dim)">Something we didn't answer? Write to hello@soundlineschool.com. If we don't know, we'll find out and tell you.</p>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · 8</span></div>
+  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+</section>
+
+<!-- 9 ───────────────────────────────────────────── what it costs -->
+<section class="page page--tuition">
+  <p class="eyebrow">What it costs</p>
+  <h1>Tuition, 2027&ndash;28</h1>
+  <p class="lede" style="font-size:12px">Twelve monthly payments. Here is the whole table. We publish it before anyone is asked to commit, and the founding rate holds through twelfth grade.</p>
+
+  <table style="margin-top:18px">
+    <tr>
+      <th style="width:1.9in"></th>
+      <th><span style="font-family:var(--shout);font-weight:800;font-size:15px;letter-spacing:-.02em;text-transform:none;letter-spacing:-.02em">The School</span><br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">Five days a week, 8:30 to 3:00</span></th>
+      <th><span style="font-family:var(--shout);font-weight:800;font-size:15px;text-transform:none;letter-spacing:-.02em">The Collaborative</span><br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">Three days a week, for homeschooling families</span></th>
+    </tr>
+    <tr>
+      <td style="font-weight:600">A month</td>
+      <td><span class="num" style="font-size:26px;color:var(--deep)">$1,500</span><br><span style="font-size:10px;color:var(--dim)">$18,000 a year</span></td>
+      <td><span class="num" style="font-size:26px;color:var(--deep)">$900</span><br><span style="font-size:10px;color:var(--dim)">$10,800 a year</span></td>
+    </tr>
+  </table>
+  <div class="hi" style="margin-top:0;border-radius:0 0 9px 9px">
+    <div style="display:grid;grid-template-columns:1.9in 1fr 1fr;gap:10px;align-items:start">
+      <div><b style="font-size:11px">Founding Families</b><p style="font-size:9.5px;color:var(--dim);margin:3px 0 0">10% off, and your rate holds through twelfth grade</p></div>
+      <div><span class="num" style="font-size:26px;color:var(--deep)">$1,350</span><br><span style="font-size:10px;color:var(--dim)">$16,200 a year</span></div>
+      <div><span class="num" style="font-size:26px;color:var(--deep)">$810</span><br><span style="font-size:10px;color:var(--dim)">$9,720 a year</span></div>
+    </div>
+  </div>
+
+  <div class="cols2" style="margin-top:18px">
+    <div><h3>What&rsquo;s included</h3><p>Everything in the day: the two hours of practice, the four hours of making, the Quest, the arts, Showcase Friday. There is no materials fee on top of tuition.</p></div>
+    <div><h3>Paying in full</h3><p>Pay the year by March 1 and take 3% off, on top of the founding rate.</p></div>
+    <div><h3>Extended Day</h3><p>Until 5:30, priced separately. Founding Families pay 10% less for it too.</p></div>
+    <div><h3>Two kids</h3><p>10% off the second.</p></div>
+  </div>
+
+  <div class="band">
+    <h2 style="font-size:17px">What you pay now is $500, and it isn&rsquo;t ours.</h2>
+    <p>It is held in escrow by an independent escrow agent, not by us, and it is refundable in full until we sign a lease. It counts toward your $2,500 deposit, and the deposit counts toward tuition. Nothing you pay now is on top of anything.</p>
+    <p style="margin-top:7px;color:var(--beacon)">A place in line is placed in the order families join.</p>
+  </div>
+
+  <div class="sp"></div>
+  <p style="font-size:10px;color:var(--dim)">The current figures are always at soundlineschool.com/cost.html</p>
+  <div class="foot"><span>Soundline School &middot; Miller Place, NY</span><span>soundlineschool.com &middot; <span class="pg"></span></span></div>
 </section>
 
 <!-- 9 ───────────────────────────────────────────── join -->
