@@ -192,10 +192,10 @@
     .home .day-bar b{font-size:.88rem; letter-spacing:-.02em; white-space:nowrap}
     .home .day-bar li span{display:none}
   }
-  .ff-home .lines{list-style:none; margin:clamp(1.6rem,3vw,2.2rem) 0; padding:0; border-top:1px solid var(--rule-dark)}
-  .ff-home .lines li{display:grid; grid-template-columns:2.2rem 1fr; gap:.6rem; padding:.85rem 0; border-bottom:1px solid var(--rule-dark); color:var(--on-dark-dim)}
-  .ff-home .lines b{font-family:var(--shout); font-weight:800; color:var(--beacon)}
-  .ff-home .lines strong{color:var(--paper); font-weight:600}
+  .lines{list-style:none; margin:clamp(1.6rem,3vw,2.2rem) 0; padding:0; border-top:1px solid var(--rule-dark)}
+  .lines li{display:grid; grid-template-columns:2.2rem 1fr; gap:.6rem; padding:.85rem 0; border-bottom:1px solid var(--rule-dark); color:var(--on-dark-dim)}
+  .lines b{font-family:var(--shout); font-weight:800; color:var(--beacon)}
+  .lines strong{color:var(--paper); font-weight:600}
   .actions{display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.4rem}
   .packet-link{font-weight:600; color:var(--paper)}
   .packet-link.on-paper{color:var(--channel)}
@@ -246,7 +246,7 @@
   .story .say{max-width:30ch; color:var(--channel)}
   .story p{max-width:var(--measure)}
   .story .close{font-family:var(--reassure); font-style:italic; font-size:clamp(1.4rem,1.15rem + 1vw,1.9rem); color:var(--channel); margin:1.2rem 0 0}
-  .story .links{margin-top:1.4rem; display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; font-weight:600}
+  .links{margin-top:1.4rem; display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; font-weight:600}
 
   /* Join: the dates sit on the line */
   ol.nights{position:relative; margin-left:.4rem; padding-left:1.4rem; border-left:1px solid rgba(95,180,230,.7)}
