@@ -55,9 +55,11 @@ Repeat their problem in their own words. Do not move on until they say *yes, exa
 **Pick two things, not ten.** The mapping is below. A parent who came for one problem does not want the full tour; they want to hear their own sentence answered.
 
 ### 5 · Say the hard parts out loud — 2 min
-The building isn't signed. Tuition isn't published until the 12th. This is the first cohort, which means their child is a founder and also, honestly, a guinea pig.
+The building isn't signed. This is the first cohort, which means their child is a founder and also, honestly, a guinea pig.
 
-**Naming these yourself is the strongest move available to you.** They are already thinking all three, and every other school would dodge. Saying them first converts your biggest weakness into the reason they trust the rest.
+**Naming these yourself is the strongest move available to you.** They are already thinking both, and every other school would dodge. Saying them first converts your biggest weakness into the reason they trust the rest.
+
+Then answer the building one properly, because you now can: **the $500 that reserves a seat is held by an independent escrow agent, not by Soundline, and is refundable in full until the lease is signed.** That sentence does more work than any reassurance, because it costs you something. Say it every time the building comes up — don't wait to be asked twice.
 
 ### 6 · Close on a date — 2 min
 Offer in descending order of commitment, and stop at the first yes:
@@ -83,12 +85,12 @@ Three lines of email, with something from the call in the first line so it is ob
 | What they tell you | What you answer with | Where you send them |
 |---|---|---|
 | Bored, ahead, coasting | Grouped by skill, not age. Nobody waits once they've got it. | `day.html` |
-| Anxious, lost in a big middle school | Eight to ten in a grade, one advisor for three years, nowhere to hide | `about.html` |
+| Anxious, lost in a big middle school | Ten to twelve in a grade, one advisor for three years, nowhere to hide | `about.html` |
 | Checked out, on screens | Two hours of hands-on practice; the only screen in the morning is the guide's | Screen-time FAQ on `join.html` |
 | Bright, and nobody has noticed | A defence every six weeks, and a folder of work that travels | `vision.html` |
 | "Will this count for high school?" | Ninth grade in year two, then a grade a year; NY's diploma is built on evidence | High-school FAQ on `join.html` |
 | We homeschool | The Collaborative — three days, **by the term, not the year** | `collaborative.html` |
-| It's the money | The number comes on the 12th; the federal scholarship starts in January | `cost.html` |
+| It's the money | $1,350 a month founding, everything included; the federal scholarship starts in January | `cost.html` |
 
 **For a homeschool family the close is different and easier.** They are already out of the system, so there is no leap to argue them across — and *by the term* is the whole pitch. Say it early. It is the only thing on offer locally that lets a cautious family try a first-year school without betting a year on it.
 

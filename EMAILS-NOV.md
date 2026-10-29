@@ -6,16 +6,20 @@ Written 29 Oct 2026. Companion to `ADS-NOV11.md` and `CALL-GUIDE.md`.
 
 ## Before you send anything
 
-**Fill these in once.** They appear across all three.
+**The numbers are set** (`print/Soundline-Tuition-2027-28.pdf`) and are written into the emails below.
 
-| Placeholder | What it is |
-|---|---|
-| `[TUITION]` | Full-time annual tuition, and the monthly figure |
-| `[COLLAB]` | Collaborative, three days — annual and monthly |
-| `[EXTDAY]` | Extended Day, priced separately |
-| `[DEPOSIT]` | Amount, and whether it is refundable and until when |
-| `[LINK]` | Where a family reserves a seat |
-| `[SIBLING]` | Sibling rate |
+| | A month | A year |
+|---|---|---|
+| The School, five days | $1,500 | $18,000 |
+| **Founding Families** | **$1,350** | **$16,200** |
+| The Collaborative, three days | $900 | $10,800 |
+| **Founding Families** | **$810** | **$9,720** |
+
+Founding rate is 10% off and holds through twelfth grade. Second child 10% off. Pay the year by 1 March and take a further 3%. Extended Day priced separately, founding families 10% less there too.
+
+**$500 reserves a seat**, held by an independent escrow agent rather than by Soundline, refundable in full until the lease is signed. It counts toward the $2,500 deposit, and the deposit counts toward tuition.
+
+Two things still to fill: `[EXTDAY]` and `[LINK]`, the page where a family actually reserves.
 
 **Send them yourself, from Gmail, one at a time.** The list is small enough. A plain personal send from `hello@soundlineschool.com` lands in the inbox and gets replies; a Mailchimp template to forty people lands in Promotions and gets none. Below about fifty recipients, bulk tooling costs you more than it saves. Never BCC a batch — if one person replies-all to a BCC list you have leaked your entire inquiry list to each other.
 
@@ -66,13 +70,13 @@ The most important email you will send this year. The number goes in the first l
 
 Hi [Name],
 
-Tuition at Soundline is **[TUITION]** a year, paid monthly over twelve months — [TUITION monthly] a month. The Collaborative, which is three days a week, is **[COLLAB]**, or [COLLAB monthly] a month. Extended Day, to 5:30, is **[EXTDAY]** and only charged to families who use it.
+Tuition at Soundline is **$1,500 a month** — $18,000 a year, paid over twelve months. **Founding families pay $1,350**, which is $16,200. The Collaborative, three days a week, is $900 a month, or **$810 for founding families**. Extended Day, to 5:30, is [EXTDAY] and only charged to families who use it, with the same 10% off for founding families.
 
-That's the whole price. No application fee, no registration fee, no activity fee, no technology fee, no annual fundraising minimum. If a cost appears later that isn't on this list, it will be because you chose it.
+That's the whole price. No application fee, no registration fee, no materials fee, no technology fee, no annual fundraising minimum. Everything in the day is in it: the two hours of practice, the four hours of making, the Quest, the arts, Showcase Friday. If a cost appears later that isn't on this list, it will be because you chose it.
 
-**What a founding rate means.** The rate you enroll at is the rate you pay every year your child is at Soundline, through twelfth grade. It doesn't rise with our costs and it doesn't rise when the school gets harder to get into. Founding families carry their number the whole way. [SIBLING]
+**What a founding rate means.** $1,350 is the rate you pay every year your child is at Soundline, through twelfth grade. It doesn't rise with our costs and it doesn't rise when the school gets harder to get into. Founding families carry their number the whole way. A second child is 10% off, and if you pay the year by 1 March you take a further 3%.
 
-**Why this number and not a lower one.** Eight to ten students in a grade, four adults who know every child by name, and one advisor who stays with your child for three years. That ratio is the school. We could have priced it lower by putting more children in a room, and then it would be a different school and you'd have been sold something we couldn't deliver.
+**Why this number and not a lower one.** Ten to twelve students in a grade, four adults who know every child by name, and one advisor who stays with your child for three years. That ratio is the school. We could have priced it lower by putting more children in a room, and then it would be a different school and you'd have been sold something we couldn't deliver.
 
 **On affordability, two things.**
 
@@ -80,7 +84,9 @@ The first is ours: there is real financial aid in our first budget, not a token 
 
 The second is new. A federal scholarship tax credit begins on 1 January 2027 — the same school year we open. It funds tuition scholarships through non-profit scholarship organisations, and eligibility runs to 300% of area median income, which on Long Island is a far higher ceiling than people assume. New York announced on 9 October that it intends to take part, but the state hasn't filed with the IRS yet. I'm not going to promise you something that is still on paper. I will tell you the day it's official, and I'll name the organisation we work with the day the state's list is published. Everything we know is here: soundlineschool.com/cost.html
 
-**To reserve a founding seat.** [LINK]. The deposit is [DEPOSIT]. A founding seat comes with the locked rate, a place on the Family Council, and a say in what this school becomes while it is still being decided.
+**To reserve a founding seat.** [LINK]. It is **$500**, and here is the part I'd want to know if I were you: it is held by an independent escrow agent, not by us, and it is **refundable in full until we sign a lease.** If there is no building, you get your money back without asking twice. It counts toward the $2,500 deposit, and the deposit counts toward tuition — nothing you pay now sits on top of anything.
+
+A founding seat comes with the $1,350 rate for as long as your child is here, a place on the Family Council, and a say in what this school becomes while it is still being decided. Places are held in the order families join.
 
 **And if the answer is no.** If this isn't right for your family — the number, the timing, any of it — I'd genuinely like to know why. Reply with one line. It makes the school better and it costs you nothing.
 
@@ -110,15 +116,15 @@ Hi [Name],
 
 You weren't at the library on Wednesday, which is fine — November is November. Here's the whole thing in ninety seconds, including the part people came for.
 
-**The number.** [TUITION] a year, paid monthly over twelve months. The Collaborative, three days a week, is [COLLAB]. Nothing else is charged except Extended Day, if you use it. Founding families lock that rate for as long as their child is enrolled — every year, through twelfth grade.
+**The number.** $1,500 a month, and $1,350 for founding families — $16,200 a year, paid over twelve. The Collaborative, three days a week, is $900, or $810 founding. Nothing else is charged except Extended Day, if you use it. Founding families lock that rate for as long as their child is enrolled, every year through twelfth grade.
 
 **The three questions that actually got asked.**
 
-*"Isn't eight to ten in a grade too small?"* It's three grades in one building, your child's working group changes by subject, and the whole school builds one thing together on Fridays. Small enough that nobody disappears. Big enough for a real argument about a book.
+*"Isn't ten to twelve in a grade too small?"* It's three grades in one building, your child's working group changes by subject, and the whole school builds one thing together on Fridays. Small enough that nobody disappears. Big enough for a real argument about a book.
 
 *"What happens for high school?"* We add ninth grade in year two, then a grade a year through twelfth. New York's diploma is moving to evidence of what a graduate can actually do, and every one of those things is something your child makes and defends here, every six weeks.
 
-*"You don't have a building yet."* Not signed yet, no. We announce it the day it is, and I'd rather say that plainly than show you a photograph of somewhere we're still negotiating for.
+*"You don't have a building yet."* Not signed yet, no. We announce it the day it is, and I'd rather say that plainly than show you a photograph of somewhere we're still negotiating for. It's also why the $500 that reserves a seat sits with an independent escrow agent rather than with us, refundable in full until the lease is signed. You shouldn't have to take that risk on trust.
 
 **What I'd actually like.** Fifteen minutes on the phone, about your child specifically rather than about the school in general. That's the conversation worth having, and it's the one I can't fit into an email. Reply with two or three times that work this week and I'll call you.
 

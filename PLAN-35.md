@@ -78,7 +78,9 @@ Shipped today: `cost.html` — the full explanation, carefully hedged (New York 
 
 ## 3. The number problem: 35 does not fit the school you are selling
 
-The site says, in three places, **eight to ten in a grade.** Three grades is 24–30 seats. 35 is above your own published cap.
+**Resolved, 29 Oct: ten to twelve in a grade.** Three grades is 30–36 seats, so 35 now sits inside the published cap rather than above it. The rest of this section is kept as the reasoning behind that call.
+
+~~The site says, in three places, **eight to ten in a grade.** Three grades is 24–30 seats. 35 is above your own published cap.~~
 
 Two honest ways to resolve it, and only one of them is good:
 
@@ -167,8 +169,10 @@ $300–600/month across town Facebook groups, once `cost.html` exists to retarge
 
 1. ~~How many came on 25 October?~~ **Answered: nobody.** See §0 — it changes the diagnosis, not the destination.
 2. ~~Nov 12 venue and time.~~ **Answered: Wednesday 11 November, 7:00 pm, Port Jefferson Free Library**, library confirmed open. Tuition and registration follow on the 12th, so the packet's date stands. Both live across the site.
-3. **How many surveys are in, and what do they say?** Now the single most important unknown. Ten real responses would change the channel mix more than anything else in this file.
-4. **35 = 30 + Collaborative, or a raised cap?** §3.
-5. **Lease status.** §5.
-6. **Deposit: how much, refundable, and on what rail?** Needed before 11 November.
-7. **How many of the twenty calls are booked?** §0 and `CALL-GUIDE.md`. The phone is the live channel; everything else is still potential.
+3. ~~Nov 12 tuition.~~ **Answered: $1,500 a month, $1,350 founding; Collaborative $900 / $810.** Published sheet in `print/`.
+4. ~~35 = 30 + Collaborative, or a raised cap?~~ **Answered: ten to twelve in a grade**, so 30–36 full-time seats. §3.
+5. ~~Deposit: how much, refundable, and on what rail?~~ **Answered: $500 to reserve, in independent escrow, refundable until the lease signs; $2,500 deposit; both credit against tuition.** The strongest sentence we have, and it is in the emails and the call guide now.
+6. ~~Pixel.~~ **Live** — `29033437216289568`, with domain verification on the homepage. Ads can run measurably.
+7. **Lease status.** §5. Now the only hard blocker left, and the escrow terms buy time rather than removing it.
+8. **How many surveys are in, and what do they say?** §0.
+9. **How many of the twenty calls are booked?** `CALL-GUIDE.md`. The phone is the live channel; everything else is still potential.

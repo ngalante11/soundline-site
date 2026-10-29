@@ -55,7 +55,7 @@ Run all four. Meta will settle on one or two within four days; kill anything und
 >
 > Middle school is three years. They go fast.
 >
-> Soundline opens in Miller Place in September 2027 — grades six through eight, eight to ten in a grade, and every adult in the building knows your child by name. Two hours of practice in the morning. Four hours of making.
+> Soundline opens in Miller Place in September 2027 — grades six through eight, ten to twelve in a grade, and every adult in the building knows your child by name. Two hours of practice in the morning. Four hours of making.
 >
 > Come hear about it. Wednesday 11 November, 7:00 pm, Port Jefferson Free Library. Free, and you can ask anything.
 
@@ -70,7 +70,7 @@ Run all four. Meta will settle on one or two within four days; kill anything und
 >
 > At Soundline, students are grouped by skill, not by age — a sixth grader and an eighth grader can work the same thing at the same table, and each moves on when it's theirs.
 >
-> Grades six through eight, opening September 2027 in Miller Place. Eight to ten in a grade.
+> Grades six through eight, opening September 2027 in Miller Place. Ten to twelve in a grade.
 >
 > Information night: Wednesday 11 November, 7:00 pm, Port Jefferson Free Library.
 
@@ -96,7 +96,7 @@ Run all four. Meta will settle on one or two within four days; kill anything und
 ### A4 — The number
 *Image: `img/social/09-nov11-h1.png`*
 
-> Eight to ten in a grade.
+> Ten to twelve in a grade.
 >
 > Small enough that there's nowhere to hide. Big enough for a real seminar. One advisor who stays with your child for all three years.
 >
@@ -104,7 +104,7 @@ Run all four. Meta will settle on one or two within four days; kill anything und
 >
 > Wednesday 11 November, 7:00 pm, Port Jefferson Free Library. Tuition is published the next morning — everyone in the room hears the number first.
 
-**Headline:** Eight to ten in a grade
+**Headline:** Ten to twelve in a grade
 **Description:** Free and open to all · Wed 11 Nov
 **Button:** Learn more
 
@@ -224,7 +224,7 @@ Type it and pick the library's real place page from the dropdown rather than typ
 >
 > Come and hear what it is. We'll walk through what a day actually looks like, hour by hour — two hours of practice in the morning, four hours of making — and you'll meet the people building it. Then we'll take every question in the room, including the hard ones.
 >
-> Eight to ten students in a grade. One advisor who stays with your child for three years. Every adult in the building knows your kid by name.
+> Ten to twelve students in a grade. One advisor who stays with your child for three years. Every adult in the building knows your kid by name.
 >
 > Tuition goes out the next morning, Thursday 12 November, and founding enrollment opens with it. Everyone in the room on Wednesday hears the number first.
 >
