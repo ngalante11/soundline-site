@@ -3,6 +3,7 @@
 //   node tools/packet.js            → both
 //   node tools/packet.js packet     → just the nine-page packet
 //   node tools/packet.js tuition    → just the tuition sheet
+//   node tools/packet.js dossier    → the one-page SGO dossier
 //
 // Sources live in print/. Every fact in them must match the live site;
 // each source names the pages it has to agree with. Refuses to write a
@@ -16,6 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const DOCS = {
   packet:  { src: 'print/packet.html',  out: 'soundline-school-information.pdf' },
   tuition: { src: 'print/tuition.html', out: 'print/Soundline-Tuition-2027-28.pdf' },
+  dossier: { src: 'print/dossier.html', out: 'print/Soundline-SGO-Dossier.pdf' },
 };
 
 (async () => {
