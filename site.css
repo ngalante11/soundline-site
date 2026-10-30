@@ -1,4 +1,4 @@
-/* Night water — Brand Guide v1.7. Rev. 10 (Oct 15, 2026): the sounding line, the photo hero, A Tuesday. Rev. 8 (Oct 8, 2026): five pages (Home, A day here, Our vision, About us, Join), phone menu, sticky survey bar, informational packet. */
+/* Night water — Brand Guide v1.7. Rev. 11 (Oct 30, 2026): the headline takes the day bar's colors; one name for the one action; labels in sentence case; fewer boxes; What it costs in the nav; the research page joins the template; the fathom rail retired. Rev. 10 (Oct 15): the photo hero, A Tuesday. Rev. 8 (Oct 8): five pages, phone menu, sticky survey bar. */
 
   
   :root{
@@ -17,7 +17,8 @@
   a:focus-visible{outline:3px solid var(--channel); outline-offset:4px}
   .dark a:focus-visible{outline-color:var(--beacon)}
   .wrap{width:min(100% - 2.5rem, 72rem); margin-inline:auto}
-  .label{font-family:var(--read); font-weight:600; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase}
+  .label{font-family:var(--read); font-weight:600; font-size:.88rem; letter-spacing:0; color:var(--channel)}
+  .dark .label{color:var(--glow)}
   p{margin:0 0 1.1em}
   h2{font-family:var(--shout); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:clamp(2.1rem,1.4rem + 2.8vw,3.7rem); margin:0 0 .5em; max-width:18ch}
   h3{font-family:var(--shout); font-weight:800; letter-spacing:-.035em; line-height:1.05; font-size:1.35rem; margin:0 0 .5rem}
@@ -40,17 +41,18 @@
   .lockup svg{width:2.6rem; height:2.6rem; flex:none}
   .lockup .name{display:flex; flex-direction:column; gap:.2rem}
   .wordmark{font-family:var(--shout); font-weight:800; font-size:1.55rem; line-height:1; letter-spacing:-.045em; text-transform:uppercase}
-  .lockup .label{font-size:.66rem; color:var(--on-dark-dim)}
-  nav.top-nav{display:flex; align-items:center; gap:1.6rem; font-size:.98rem}
+  .lockup .label{font-size:.8rem; color:var(--on-dark-dim)}
+  nav.top-nav{display:flex; align-items:center; gap:1.4rem; font-size:.96rem}
   nav.top-nav a.nav-link{color:var(--on-dark-dim); text-decoration:none; border-bottom:2px solid transparent; padding-bottom:1px}
   nav.top-nav a.nav-link:hover{color:var(--paper); border-bottom-color:var(--channel)}
-  @media(max-width:56rem){ nav.top-nav a.nav-link{display:none} }
+  @media(max-width:64rem){ nav.top-nav a.nav-link{display:none} }
   @media(max-width:26rem){ .lockup{gap:.8rem} .lockup .label{display:none} }
 
   .hero{padding:clamp(3.5rem,8vw,6.5rem) 0 clamp(1.5rem,3vw,2.5rem)}
   .hero h1{font-family:var(--shout); font-weight:800; letter-spacing:-.045em; line-height:.98; font-size:clamp(2.6rem, 1.4rem + 5.4vw, 6.2rem); margin:0 0 1.6rem; max-width:24ch}
   .hero h1 span{display:block}
-  .hero h1 .a{color:var(--paper)} .hero h1 .b{color:var(--glow)} .hero h1 .c{color:var(--beacon)}
+  /* practice is Shallows, making is Making, and the third line is the beacon: the same three colors as the bar beneath */
+  .hero h1 .a{color:var(--shallows)} .hero h1 .b{color:var(--making)} .hero h1 .c{color:var(--beacon)}
   .hero .lede{max-width:var(--measure); margin:0 0 2rem; color:var(--on-dark-dim); font-size:clamp(1.1rem,1rem + .5vw,1.4rem)}
   .ctas{display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.2rem}
   .ctas .note{font-family:var(--reassure); font-style:italic; color:var(--glow); font-size:1.15rem}
@@ -88,8 +90,6 @@
   .card{background:#fff; border:3px solid var(--deep); border-radius:1rem; padding:1.5rem 1.4rem 1.6rem}
   .card p{margin:0; font-size:1rem; color:var(--on-paper-dim)}
   .card .label{display:block; color:var(--channel); margin-bottom:.55rem}
-  .chip{display:flex; gap:.35rem; margin-bottom:1rem} .chip i{display:block; height:.6rem; width:3rem; border-radius:.3rem}
-  .chip .s{background:var(--shallows)} .chip .p{background:var(--making)} .chip .b{background:var(--beacon)}
   .day.fri{background:var(--making); border-color:var(--making)}
   .day.fri p, .day.fri .label{color:var(--deep)}
 
@@ -99,13 +99,12 @@
   .plate .say{color:var(--beacon)}
   .glow-cards{display:grid; gap:1rem; grid-template-columns:1fr; margin:clamp(2rem,4vw,3rem) 0}
   @media(min-width:48rem){ .glow-cards{grid-template-columns:repeat(3,1fr)} }
-  .glow-cards div{border:3px solid var(--glow); border-radius:1rem; padding:1.5rem 1.4rem}
+  .glow-cards div{border-top:3px solid var(--glow); padding:1.1rem 0 0}
   .glow-cards h3{color:var(--glow)}
   .glow-cards p{margin:0; font-size:1rem}
 
   ol.six{list-style:none; margin:clamp(1.5rem,3vw,2.5rem) 0 clamp(2rem,4vw,3rem); padding:0; display:grid; grid-template-columns:1fr; border-top:3px solid var(--paper)}
   ol.six li{padding:1.6rem 0 1.8rem; border-bottom:1px solid var(--rule-dark)}
-  ol.six .n{display:block; font-family:var(--shout); font-weight:800; color:var(--beacon); font-size:1.05rem; margin-bottom:.4rem}
   ol.six h3{font-size:clamp(1.5rem,1.2rem + 1vw,2.05rem); margin-bottom:.35rem}
   ol.six p{margin:0; font-size:1.02rem}
   @media(min-width:48rem){
@@ -118,10 +117,17 @@
   .proof h3{font-family:var(--read); font-weight:600; letter-spacing:0; font-size:1.15rem; line-height:1.3}
   .proof .grid > div{border-top:3px solid var(--deep); padding-top:1.3rem}
   .proof p{margin:0; font-size:1rem; color:var(--on-paper-dim)}
+  .proof .label{display:block; margin-bottom:.4rem}
+  .proof.keyed .grid > .s{border-top-color:var(--shallows)} .proof.keyed .grid > .p{border-top-color:var(--making)} .proof.keyed .grid > .b{border-top-color:var(--beacon)}
 
-  .about{background:#fff; border:3px solid var(--deep); border-radius:1.2rem; padding:clamp(1.8rem,5vw,4rem)}
-  .about p{max-width:var(--measure)}
-  .about .close{font-family:var(--reassure); font-style:italic; font-size:clamp(1.4rem,1.15rem + 1vw,1.9rem); color:var(--channel); margin:1.4rem 0 0}
+  /* the people: a list with room for a portrait above each name once there are portraits */
+  .people{list-style:none; margin:0; padding:0; display:grid; gap:1.6rem 1.5rem; grid-template-columns:1fr}
+  @media(min-width:40rem){ .people{grid-template-columns:1fr 1fr} }
+  @media(min-width:62rem){ .people{grid-template-columns:repeat(4,1fr)} }
+  .people li{border-top:3px solid var(--deep); padding-top:1rem}
+  .people .label{display:block; margin-bottom:.3rem}
+  .people h3{font-size:1.3rem}
+  .people p{margin:0; font-size:1rem; color:var(--on-paper-dim)}
 
   .track{border-radius:1.2rem; padding:clamp(1.6rem,3.5vw,2.6rem); border:0}
   .track h3{font-size:clamp(1.5rem,1.2rem + 1vw,2.1rem)}
@@ -129,19 +135,23 @@
   .track.school{background:var(--channel); color:var(--paper)} .track.school .label{color:var(--glow)} .track.school p{color:var(--on-dark-dim)}
   .track.collab{background:var(--shallows); color:var(--deep)} .track.collab .label{color:var(--deep)} .track.collab p{color:var(--deep)}
 
-  .steps{list-style:none; margin:clamp(2rem,4vw,3rem) 0 1.8rem; padding:0; display:grid; gap:1rem; grid-template-columns:1fr}
-  @media(min-width:52rem){ .steps{grid-template-columns:repeat(3,1fr)} }
-  .steps > li{border:3px solid var(--paper); border-radius:1.2rem; padding:1.8rem 1.6rem; display:flex; flex-direction:column; gap:.2rem}
+  .steps{list-style:none; margin:clamp(2rem,4vw,3rem) 0 1.8rem; padding:0; display:grid; gap:1rem; grid-template-columns:minmax(0,1fr)}
+  @media(min-width:52rem){ .steps{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .steps > li{min-width:0; border:3px solid var(--paper); border-radius:1.2rem; padding:1.8rem 1.6rem; display:flex; flex-direction:column; gap:.2rem}
   .steps > li:first-child{border-color:var(--beacon)}
   .steps .n{font-family:var(--shout); font-weight:800; font-size:3.2rem; line-height:1; margin-bottom:.8rem}
   .steps > li:first-child .n{color:var(--beacon)}
   .steps p{margin:0 0 1rem; font-size:1.02rem}
   .steps .btn{align-self:flex-start}
   .perks{color:var(--glow) !important}
-  ol.nights{list-style:none; margin:0; padding:0}
-  ol.nights li{display:grid; grid-template-columns:4.5rem 1fr; gap:.8rem; padding:.55rem 0; border-top:1px solid var(--rule-dark); font-size:.98rem}
-  ol.nights li:last-child{border-bottom:1px solid var(--rule-dark)}
+  /* Join: the dates sit on the line */
+  ol.nights{list-style:none; margin:0 0 0 .4rem; padding:0 0 0 1.4rem; position:relative; border-left:1px solid rgba(95,180,230,.7)}
+  ol.nights li{display:grid; grid-template-columns:4.5rem 1fr; gap:.8rem; padding:.45rem 0 .8rem; position:relative; font-size:.98rem}
+  ol.nights li:last-child{padding-bottom:.2rem}
+  ol.nights li::before{content:""; position:absolute; left:-1.4rem; top:1rem; width:1rem; height:1px; background:rgba(95,180,230,.9)}
+  ol.nights li.next::before{height:3px; top:.95rem; background:var(--beacon)}
   ol.nights time{font-family:var(--shout); font-weight:800; color:var(--paper)}
+  ol.nights li.next time{color:var(--beacon)}
   ol.nights span{color:var(--on-dark-dim)}
   .aside{margin:0; font-size:1rem}
   .aside a{color:var(--beacon)}
@@ -152,7 +162,8 @@
   footer .wordmark{font-size:1.3rem}
   footer a{text-decoration:none; border-bottom:2px solid var(--channel)}
   footer .meta{color:var(--on-dark-dim); text-align:right}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn{transition:none} }
+  footer .meta a + a{margin-left:1rem}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn{transition:none} .sticky-cta{transition:none} }
 
   /* ---------- rev. 8: five pages, phone menu, sticky survey bar ---------- */
   nav.top-nav a.nav-link[aria-current="page"]{color:var(--paper); border-bottom-color:var(--beacon)}
@@ -165,21 +176,23 @@
   .menu .panel a{display:flex; align-items:center; min-height:2.9rem; padding:0 .9rem; border-radius:.6rem; text-decoration:none; font-weight:600; color:var(--paper)}
   .menu .panel a[aria-current="page"]{color:var(--beacon)}
   .menu .panel a:hover{background:var(--channel)}
-  @media(max-width:56rem){ .menu{display:block} nav.top-nav .btn.small{display:none} }
+  @media(max-width:64rem){ .menu{display:block} nav.top-nav .btn.small{display:none} }
 
   .sticky-cta{display:none}
   @media(max-width:56rem){
     body{padding-bottom:5.2rem}
     .sticky-cta{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:30; padding:.7rem 1.25rem calc(.7rem + env(safe-area-inset-bottom)); background:var(--deep); border-top:1px solid var(--rule-dark)}
     .sticky-cta .btn{flex:1; justify-content:center; background:var(--beacon); border-color:var(--beacon); color:var(--deep)}
+    /* steps aside while another survey button is on screen, so there is never a second yellow pill in view */
+    .sticky-cta{transition:transform .25s ease}
+    .sticky-cta.off{transform:translateY(110%)}
   }
 
   /* inner-page heroes */
   .page-hero{padding:clamp(2.8rem,7vw,5rem) 0 clamp(1rem,2vw,1.5rem)}
-  .page-hero h1{font-family:var(--shout); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:clamp(2.4rem,1.4rem + 4vw,4.8rem); margin:.6rem 0 1.2rem; max-width:20ch}
+  .page-hero h1{font-family:var(--shout); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:clamp(2.4rem,1.4rem + 4vw,4.8rem); margin:0 0 1.2rem; max-width:20ch}
+  .page-hero .perks{margin:1rem 0 0; max-width:var(--measure)}
   .page-hero .lede{max-width:var(--measure); margin:0; color:var(--on-dark-dim); font-size:clamp(1.1rem,1rem + .5vw,1.35rem)}
-  .steps{grid-template-columns:minmax(0,1fr)} .steps > li{min-width:0}
-  @media(min-width:52rem){ .steps{grid-template-columns:repeat(3,minmax(0,1fr))} }
   .page-hero .say{color:var(--beacon)}
   .page-hero ol.six p, .page-hero .split p{color:var(--on-dark-dim)}
   .page-hero .day-bar{margin-top:clamp(2rem,4vw,3rem)}
@@ -192,10 +205,15 @@
     .home .day-bar b{font-size:.88rem; letter-spacing:-.02em; white-space:nowrap}
     .home .day-bar li span{display:none}
   }
+  .m0{margin:0} .measure{max-width:var(--measure)} .after-faq{margin-top:1.6rem}
+  .visually-hidden{position:absolute; left:-9999px}
+  .split.end h2{margin:0} .split.end .perks{margin:0} .plate .lit{color:var(--paper)}
+  .next-page.spread{justify-content:space-between; gap:1rem; flex-wrap:wrap}
   .lines{list-style:none; margin:clamp(1.6rem,3vw,2.2rem) 0; padding:0; border-top:1px solid var(--rule-dark)}
   .lines li{display:grid; grid-template-columns:2.2rem 1fr; gap:.6rem; padding:.85rem 0; border-bottom:1px solid var(--rule-dark); color:var(--on-dark-dim)}
   .lines b{font-family:var(--shout); font-weight:800; color:var(--beacon)}
   .lines strong{color:var(--paper); font-weight:600}
+  .lines.plain li{grid-template-columns:1fr}
   .actions{display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.4rem}
   .packet-link{font-weight:600; color:var(--paper)}
   .packet-link.on-paper{color:var(--channel)}
@@ -213,25 +231,12 @@
   .next-page{display:flex; justify-content:flex-end; margin-top:clamp(2rem,4vw,3rem)}
   .next-page a{font-family:var(--shout); font-weight:800; font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem); letter-spacing:-.03em; text-decoration:none; border-bottom:3px solid var(--beacon)}
 
-  /* ---------- rev. 10 (Oct 15, 2026): the sounding line, the photo hero, A Tuesday ---------- */
-  /* The fathom rail: a depth map of the page. Ticks are sections; the lead is where you are. Desktop only. */
-  .fathom{display:none}
-  @media(min-width:66rem){
-    .fathom{display:block; position:fixed; left:clamp(1rem,2.2vw,2.2rem); top:6.5rem; bottom:6.5rem; width:1px; z-index:25; background:rgba(95,180,230,.55); pointer-events:none}
-    .fathom .tick{position:absolute; left:-.45rem; width:1rem; height:1px; background:rgba(95,180,230,.9)}
-    .fathom .tick a{position:absolute; left:1.3rem; top:-.55em; font-family:var(--read); font-weight:600; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap; text-decoration:none; color:rgba(95,180,230,.95); pointer-events:auto; opacity:0; transform:translateX(-4px); transition:opacity .2s, transform .2s}
-    .fathom:hover .tick a, .fathom .tick.near a{opacity:1; transform:none}
-    .fathom .lead{position:absolute; left:-.35rem; width:.7rem; height:1rem; background:var(--beacon); border:2px solid var(--deep); clip-path:polygon(50% 0,100% 30%,100% 100%,0 100%,0 30%); transform:translateY(-50%); transition:top .08s linear}
-    .fathom .fm{display:none}
-    .fathom .mark{position:absolute; left:-.7rem; width:1.4rem; height:1px; background:var(--beacon)}
-  }
-  @media (prefers-reduced-motion: reduce){ .fathom .lead{transition:none} }
-
+  /* ---------- rev. 10 (Oct 15, 2026): the photo hero, A Tuesday ---------- */
   /* The photo hero. Falls back to the plain dark hero if the image is missing. */
   .hero-photo{position:relative; overflow:hidden; isolation:isolate}
   .hero-photo .pic{position:absolute; inset:0; z-index:-1; background:var(--deep) url(img/hero-sound.jpg) center 40% / cover no-repeat}
   .hero-photo .pic::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(18,34,43,.96) 0, rgba(18,34,43,.88) 38%, rgba(18,34,43,.45) 70%, rgba(18,34,43,.25) 100%), linear-gradient(0deg, var(--deep) 0, rgba(18,34,43,0) 35%)}
-  .hero-photo .cap{position:absolute; right:1.25rem; bottom:.9rem; z-index:2; font-size:.78rem; color:var(--on-dark-dim); letter-spacing:.02em}
+  .hero-photo .cap{position:absolute; right:1.25rem; bottom:.6rem; z-index:2; font-size:.78rem; color:var(--on-dark-dim); letter-spacing:.02em}
   @media(max-width:56rem){
     /* phones: the photo is a band under the header, then the words on Deep Sound */
     .hero-photo .pic{position:relative; inset:auto; z-index:0; height:64vw; min-height:15rem; background-image:url(img/hero-sound-1200.jpg); background-position:62% 58%; background-size:cover}
@@ -246,15 +251,8 @@
   .story .say{max-width:30ch; color:var(--channel)}
   .story p{max-width:var(--measure)}
   .story .close{font-family:var(--reassure); font-style:italic; font-size:clamp(1.4rem,1.15rem + 1vw,1.9rem); color:var(--channel); margin:1.2rem 0 0}
-  .links{margin-top:1.4rem; display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; font-weight:600}
+  .links{margin:1.4rem 0 0; display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; font-weight:600}
 
-  /* Join: the dates sit on the line */
-  ol.nights{position:relative; margin-left:.4rem; padding-left:1.4rem; border-left:1px solid rgba(95,180,230,.7)}
-  ol.nights li{border:0; padding:.45rem 0 .8rem; position:relative}
-  ol.nights li:last-child{border:0; padding-bottom:.2rem}
-  ol.nights li::before{content:""; position:absolute; left:-1.4rem; top:1rem; width:1rem; height:1px; background:rgba(95,180,230,.9)}
-  ol.nights li.next::before{height:3px; top:.95rem; background:var(--beacon)}
-  ol.nights li.next time{color:var(--beacon)}
 
   /* A Tuesday: the day as a sounding */
   .tues{list-style:none; margin:clamp(2rem,4vw,3rem) 0 0; padding:0 0 0 1.6rem; border-left:1px solid rgba(95,180,230,.8); position:relative}
@@ -263,10 +261,10 @@
   .tues li::before{content:""; position:absolute; left:-1.6rem; top:.95rem; width:1.1rem; height:1px; background:rgba(95,180,230,.95)}
   .tues li.deep::before{height:3px; top:.9rem; background:var(--beacon)}
   .tues time{font-family:var(--shout); font-weight:800; font-size:1.25rem; letter-spacing:-.03em; line-height:1.4; color:var(--channel)}
-  .tues time small{display:block; font-family:var(--read); font-weight:600; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--on-paper-dim)}
+  .tues time small{display:block; font-family:var(--read); font-weight:600; font-size:.82rem; color:var(--on-paper-dim)}
   .tues h3{font-size:clamp(1.3rem,1.1rem + .8vw,1.7rem); margin-bottom:.3rem}
   .tues p{margin:0; max-width:var(--measure); color:var(--on-paper-dim)}
-  .tues .k{display:inline-block; font-family:var(--read); font-weight:600; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; padding:.15rem .5rem; border-radius:.3rem; margin-bottom:.5rem}
+  .tues .k{display:inline-block; font-family:var(--read); font-weight:600; font-size:.82rem; padding:.1rem .5rem; border-radius:.3rem; margin-bottom:.5rem}
   .tues .k.practice{background:var(--shallows); color:var(--deep)} .tues .k.making{background:var(--making); color:var(--deep)} .tues .k.out{background:var(--glow); color:var(--deep)} .tues .k.ext{border:2px dashed var(--deep)}
   .adds{display:grid; gap:1rem; grid-template-columns:1fr; margin-top:1.6rem}
   @media(min-width:52rem){ .adds{grid-template-columns:repeat(2,1fr)} }
@@ -280,10 +278,26 @@
   .event.on-page{margin:clamp(1.8rem,4vw,2.8rem) 0 0; background:transparent; backdrop-filter:none}
   @media(min-width:52rem){ .event{grid-template-columns:minmax(0,1fr) auto} }
   .event .label{color:var(--beacon)}
-  .event h2{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.5rem); margin:.4rem 0 .5rem; max-width:none}
+  .event h2{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.5rem); margin:0 0 .5rem; max-width:none}
   .event p{margin:0; color:var(--on-dark-dim); max-width:var(--measure)}
+  .event .when{color:var(--paper); font-weight:600; margin-bottom:.6rem}
   .ev-act{display:flex; flex-direction:column; gap:.6rem; align-items:flex-start}
   @media(min-width:52rem){ .ev-act{align-items:flex-end; text-align:right; max-width:17rem} }
   .ev-act .note{font-family:var(--reassure); font-style:italic; color:var(--glow); font-size:1rem; line-height:1.35}
   .ev-act .btn{white-space:nowrap}
-  .hero-photo .cap{bottom:.6rem}
+
+
+  /* ---------- rev. 11: the research page shares this sheet ---------- */
+  .wrap.narrow{width:min(100% - 2.5rem, 48rem)}
+  .claim{border-top:3px solid var(--deep); padding:1.6rem 0 2.2rem}
+  .claim .label{display:block; margin-bottom:.5rem}
+  .claim h2{font-size:clamp(1.6rem,1.3rem + 1.2vw,2.3rem); margin-bottom:.8rem; max-width:none}
+  .claim h3{font-family:var(--read); font-weight:600; font-size:1rem; letter-spacing:0; margin:1.3rem 0 .4rem}
+  .claim p{max-width:var(--measure)}
+  .finding{border-left:3px solid var(--shallows); padding:.2rem 0 .2rem 1.2rem; margin:1.2rem 0}
+  .finding p:last-child{margin:0}
+  .cite{font-size:.9rem; color:var(--on-paper-dim); margin:.6rem 0 0}
+  .cite a{overflow-wrap:anywhere}
+  .honest{font-family:var(--reassure); font-style:italic; font-size:1.1rem; color:var(--on-paper-dim)}
+  .plate.proofs h2{color:var(--beacon); max-width:22ch}
+  .plate.proofs p{max-width:var(--measure)}
