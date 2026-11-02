@@ -5,7 +5,16 @@
 // wants a separate upload per ratio and will letterbox anything it has to
 // crop itself.
 //
-//   node tools/ads-nov11.js            → all three sizes into img/ads/
+//   node tools/ads-nov11.js                  → type-only, three sizes
+//   node tools/ads-nov11.js --photo <file>   → the same three over a photo
+//
+// Paid is not organic. A type-only card works in the feed of someone who
+// already follows us; to a stranger it is a wall of words to scroll past,
+// and Meta's feed is faces. The photo cut exists for cold traffic. Give it
+// a real photograph of real people — the room on an information night, the
+// people who will teach. Not a stock child: we would be selling a kid who
+// does not exist at a school that does not exist yet, which is the exact
+// thing the escrow card brags about not doing.
 //
 // Stories keeps Meta's safe area clear: nothing that must be read sits in
 // the top 14% (profile row) or the bottom 20% (the swipe-up furniture).
@@ -15,6 +24,12 @@ const path = require('path');
 const fs = require('fs');
 
 const OUT = path.join(__dirname, '..', 'img', 'ads');
+
+// Where the photograph sits in each frame. The scrim has to carry white
+// text at any crop, so it is heavier at the bottom than it looks.
+const SCRIM = `linear-gradient(to bottom,
+  rgba(18,34,43,.30) 0%, rgba(18,34,43,.34) 30%,
+  rgba(18,34,43,.80) 58%, rgba(18,34,43,.97) 74%, #12222B 84%)`;
 
 const MARK = `<svg class="mark" viewBox="0 0 160 160" aria-hidden="true">
   <path d="M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z" fill="#F2C14E" stroke="#F7F5F0" stroke-width="7" stroke-linejoin="round"/>
@@ -59,7 +74,7 @@ const SIZES = [
   { id: 'story-9x16', w: 1080, h: 1920, head: 104, kick: 32, sub: 46, foot: 28, pad: '270px 80px 0', floor: 494, wave: 368 },
 ];
 
-const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
+const page = (s, photo) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;1,400&display=swap">
 <style>
   :root{
@@ -73,6 +88,8 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
   *{box-sizing:border-box;margin:0;padding:0}
   body{width:${s.w}px;height:${s.h}px;background:var(--deep);color:var(--paper);
        font-family:var(--read);overflow:hidden}
+  .shot{position:absolute;inset:0;background-image:${SCRIM}, url("${photo || ''}");
+        background-size:cover, cover;background-position:center, center ${s.focus || '28%'}}
   .card{width:${s.w}px;height:${s.h}px;padding:${s.pad};display:flex;flex-direction:column;
         position:relative}
 
@@ -83,7 +100,7 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
             letter-spacing:-.01em;text-transform:uppercase}
   .where{font-weight:600;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
 
-  .body{flex:1;display:flex;flex-direction:column;justify-content:center;
+  .body{flex:1;display:flex;flex-direction:column;justify-content:${photo ? 'flex-end' : 'center'};
         padding-bottom:40px;min-height:0}
 
   /* the date, boxed, because it is the single thing the ad is selling */
@@ -105,6 +122,7 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
   .wave{position:absolute;left:0;right:0;bottom:${s.wave}px;
         width:${s.w}px;height:90px;color:var(--accent)}
 </style></head><body>
+${photo ? '<div class="shot"></div>' : ''}
 <div class="card">
   <div class="lockup">${MARK}
     <span class="name"><span class="wordmark">Soundline</span>
@@ -127,6 +145,21 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
 </body></html>`;
 
 (async () => {
+  const argv = process.argv.slice(2);
+  const i = argv.indexOf('--photo');
+  let photo = null;
+  if (i !== -1) {
+    const given = argv[i + 1];
+    if (!given) throw new Error('--photo needs a file');
+    const abs = path.resolve(given);
+    if (!fs.existsSync(abs)) throw new Error(`no such photo: ${abs}`);
+    // setContent runs on about:blank, which cannot read file:// — inline it.
+    const ext = path.extname(abs).toLowerCase();
+    const mime = { '.jpg': 'jpeg', '.jpeg': 'jpeg', '.png': 'png', '.webp': 'webp' }[ext];
+    if (!mime) throw new Error(`photo must be jpg, png or webp, not ${ext}`);
+    photo = `data:image/${mime};base64,${fs.readFileSync(abs).toString('base64')}`;
+  }
+
   fs.mkdirSync(OUT, { recursive: true });
   const browser = await chromium.launch({ args: ['--no-sandbox'] });
 
@@ -136,7 +169,7 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
       deviceScaleFactor: 1,
     });
     const p = await ctx.newPage();
-    await p.setContent(page(s), { waitUntil: 'networkidle' });
+    await p.setContent(page(s, photo), { waitUntil: 'networkidle' });
     await p.evaluate(() => document.fonts.ready);
 
     // Shrink until every authored line holds on one line, as the organic
@@ -169,7 +202,7 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
     });
     if (overflow) throw new Error(`${s.id}: ${overflow}`);
 
-    const file = path.join(OUT, `nov11-${s.id}.png`);
+    const file = path.join(OUT, `nov11-${photo ? 'photo-' : ''}${s.id}.png`);
     await p.screenshot({ path: file });
     console.log('drew', path.relative(path.join(__dirname, '..'), file), `${s.w}x${s.h}`);
     await ctx.close();
