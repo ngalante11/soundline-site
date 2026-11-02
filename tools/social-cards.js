@@ -8,6 +8,7 @@
 //   node tools/social-cards.js 1        → the November 11 information-night card
 //   node tools/social-cards.js 3 4      → phases three and four
 //   node tools/social-cards.js all      → everything
+//   node tools/social-cards.js --audit  → what the rotation actually sells
 //
 // Prints the slot schedule it expects, and refuses to run if a scheduled
 // date falls on the wrong weekday for its slot.
@@ -32,33 +33,50 @@ const WHEEL = {
 // --------------------------------------------------------------- the cards
 // track: home → Glow, public → Making, shared → Beacon. The last headline
 // line takes the track colour, as in Phase One.
+//
+// pillar: what the card actually sells. An eleven-to-fourteen-year-old needs
+// three things, and a parent of one is shopping for all three:
+//
+//   significance — the work matters to somebody besides a gradebook
+//   belonging    — they are known, by name, by the same adults, for years
+//   fun          — they want to walk in the door
+//
+// Two other values are not pillars and are capped deliberately. 'trust'
+// answers the parent's anxiety (the bus, the paperwork, the deposit, the
+// research): necessary, and it converts nobody on its own. 'event' is the
+// standing invitation. Run --audit to see the balance.
 const CARDS = {
   // ---- homeschool -------------------------------------------------------
   h3: {
     track: 'home',
+    pillar: 'trust',
     head: ["We'll keep", 'your hours log.'],
     foot: ['Course descriptions, hours, the quarterly report.',
            'The Collaborative · three days a week'],
   },
   h4: {
     track: 'home',
+    pillar: 'significance',
     head: ['A sixth grader and', 'an eighth grader,', 'same table, same skill.'],
     foot: ['Each moves on when they have got it.', 'Not in June. Not when the class catches up.'],
   },
   h5: {
     track: 'home',
+    pillar: 'significance',
     head: ['Defended out loud.', "To someone who isn't you."],
     foot: ['Every six weeks. No slides, no screen.',
            'The hard part to do at home. Here it is Wednesday.'],
   },
   h7: {
     track: 'home',
+    pillar: 'significance',
     head: ['Thursdays, they work', 'next to someone who', 'does it for a living.'],
     foot: ['Seventh and eighth grade apprenticeships.',
            'The year work stops being assignments.'],
   },
   h8: {
     track: 'home',
+    pillar: 'trust',
     head: ['Three days a week.', 'And the paperwork', 'to match.'],
     foot: ['Monday, Wednesday, Friday · 8:30 to 3:00',
            'Information night January 14.'],
@@ -67,42 +85,49 @@ const CARDS = {
   // ---- public school ----------------------------------------------------
   p1v2: {
     track: 'public',
+    pillar: 'belonging',
     head: ['Doing fine on paper.', 'Quietly checked out.'],
     foot: ['Middle school is three years. They go fast.',
            'Information night January 14.'],
   },
   p3: {
     track: 'public',
+    pillar: 'trust',
     head: ['Eleven minutes', 'in a folding chair,', 'twice a year.'],
     foot: ['An 88 does not tell you what your child can do.',
            'A folder of proof does.'],
   },
   p4: {
     track: 'public',
+    pillar: 'trust',
     head: ['Six hours on a Chromebook', 'is not a curriculum.'],
     foot: ['Taught by a person with a book, never by an app.',
            'How much screen time? Less than you would think.'],
   },
   p5: {
     track: 'public',
+    pillar: 'significance',
     head: ['Two hours of practice.', 'Four hours of making.'],
     foot: ['8:30 to 3:00 · Extended Day until 5:30',
            'Grades 6–8 · Miller Place · September 2027'],
   },
   p6: {
     track: 'public',
+    pillar: 'trust',
     head: ['None of this is new.', 'Putting it in one', 'building is.'],
     foot: ['Mastery, long projects, one close teacher.',
            'The research, with sources, is on the site.'],
   },
   p7: {
     track: 'public',
+    pillar: 'significance',
     head: ['Four minutes of work.', 'Thirty-eight of waiting.'],
     foot: ['Nobody waits here once they have got it.',
            'Grouped by skill, not age.'],
   },
   p8: {
     track: 'public',
+    pillar: 'trust',
     head: ['The bus. The IEP.', 'And sports.'],
     foot: ['The three questions asked before any of the others.',
            'All three answered on the site.'],
@@ -111,20 +136,75 @@ const CARDS = {
   // Ask stops promising a date and starts naming what is open.
   p9v2: {
     track: 'public',
+    pillar: 'trust',
     head: ['Tuition is published.', 'Founding enrollment', 'is open.'],
     foot: ['A rate that holds through twelfth grade.',
            'A seat on the Family Council.'],
   },
 
+  // ---- belonging --------------------------------------------------------
+  // Being known is a function of arithmetic and of time. Both are things we
+  // can state as fact rather than promise, which is the only way to say
+  // "your child will be known" without sounding like a brochure.
+  b1: {
+    track: 'shared',
+    pillar: 'belonging',
+    head: ['Ten to twelve', 'in a grade.', 'There is no back row.'],
+    foot: ['Nobody drifts. Nobody is a seating chart.',
+           'Four adults in the building, and they all know them.'],
+  },
+  b2: {
+    track: 'shared',
+    pillar: 'belonging',
+    head: ['The same adult,', 'September of sixth', 'to June of eighth.'],
+    foot: ['Long enough to notice when something is off.',
+           'Long enough to be believed when they say it.'],
+  },
+  b3: {
+    track: 'home',
+    pillar: 'belonging',
+    head: ['A sixth grader can be', 'the best in the room', 'at something.'],
+    foot: ['Grouped by skill, not by age.',
+           'Which means everyone is ahead at something.'],
+  },
+
+  // ---- fun --------------------------------------------------------------
+  // The hardest of the three to claim, because a school that says it is fun
+  // sounds unserious. So none of these say "fun" — they describe what it
+  // looks like from the passenger seat.
+  f1: {
+    track: 'public',
+    pillar: 'fun',
+    head: ['They tell you about it', 'in the car.'],
+    foot: ['The whole way home, without being asked.',
+           'That is the measure we actually care about.'],
+  },
+  f2: {
+    track: 'public',
+    pillar: 'fun',
+    head: ['When did school', 'get so quiet?'],
+    foot: ['Four hours of making, every afternoon.',
+           'Loud is allowed.'],
+  },
+  f3: {
+    track: 'shared',
+    pillar: 'fun',
+    head: ['Ask yours what', "they'd build,", 'given six weeks.'],
+    foot: ['Then ask where they could do that now.',
+           'Every six weeks, that is the afternoon.'],
+  },
+
   // ---- shared -----------------------------------------------------------
   s1: {
     track: 'shared',
+    pillar: 'belonging',
     head: ['“He’ll know your child', 'by Wednesday.”'],
     foot: ['Adam King · lead guide',
            'Four adults in the building. Every student known.'],
   },
   s2v2: {
     track: 'shared',
+    pillar: 'significance',
     head: ['Depth', 'with direction.'],
     sub: 'Every child has a soundline.',
     foot: ['Where they are, skill by skill —',
@@ -132,6 +212,7 @@ const CARDS = {
   },
   s3: {
     track: 'shared',
+    pillar: 'fun',
     head: ['Friday, 2:00.', 'Usually loud.'],
     foot: ['Someone presents. Something is performed.',
            'Families welcome.'],
@@ -141,6 +222,7 @@ const CARDS = {
   // generator owns, because the hour and the venue were confirmed late.
   s4nov: {
     track: 'shared',
+    pillar: 'event',
     head: ['Information night,', 'November 11.'],
     foot: ['7:00 pm · Port Jefferson Free Library',
            'Founding enrollment opens the next morning.'],
@@ -150,18 +232,21 @@ const CARDS = {
   // building gets asked before any other.
   x1escrow: {
     track: 'shared',
+    pillar: 'trust',
     head: ['We do not hold', 'your deposit.'],
     foot: ['$500, in escrow with an independent agent.',
            'Refundable in full until we sign a lease.'],
   },
   s4dec: {
     track: 'shared',
+    pillar: 'event',
     head: ['Information night,', 'December 12.'],
     foot: ['What Soundline is. What a day looks like.',
            'Free and open to all.'],
   },
   s4jan: {
     track: 'shared',
+    pillar: 'event',
     head: ['Information night,', 'January 14.'],
     foot: ['What Soundline is. What a day looks like.',
            'Free and open to all.'],
@@ -182,8 +267,8 @@ const SCHEDULE = {
   2: { window: 'Nov 12 – Nov 30 · open', slots: [
     ['2026-11-13', 'place',     's2v2'],
     ['2026-11-15', 'ask',       'p9v2'],
-    ['2026-11-16', 'mechanism', 'h3'],
-    ['2026-11-18', 'mirror',    'p3'],
+    ['2026-11-16', 'mechanism', 'b1'],
+    ['2026-11-18', 'mirror',    'f1'],
     ['2026-11-20', 'place',     'x1escrow'],
     ['2026-11-22', 'ask',       's4dec'],
     ['2026-11-23', 'mechanism', 'p8'],
@@ -196,8 +281,8 @@ const SCHEDULE = {
     ['2026-12-02', 'mirror',    'p7'],
     ['2026-12-04', 'place',     's3'],
     ['2026-12-06', 'ask',       's4dec'],
-    ['2026-12-07', 'mechanism', 'h4'],
-    ['2026-12-09', 'mirror',    'p3'],
+    ['2026-12-07', 'mechanism', 'b2'],
+    ['2026-12-09', 'mirror',    'f3'],
     ['2026-12-11', 'place',     'h7'],
   ]},
   4: { window: 'Jan 2 – Jan 14 · the switch window', slots: [
@@ -206,8 +291,8 @@ const SCHEDULE = {
     ['2027-01-06', 'mirror',    'p1v2'],
     ['2027-01-08', 'place',     's2v2'],
     ['2027-01-10', 'ask',       'h8'],
-    ['2027-01-11', 'mechanism', 'p8'],
-    ['2027-01-13', 'mirror',    'p7'],
+    ['2027-01-11', 'mechanism', 'b3'],
+    ['2027-01-13', 'mirror',    'f2'],
   ]},
 };
 
@@ -321,8 +406,54 @@ function check(phases) {
   }
 }
 
+// What a phase sells, counted off the wheel rather than off the deck: a card
+// scheduled twice argues twice, and a card nobody scheduled argues nothing.
+// Trust is capped because it answers the parent's anxiety and converts no
+// one on its own, and because it is the easiest kind of card to keep writing.
+function audit() {
+  const PILLARS = ['significance', 'belonging', 'fun', 'trust', 'event'];
+  const warn = [];
+  const total = Object.fromEntries(PILLARS.map((k) => [k, 0]));
+
+  for (const n of [1, 2, 3, 4]) {
+    const runs = SCHEDULE[n].slots.map((s) => CARDS[s[2]].pillar);
+    const by = Object.fromEntries(PILLARS.map((k) =>
+      [k, runs.filter((r) => r === k).length]));
+    PILLARS.forEach((k) => { total[k] += by[k]; });
+
+    console.log(`\nPhase ${n} · ${SCHEDULE[n].window}  (${runs.length} posts)`);
+    for (const k of PILLARS) {
+      if (!by[k] && k === 'event') continue;
+      const share = runs.length ? Math.round((by[k] / runs.length) * 100) : 0;
+      console.log(`  ${k.padEnd(13)} ${String(by[k]).padStart(2)}  ${'█'.repeat(by[k])}${by[k] ? ' ' : ''}${share}%`);
+    }
+    if (n > 1) {
+      for (const k of ['belonging', 'fun']) {
+        if (!by[k]) warn.push(`phase ${n} argues ${k} nowhere`);
+      }
+      if (by.trust > by.significance + by.belonging + by.fun) {
+        warn.push(`phase ${n} is more reassurance than offer`);
+      }
+    }
+  }
+
+  const runs = Object.values(total).reduce((a, b) => a + b, 0);
+  console.log(`\nAcross the rotation · ${runs} posts`);
+  for (const k of PILLARS) {
+    console.log(`  ${k.padEnd(13)} ${String(total[k]).padStart(2)}  ${Math.round((total[k] / runs) * 100)}%`);
+  }
+
+  const unused = Object.keys(CARDS).filter((id) =>
+    ![1, 2, 3, 4].some((n) => SCHEDULE[n].slots.some((s) => s[2] === id)));
+  if (unused.length) console.log(`\nDrawn but not scheduled: ${unused.join(', ')}`);
+  if (warn.length) console.log('\nThin:\n  ' + warn.join('\n  '));
+}
+
 (async () => {
-  const phases = resolve(process.argv.slice(2));
+  const argv = process.argv.slice(2);
+  if (argv.includes('--audit')) { audit(); return; }
+
+  const phases = resolve(argv);
   check(phases);
 
   const needed = [...new Set(phases.flatMap((p) => SCHEDULE[p].slots.map((s) => s[2])))];

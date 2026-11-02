@@ -37,11 +37,15 @@ const WAVE = `<svg class="wave" viewBox="0 0 1080 90" preserveAspectRatio="none"
 // tuition is what sets us apart from other schools, but to a cold parent it
 // reads as a pitch, so price and logistics sit in the footing as
 // reassurance rather than leading.
+//
+// The venue is logistics, not identity. It stays in the footing with the
+// rest of the practical detail — put in the line under the headline it
+// reads as an advertisement for the library.
 const COPY = {
-  kicker: 'Wednesday, November 11 · 7:00 pm',
+  kicker: 'Information night · Wednesday, November 11 · 7:00 pm',
   head: ['They matter.', 'They belong.', 'They want to be here.'],
-  sub: 'Port Jefferson Free Library',
-  foot: ['Free · no sign-up · about an hour',
+  sub: 'A new middle school, opening in Miller Place.',
+  foot: ['Port Jefferson Free Library · free · no sign-up',
          'Grades 6–8 · opening September 2027'],
 };
 
