@@ -6,6 +6,7 @@
 // crop itself.
 //
 //   node tools/ads-nov11.js                  → type-only, three sizes
+//   NIGHT=dec12 node tools/ads-nov11.js      → the December 12 session
 //   node tools/ads-nov11.js --photo <file>   → the same three over a photo
 //
 // Paid is not organic. A type-only card works in the feed of someone who
@@ -25,11 +26,13 @@ const fs = require('fs');
 
 const OUT = path.join(__dirname, '..', 'img', 'ads');
 
-// Where the photograph sits in each frame. The scrim has to carry white
-// text at any crop, so it is heavier at the bottom than it looks.
-const SCRIM = `linear-gradient(to bottom,
-  rgba(18,34,43,.30) 0%, rgba(18,34,43,.34) 30%,
-  rgba(18,34,43,.80) 58%, rgba(18,34,43,.97) 74%, #12222B 84%)`;
+// The photograph takes a band across the top and the type sits under it on
+// solid ground. Full-bleed put the figures behind the headline: in the
+// shoreline shot they fall in the lower third of the frame, which is exactly
+// where the words are. A band crops to them and keeps both legible.
+const BAND = `linear-gradient(to bottom,
+  rgba(18,34,43,.20) 0%, rgba(18,34,43,.16) 46%,
+  rgba(18,34,43,.62) 76%, rgba(18,34,43,.95) 93%, #12222B 100%)`;
 
 const MARK = `<svg class="mark" viewBox="0 0 160 160" aria-hidden="true">
   <path d="M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z" fill="#F2C14E" stroke="#F7F5F0" stroke-width="7" stroke-linejoin="round"/>
@@ -56,8 +59,13 @@ const WAVE = `<svg class="wave" viewBox="0 0 1080 90" preserveAspectRatio="none"
 // The venue is logistics, not identity. It stays in the footing with the
 // rest of the practical detail — put in the line under the headline it
 // reads as an advertisement for the library.
+const NIGHTS = {
+  nov11: 'Information night · Wednesday, November 11 · 7:00 pm',
+  dec12: 'Information night · Saturday, December 12',
+};
+
 const COPY = {
-  kicker: 'Information night · Wednesday, November 11 · 7:00 pm',
+  kicker: NIGHTS[process.env.NIGHT || 'nov11'],
   head: ['They matter.', 'They belong.', 'They want to be here.'],
   sub: 'A new middle school, opening in Miller Place.',
   foot: ['Port Jefferson Free Library · free · no sign-up',
@@ -69,9 +77,9 @@ const COPY = {
 // rides. In Stories both clear Meta's bottom furniture, and the wave sits
 // below the footing rather than through it.
 const SIZES = [
-  { id: 'feed-4x5',   w: 1080, h: 1350, head: 92,  kick: 29, sub: 40, foot: 26, pad: '78px 80px 0',  floor: 74,  wave: -16 },
-  { id: 'feed-1x1',   w: 1080, h: 1080, head: 80,  kick: 27, sub: 34, foot: 24, pad: '62px 80px 0',  floor: 74,  wave: -16 },
-  { id: 'story-9x16', w: 1080, h: 1920, head: 104, kick: 32, sub: 46, foot: 28, pad: '270px 80px 0', floor: 494, wave: 368 },
+  { id: 'feed-4x5',   w: 1080, h: 1350, head: 92,  kick: 29, sub: 40, foot: 26, pad: '78px 80px 0',  floor: 74,  wave: -16, band: 46 },
+  { id: 'feed-1x1',   w: 1080, h: 1080, head: 80,  kick: 27, sub: 34, foot: 24, pad: '62px 80px 0',  floor: 74,  wave: -16, band: 38 },
+  { id: 'story-9x16', w: 1080, h: 1920, head: 104, kick: 32, sub: 46, foot: 28, pad: '270px 80px 0', floor: 494, wave: 368, band: 44 },
 ];
 
 const page = (s, photo) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -88,8 +96,9 @@ const page = (s, photo) => `<!doctype html><html lang="en"><head><meta charset="
   *{box-sizing:border-box;margin:0;padding:0}
   body{width:${s.w}px;height:${s.h}px;background:var(--deep);color:var(--paper);
        font-family:var(--read);overflow:hidden}
-  .shot{position:absolute;inset:0;background-image:${SCRIM}, url("${photo || ''}");
-        background-size:cover, cover;background-position:center, center ${s.focus || '28%'}}
+  .shot{position:absolute;left:0;right:0;top:0;height:${s.band}%;
+        background-image:${BAND}, url("${photo || ''}");
+        background-size:cover, cover;background-position:center, center 84%}
   .card{width:${s.w}px;height:${s.h}px;padding:${s.pad};display:flex;flex-direction:column;
         position:relative}
 
@@ -202,7 +211,7 @@ ${photo ? '<div class="shot"></div>' : ''}
     });
     if (overflow) throw new Error(`${s.id}: ${overflow}`);
 
-    const file = path.join(OUT, `nov11-${photo ? 'photo-' : ''}${s.id}.png`);
+    const file = path.join(OUT, `${process.env.NIGHT || 'nov11'}-${photo ? 'photo-' : ''}${s.id}.png`);
     await p.screenshot({ path: file });
     console.log('drew', path.relative(path.join(__dirname, '..'), file), `${s.w}x${s.h}`);
     await ctx.close();
