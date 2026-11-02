@@ -31,9 +31,15 @@ const WAVE = `<svg class="wave" viewBox="0 0 1080 90" preserveAspectRatio="none"
 // The event is the offer, so the date carries the weight a headline usually
 // carries and the hook sits under it. Beacon throughout: this is a shared
 // card, it has to work for a homeschooling parent and a public-school one.
+//
+// The headline sells the three things a middle schooler needs and a parent
+// of one is actually shopping for: significance, belonging, fun. Publishing
+// tuition is what sets us apart from other schools, but to a cold parent it
+// reads as a pitch, so price and logistics sit in the footing as
+// reassurance rather than leading.
 const COPY = {
   kicker: 'Wednesday, November 11 · 7:00 pm',
-  head: ['A new middle', 'school, and the', 'number it costs.'],
+  head: ['They matter.', 'They belong.', 'They want to be here.'],
   sub: 'Port Jefferson Free Library',
   foot: ['Free · no sign-up · about an hour',
          'Grades 6–8 · opening September 2027'],
@@ -82,7 +88,7 @@ const page = (s) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
           color:var(--deep);background:var(--beacon);padding:14px 20px 15px;margin-bottom:34px}
   h1{font-family:var(--shout);font-weight:800;letter-spacing:-.04em;line-height:.96;
      font-size:${s.head}px}
-  h1 span{display:block}
+  h1 span{display:block;white-space:nowrap}
   h1 span:last-child{color:var(--accent)}
   .sub{font-family:var(--reassure);font-style:italic;font-size:${s.sub}px;line-height:1.3;
        color:rgba(247,245,240,.82);margin-top:28px;max-width:22ch}
