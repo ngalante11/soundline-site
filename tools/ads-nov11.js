@@ -34,6 +34,10 @@ const BAND = `linear-gradient(to bottom,
   rgba(18,34,43,.20) 0%, rgba(18,34,43,.16) 46%,
   rgba(18,34,43,.62) 76%, rgba(18,34,43,.95) 93%, #12222B 100%)`;
 
+const SIDE = `linear-gradient(to right,
+  #12222B 0%, rgba(18,34,43,.97) 38%, rgba(18,34,43,.72) 56%,
+  rgba(18,34,43,.26) 78%, rgba(18,34,43,.18) 100%)`;
+
 const MARK = `<svg class="mark" viewBox="0 0 160 160" aria-hidden="true">
   <path d="M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z" fill="#F2C14E" stroke="#F7F5F0" stroke-width="7" stroke-linejoin="round"/>
   <path d="M44 24 L52 32 M116 24 L108 32 M80 6 V12" stroke="#F7F5F0" stroke-width="6" stroke-linecap="round"/>
@@ -79,6 +83,7 @@ const COPY = {
 const SIZES = [
   { id: 'feed-4x5',   w: 1080, h: 1350, head: 92,  kick: 29, sub: 40, foot: 26, pad: '78px 80px 0',  floor: 74,  wave: -16, band: 46 },
   { id: 'feed-1x1',   w: 1080, h: 1080, head: 80,  kick: 27, sub: 34, foot: 24, pad: '62px 80px 0',  floor: 74,  wave: -16, band: 38 },
+  { id: 'wide-1.91x1', w: 1200, h: 628,  head: 42, kick: 16, sub: 20, foot: 14, pad: '30px 38px 0', floor: 30, wave: null, band: 100, wide: true },
   { id: 'story-9x16', w: 1080, h: 1920, head: 104, kick: 32, sub: 46, foot: 28, pad: '270px 80px 0', floor: 494, wave: 368, band: 44 },
 ];
 
@@ -99,10 +104,21 @@ const page = (s, photo) => `<!doctype html><html lang="en"><head><meta charset="
   .shot{position:absolute;left:0;right:0;top:0;height:${s.band}%;
         background-image:${BAND}, url("${photo || ''}");
         background-size:cover, cover;background-position:center, center 84%}
+  .wide .shot{inset:0;height:100%;
+        background-image:${SIDE}, url("${photo || ''}");
+        background-position:center, 72% 78%}
   .card{width:${s.w}px;height:${s.h}px;padding:${s.pad};display:flex;flex-direction:column;
         position:relative}
 
   .lockup{display:flex;align-items:center;gap:20px;flex:none}
+  .wide .card{padding:${s.pad}}
+  .wide .mark{width:38px;height:38px}
+  .wide .wordmark{font-size:21px}
+  .wide .where{font-size:11px}
+  .wide .body,.wide .plate{max-width:60%}
+  .wide .kicker{margin-bottom:18px;padding:9px 13px 10px}
+  .wide .sub{margin-top:14px}
+  .wide .hair{margin-bottom:14px}
   .mark{width:58px;height:58px;flex:none}
   .name{display:flex;flex-direction:column;gap:6px}
   .wordmark{font-family:var(--shout);font-weight:800;font-size:31px;line-height:1;
@@ -130,17 +146,17 @@ const page = (s, photo) => `<!doctype html><html lang="en"><head><meta charset="
   .url{font-weight:700;font-size:${s.foot}px;white-space:nowrap}
   .wave{position:absolute;left:0;right:0;bottom:${s.wave}px;
         width:${s.w}px;height:90px;color:var(--accent)}
-</style></head><body>
+</style></head><body class="${s.wide ? 'wide' : ''}">
 ${photo ? '<div class="shot"></div>' : ''}
 <div class="card">
   <div class="lockup">${MARK}
     <span class="name"><span class="wordmark">Soundline</span>
-    <span class="where">School · Miller Place, NY</span></span>
+    <span class="where">Miller Place, NY</span></span>
   </div>
   <div class="body">
     <span class="kicker">${COPY.kicker}</span>
     <h1 id="head">${COPY.head.map((l) => `<span>${l}</span>`).join('')}</h1>
-    <p class="sub">${COPY.sub}</p>
+    ${s.wide ? '' : `<p class="sub">${COPY.sub}</p>`}
   </div>
   <div class="plate">
     <div class="hair"></div>
@@ -149,7 +165,7 @@ ${photo ? '<div class="shot"></div>' : ''}
       <span class="url">soundlineschool.com</span>
     </div>
   </div>
-  ${WAVE}
+  ${s.wave === null ? '' : WAVE}
 </div>
 </body></html>`;
 
@@ -205,8 +221,11 @@ ${photo ? '<div class="shot"></div>' : ''}
       const b = document.querySelector('.body');
       ok.push(b.scrollHeight <= b.clientHeight + 1);
       // .plate's rect includes its bottom padding, so measure the type.
-      const wave = document.querySelector('.wave').getBoundingClientRect();
-      ok.push(wave.top >= document.querySelector('.foot-row').getBoundingClientRect().bottom - 1);
+      var waveEl = document.querySelector('.wave');
+      if (waveEl) {
+        var wave = waveEl.getBoundingClientRect();
+        ok.push(wave.top >= document.querySelector('.foot-row').getBoundingClientRect().bottom - 1);
+      }
       return ok.every(Boolean) ? null : 'copy does not fit the frame';
     });
     if (overflow) throw new Error(`${s.id}: ${overflow}`);
