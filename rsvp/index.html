@@ -142,6 +142,7 @@
         <p>The number reaches you on the morning of Thursday, November 12. If a Wednesday evening does turn out to be possible, come anyway — nothing needs changing.</p>
         <a class="btn survey" href="/soundline-school-information.pdf">Download the informational packet</a>
         <p class="note">Questions in the meantime? Write to <a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a>. If we don't know, we'll find out and tell you.</p>
+      <p class="note"><a href="#" id="reopen">Need to send it again?</a></p>
       </div>
     </div>
   </section>
@@ -223,9 +224,30 @@
     try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
   }
 
+  // Once a family has confirmed, the form is finished business. Leaving it
+  // on the page puts a half-scrolled questionnaire directly above the words
+  // "you're on the list", which reads as though nothing was received.
+  var reopen = document.getElementById('reopen');
+  if (reopen) {
+    reopen.addEventListener('click', function (e) {
+      e.preventDefault();
+      try { window.localStorage.removeItem(KEY); } catch (err) {}
+      thanks.hidden = true;
+      sent.hidden = false;
+      var f = document.querySelector('.form-frame');
+      var fb = document.querySelector('.fallback');
+      if (f) { f.hidden = false; f.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (fb) fb.hidden = false;
+    });
+  }
+
   function reveal() {
     sent.hidden = true;
     thanks.hidden = false;
+    var frame = document.querySelector('.form-frame');
+    var fallback = document.querySelector('.fallback');
+    if (frame) frame.hidden = true;
+    if (fallback) fallback.hidden = true;
   }
 
   if (formUrl && already()) reveal();
