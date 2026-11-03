@@ -6,6 +6,9 @@
 # plans, call scripts and draft copy, not pages for families to read.
 exclude:
   - _internal
+  - reports
+  - research_notes
+  - OUTREACH-SGO.md
   - print
   - tools
   - README.md
