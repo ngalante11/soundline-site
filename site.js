@@ -8,34 +8,18 @@ var SURVEY_URL = "https://soundlineschool.com/survey/";
   }
 })();
 
-/* rev. 10: the fathom rail — a depth map of the page. Ticks are sections; the lead is where you are. */
+/* rev. 11: the sticky survey bar steps aside while any other survey button is on screen,
+   so a phone never shows two yellow pills at once. Without IntersectionObserver the bar simply stays. */
 (function(){
-  if (!window.matchMedia || !matchMedia('(min-width:66rem)').matches) return;
-  var secs = document.querySelectorAll('[data-fathom]'); if (!secs.length) return;
-  var rail = document.createElement('div'); rail.className = 'fathom'; rail.setAttribute('aria-hidden','true');
-  var lead = document.createElement('div'); lead.className = 'lead';
-  var fm = document.createElement('div'); fm.className = 'fm';
-  rail.appendChild(lead); rail.appendChild(fm); document.body.appendChild(rail);
-  var ticks = [];
-  function layout(){
-    var H = rail.clientHeight, docH = document.documentElement.scrollHeight - innerHeight; if (docH <= 0) docH = 1;
-    rail.querySelectorAll('.tick').forEach(function(t){ t.remove(); }); ticks = [];
-    secs.forEach(function(s){
-      var y = s.getBoundingClientRect().top + scrollY; var p = Math.min(1, y / docH);
-      var t = document.createElement('div'); t.className = 'tick'; t.style.top = (p * H) + 'px';
-      var a = document.createElement('a'); a.href = '#' + (s.id || ''); a.textContent = s.getAttribute('data-fathom');
-      a.addEventListener('click', function(e){ e.preventDefault(); s.scrollIntoView({behavior:'smooth'}); });
-      t.appendChild(a); rail.appendChild(t); ticks.push({el:t, y:y});
-    });
-    move();
-  }
-  function move(){
-    var docH = document.documentElement.scrollHeight - innerHeight; if (docH <= 0) docH = 1;
-    var p = Math.min(1, scrollY / docH); lead.style.top = (p * rail.clientHeight) + 'px';
-    fm.style.top = (p * rail.clientHeight) + 'px'; fm.textContent = (p * 10).toFixed(1) + ' fm';
-    ticks.forEach(function(t){ t.el.classList.toggle('near', Math.abs(t.y - scrollY) < innerHeight * .5); });
-  }
-  addEventListener('scroll', move, {passive:true}); addEventListener('resize', layout); addEventListener('load', layout); layout();
+  var bar = document.querySelector('.sticky-cta'); if (!bar || !('IntersectionObserver' in window)) return;
+  var others = Array.prototype.filter.call(document.querySelectorAll('a.survey'), function(a){ return !bar.contains(a); });
+  if (!others.length) return;
+  var seen = new Set();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+    bar.classList.toggle('off', seen.size > 0);
+  }, {threshold: .6});
+  others.forEach(function(a){ io.observe(a); });
 })();
 
 /* Measurement. Nothing loads and nothing is sent until ANALYTICS_DOMAIN is set below.
