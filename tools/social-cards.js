@@ -78,7 +78,7 @@ const CARDS = {
     track: 'home',
     pillar: 'trust',
     head: ['Three days a week.', 'And the paperwork', 'to match.'],
-    foot: ['Monday, Wednesday, Friday · 8:30 to 3:00',
+    foot: ['Mon and Wed 9:15 to 12:30 · Fri 9:15 to 2:45',
            'Information night January 14.'],
   },
 
