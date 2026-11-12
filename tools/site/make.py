@@ -52,7 +52,8 @@ def text(s):
 
 
 def faq_ld(page):
-    qa = re.findall(r'<details[^>]*>\s*<summary[^>]*>(.*?)</summary>\s*<p[^>]*>(.*?)</p>', page, re.S)
+    # the question must not run past its own </summary> (the phone menu is a <details> too)
+    qa = re.findall(r'<details[^>]*>\s*<summary[^>]*>((?:(?!</summary>).)*)</summary>\s*<p[^>]*>(.*?)</p>', page, re.S)
     if not qa:
         return ''
     return ld({'@context': 'https://schema.org', '@type': 'FAQPage',
