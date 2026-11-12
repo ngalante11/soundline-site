@@ -8,11 +8,12 @@ var SURVEY_URL = "https://soundlineschool.com/survey/";
   }
 })();
 
-/* rev. 11: the sticky survey bar steps aside while any other survey button is on screen,
+/* Nov 12: the one action is "Ask for a call" (a.btn.call, a mailto with the questions filled in).
+   rev. 11: the sticky bar steps aside while any other action button is on screen,
    so a phone never shows two yellow pills at once. Without IntersectionObserver the bar simply stays. */
 (function(){
   var bar = document.querySelector('.sticky-cta'); if (!bar || !('IntersectionObserver' in window)) return;
-  var others = Array.prototype.filter.call(document.querySelectorAll('a.survey'), function(a){ return !bar.contains(a); });
+  var others = Array.prototype.filter.call(document.querySelectorAll('a.btn.call, a.btn.survey'), function(a){ return !bar.contains(a); });
   if (!others.length) return;
   var seen = new Set();
   var io = new IntersectionObserver(function(entries){
@@ -50,7 +51,8 @@ var ANALYTICS_DOMAIN = "";
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
     if (!a || !a.getAttribute) return;
     var href = a.getAttribute('href') || '';
-    if (a.classList.contains('survey') || /\/survey\/?$/.test(href))      goal('Survey start', {from: page()});
+    if (a.classList.contains('call'))                                      goal('Call request', {from: page()});
+    else if (a.classList.contains('survey') || /\/survey\/?$/.test(href)) goal('Survey start', {from: page()});
     else if (/\.pdf($|\?)/.test(href))                                     goal('Packet download', {from: page()});
     else if (/^mailto:/.test(href))                                        goal('Email us', {from: page()});
   }, true);
