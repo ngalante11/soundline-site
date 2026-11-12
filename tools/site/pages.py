@@ -157,7 +157,7 @@ def admissions():
              + scard(SHALLOWS, 'The Collaborative', 'Three days a week, for homeschooling families', ('$810', '$9,720 a year'), ('$900', '$10,800 a year'))
              + '</div>\n')
     details = [('What’s included', 'Everything in the day: the two hours of practice, the four hours of making, the Quest, the arts, Showcase Friday. There is no materials fee on top of tuition.'),
-               ('Extended Day', 'Until 5:30, priced separately. Founding Families pay 10% less for it too.'),
+               ('Extended Day', '3:00 to 5:30, for five-day students. $330 a month over twelve months; Founding Families pay $297. You pay it only if you use it.'),
                ('Two kids', '10% off the second.'),
                ('Class size', 'Ten to twelve students in a grade, three grades, and one advisor for three years.'),
                ('Paying in full', 'Pay the year by March 1 and take 3% off, on top of the founding rate.'),
