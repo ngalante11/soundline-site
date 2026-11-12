@@ -34,6 +34,7 @@ Six tabs. Three you write in daily, two you write in weekly, one you read.
 | **Sources** | One row per institution (library, dance studio, Facebook group, PTA, co-op). The one specific ask, when it was made, the answer, and how many families it produced. | Thursday, ask day (§3). |
 | **Events** | Information nights, Saturday builds, scholarship talks. Who came, how many conversations it booked. | The night of. |
 | **Scoreboard** | Reads everything above. Nothing is typed here except the blue targets. | Monday, read only. |
+| **Next steps** | One dated row per task, with an owner, from today to the busing forms in March. Tick Done; late rows turn red; filter by owner for one person's list. The counts at the top are the Monday agenda. | Monday, and whenever a task is done. |
 | **Lists** | The dropdown values. Edit here to add a stage, a source kind or an owner. | Rarely. |
 
 Two rows marked "Example parent (delete this row)" show the format. Delete them once the first real family is in.
