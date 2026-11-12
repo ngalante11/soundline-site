@@ -1,6 +1,7 @@
 """Build the family-facing pages.   python3 tools/site/make.py   (run from anywhere)
 
-core.py   tokens, the header and footer, shared pieces, and Home
+core.py   tokens, the header and footer, shared pieces
+plain.py  Home
 pages.py  A day here, Tuition and admissions, Our vision, About us, The Collaborative, the federal scholarship
 make.py   writes them to the repo root, moves the old addresses, puts the new header and footer on the
           research and survey pages, and writes sitemap.xml and robots.txt
@@ -9,23 +10,23 @@ The pages carry their layout inline; premium.css holds the rest. Edit the copy i
 """
 import os, re, json, html as H, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import core, pages
+import core, pages, plain
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 SITE = 'https://soundlineschool.com/'
 WHERE = 'a private middle school for grades 6–8 on Long Island’s North Shore, opening September 2027'
 
 PAGES = [
-    ('index.html', '', core.home,
-     'Soundline School is ' + WHERE + '. Two hours of practice, four hours of making, ten to twelve in a grade. Tuition is published and founding enrollment is open.'),
+    ('index.html', '', plain.home_plain,
+     'Soundline School is a new private middle school for grades 6–8 on Long Island’s North Shore, opening September 2027. It is not school as usual: every child works at their own level, builds real projects, and is known by every adult.'),
     ('day.html', 'day.html', pages.day,
-     'A school day at Soundline, 8:30 to 3:00: two hours of practice by skill, four hours of making, and one seventh grader’s Tuesday followed hour by hour.'),
+     'A school day at Soundline School, 8:30 to 3:00: two hours of math, reading and writing at each child’s level, then classes, labs and projects. Follow one seventh grader through a Tuesday.'),
     ('join.html', 'join.html', pages.admissions,
      'Tuition for 2027–28 and how to join Soundline School, ' + WHERE + '. Five days $1,500 a month, founding families $1,350. No application fee.'),
     ('vision.html', 'vision.html', pages.vision,
-     'What a Soundline student can do by eighth grade, how families will know it is working, and the research behind each part of the day.'),
+     'Six things a Soundline School student can do by the end of eighth grade, how parents will know it is working, and the research behind each part of the day.'),
     ('about.html', 'about.html', pages.about,
-     'Who is building Soundline School, where the name comes from, and how ten to twelve in a grade with one advisor for three years works.'),
+     'The people starting Soundline School, where the name comes from, and why there are ten to twelve students in a grade with one adult who stays for three years.'),
     ('collaborative.html', 'collaborative.html', pages.collaborative,
      'The Collaborative is Soundline three days a week for homeschooling families on Long Island’s North Shore: Monday, Wednesday and Friday, with the paperwork your district reads.'),
     ('scholarship.html', 'scholarship.html', pages.scholarship,
