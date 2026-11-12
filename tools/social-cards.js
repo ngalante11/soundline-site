@@ -63,31 +63,31 @@ const CARDS = {
   h5: {
     track: 'home',
     pillar: 'significance',
-    head: ['Defended out loud.', "To someone who isn't you."],
-    foot: ['Every six weeks. No slides, no screen.',
-           'The hard part to do at home. Here it is Wednesday.'],
+    head: ['They explain their work', 'out loud. To someone', "who isn't you."],
+    foot: ['Every six weeks. No slides.',
+           'It is hard to do at home. Here it is part of school.'],
   },
   h7: {
     track: 'home',
     pillar: 'significance',
     head: ['Thursdays, they work', 'next to someone who', 'does it for a living.'],
     foot: ['Seventh and eighth grade apprenticeships.',
-           'The year work stops being assignments.'],
+           'Real work, beside a real adult, in their own town.'],
   },
   h8: {
     track: 'home',
     pillar: 'trust',
-    head: ['Three days a week.', 'And the paperwork', 'to match.'],
+    head: ['Homeschooling?', 'Come three days', 'a week.'],
     foot: ['Mon and Wed 9:15 to 12:30 · Fri 9:15 to 2:45',
-           'Information night January 14.'],
+           'We hand you the paperwork for your district.'],
   },
 
   // ---- public school ----------------------------------------------------
   p1v2: {
     track: 'public',
     pillar: 'belonging',
-    head: ['Doing fine on paper.', 'Quietly checked out.'],
-    foot: ['Middle school is three years. They go fast.',
+    head: ['Doing fine.', 'And that’s all.'],
+    foot: ['Good grades, no spark. Middle school goes fast.',
            'Information night January 14.'],
   },
   p3: {
@@ -107,39 +107,39 @@ const CARDS = {
   p5: {
     track: 'public',
     pillar: 'significance',
-    head: ['Two hours of practice.', 'Four hours of making.'],
-    foot: ['8:30 to 3:00 · Extended Day until 5:30',
-           'Grades 6–8 · Miller Place · September 2027'],
+    head: ['Mornings: math,', 'reading and writing.', 'Then classes, labs', 'and real projects.'],
+    foot: ['School is 8:30 to 3:00. After school until 5:30.',
+           'Grades 6–8 · North Shore · September 2027'],
   },
   p6: {
     track: 'public',
     pillar: 'trust',
-    head: ['None of this is new.', 'Putting it in one', 'building is.'],
-    foot: ['Mastery, long projects, one close teacher.',
-           'The research, with sources, is on the site.'],
+    head: ['Each part has been', 'studied for decades.', 'One school is new.'],
+    foot: ['Moving on when you have it. Long projects. One close teacher.',
+           'The research, with sources, is on our site.'],
   },
   p7: {
     track: 'public',
     pillar: 'significance',
     head: ['Four minutes of work.', 'Thirty-eight of waiting.'],
-    foot: ['Nobody waits here once they have got it.',
-           'Grouped by skill, not age.'],
+    foot: ['Here, a kid who is ready moves on.',
+           'Each child works at their own level.'],
   },
   p8: {
     track: 'public',
     pillar: 'trust',
     head: ['The bus. The IEP.', 'And sports.'],
-    foot: ['The three questions asked before any of the others.',
-           'All three answered on the site.'],
+    foot: ['Three questions every parent asks first.',
+           'All three are answered on our site.'],
   },
   // Phase two onward: tuition is published and enrollment is live, so the
   // Ask stops promising a date and starts naming what is open.
   p9v2: {
     track: 'public',
     pillar: 'trust',
-    head: ['Tuition is published.', 'Founding enrollment', 'is open.'],
-    foot: ['A rate that holds through twelfth grade.',
-           'A seat on the Family Council.'],
+    head: ['Tuition is published.', 'Sign-up is open.'],
+    foot: ['Our first families pay less,',
+           'and keep that price through twelfth grade.'],
   },
 
   // ---- belonging --------------------------------------------------------
@@ -150,8 +150,8 @@ const CARDS = {
     track: 'shared',
     pillar: 'belonging',
     head: ['Ten to twelve', 'in a grade.', 'There is no back row.'],
-    foot: ['Nobody drifts. Nobody is a seating chart.',
-           'Four adults in the building, and they all know them.'],
+    foot: ['No child gets overlooked.',
+           'Every adult in the building knows your kid.'],
   },
   b2: {
     track: 'shared',
@@ -164,8 +164,8 @@ const CARDS = {
     track: 'home',
     pillar: 'belonging',
     head: ['A sixth grader can be', 'the best in the room', 'at something.'],
-    foot: ['Grouped by skill, not by age.',
-           'Which means everyone is ahead at something.'],
+    foot: ['Each child works at their own level,',
+           'so everyone is ahead at something.'],
   },
 
   // ---- fun --------------------------------------------------------------
@@ -177,13 +177,13 @@ const CARDS = {
     pillar: 'fun',
     head: ['They tell you about it', 'in the car.'],
     foot: ['The whole way home, without being asked.',
-           'That is the measure we actually care about.'],
+           'That is how you know school is working.'],
   },
   f2: {
     track: 'public',
     pillar: 'fun',
     head: ['When did school', 'get so quiet?'],
-    foot: ['Four hours of making, every afternoon.',
+    foot: ['Here, kids build things all afternoon.',
            'Loud is allowed.'],
   },
   f3: {
@@ -191,7 +191,40 @@ const CARDS = {
     pillar: 'fun',
     head: ['Ask yours what', "they'd build,", 'given six weeks.'],
     foot: ['Then ask where they could do that now.',
-           'Every six weeks, that is the afternoon.'],
+           'Here, every student finishes a project every six weeks.'],
+  },
+
+  // ---- the plain-language message (12 Nov 2026) --------------------------
+  // What the site now says first: it is a school, it is new, and it is not
+  // school as usual. "School as usual" is aimed at the model, never at a
+  // school or a district.
+  n1: {
+    track: 'shared',
+    pillar: 'significance',
+    head: ['A new middle school.', 'Not school as usual.'],
+    foot: ['Soundline School · grades 6, 7 and 8',
+           'Opening September 2027'],
+  },
+  n2: {
+    track: 'public',
+    pillar: 'belonging',
+    head: ['You know your kid.', 'School should too.'],
+    foot: ['Ten to twelve students in a grade.',
+           'Every adult knows your kid.'],
+  },
+  n3: {
+    track: 'shared',
+    pillar: 'significance',
+    head: ['Nobody knows what', 'work will look like', 'when they are thirty.'],
+    foot: ['So we teach what will matter no matter what:',
+           'learn hard things, make things, explain them out loud.'],
+  },
+  n4: {
+    track: 'shared',
+    pillar: 'trust',
+    head: ['Is your child younger?', 'We will call you', 'when it is their turn.'],
+    foot: ['Sign-up for September 2028 opens in August 2027.',
+           'Ask for a reminder call on our site.'],
   },
 
   // ---- shared -----------------------------------------------------------
@@ -199,8 +232,8 @@ const CARDS = {
     track: 'shared',
     pillar: 'belonging',
     head: ['“He’ll know your child', 'by Wednesday.”'],
-    foot: ['Adam King · lead guide',
-           'Four adults in the building. Every student known.'],
+    foot: ['Adam King, lead guide (our word for teacher)',
+           'Every adult here knows your kid.'],
   },
   s2v2: {
     track: 'shared',
@@ -214,8 +247,8 @@ const CARDS = {
     track: 'shared',
     pillar: 'fun',
     head: ['Friday, 2:00.', 'Usually loud.'],
-    foot: ['Someone presents. Something is performed.',
-           'Families welcome.'],
+    foot: ['Every Friday, students show their work.',
+           'Families are welcome.'],
   },
   // The night itself. Phase One art (img/social/01..09) predates this
   // generator and is not redrawn here; this is the one Phase One card the
@@ -234,8 +267,8 @@ const CARDS = {
     track: 'shared',
     pillar: 'trust',
     head: ['We do not hold', 'your deposit.'],
-    foot: ['$500, in escrow with an independent agent.',
-           'Refundable in full until we sign a lease.'],
+    foot: ['$500 holds a seat. An independent agent keeps it.',
+           'You get all of it back until we sign a lease.'],
   },
   s4dec: {
     track: 'shared',
@@ -265,16 +298,16 @@ const SCHEDULE = {
     ['2026-11-08', 'ask',       's4nov'],
   ]},
   2: { window: 'Nov 12 – Nov 30 · open', slots: [
-    ['2026-11-13', 'place',     's2v2'],
+    ['2026-11-13', 'place',     'n1'],
     ['2026-11-15', 'ask',       'p9v2'],
     ['2026-11-16', 'mechanism', 'b1'],
     ['2026-11-18', 'mirror',    'f1'],
-    ['2026-11-20', 'place',     'x1escrow'],
+    ['2026-11-20', 'place',     'n2'],        // was x1escrow: held until the escrow account is confirmed open
     ['2026-11-22', 'ask',       's4dec'],
     ['2026-11-23', 'mechanism', 'p8'],
     ['2026-11-25', 'mirror',    'h5'],
     ['2026-11-27', 'place',     's1'],
-    ['2026-11-29', 'ask',       'p9v2'],
+    ['2026-11-29', 'ask',       'n4'],
     ['2026-11-30', 'mechanism', 'p5'],
   ]},
   3: { window: 'Dec 1 – Dec 12 · report card', slots: [
@@ -289,7 +322,7 @@ const SCHEDULE = {
     ['2027-01-03', 'ask',       's4jan'],
     ['2027-01-04', 'mechanism', 'p5'],
     ['2027-01-06', 'mirror',    'p1v2'],
-    ['2027-01-08', 'place',     's2v2'],
+    ['2027-01-08', 'place',     'n3'],
     ['2027-01-10', 'ask',       'h8'],
     ['2027-01-11', 'mechanism', 'b3'],
     ['2027-01-13', 'mirror',    'f2'],
@@ -359,7 +392,7 @@ const page = (c) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <div class="card">
   <div class="lockup">${MARK}
     <span class="name"><span class="wordmark">Soundline</span>
-    <span class="where">School · Miller Place, NY</span></span>
+    <span class="where">A new middle school · North Shore, Long Island</span></span>
   </div>
   <div class="body">
     <h1 id="head">${c.head.map((l) => `<span>${l.replace(/\{([^}]*)\}/g, '<em>$1</em>')}</span>`).join('')}</h1>
