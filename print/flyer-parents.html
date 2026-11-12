@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+  Source for the parent-facing flyer. Letter, one page, portrait.
+  Print: node tools/flyers.js            -> print/Soundline-Flyer-Parents.pdf
+         node tools/flyers.js library    -> print/flyers/Soundline-Flyer-Parents-library.pdf
+  ?tag=<name> picks print/qr/<name>.svg. Dates come from ../build/builds.js.
+  Facts here must match join.html, cost.html and the tuition sheet:
+  ten to twelve in a grade, $1,350 founding, $500 in escrow refundable until the lease.
+-->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script src="../build/builds.js"></script>
+<style>
+@page{size:Letter;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#12222B;--channel:#1B4B6E;--paper:#F7F5F0;--beacon:#F2C14E;--tint:#F6E7CB;--rule:rgba(18,34,43,.16)}
+body{width:8.5in;height:11in;background:var(--paper);color:var(--deep);font-family:'Instrument Sans',Arial,sans-serif;
+  padding:.68in .8in .55in;display:flex;flex-direction:column;-webkit-print-color-adjust:exact;print-color-adjust:exact;overflow:hidden}
+.wm{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.03em;line-height:1}
+.tag{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:14px;color:var(--channel);margin-top:3px}
+hr{border:0;border-top:2.5px solid var(--deep);margin:14px 0 26px}
+h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:46px;letter-spacing:-.045em;line-height:1.0;max-width:7in}
+.sub{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:19px;line-height:1.3;color:var(--channel);margin-top:12px;max-width:6.6in}
+.cols{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;margin-top:26px;flex:1;align-items:start}
+h3{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:700;font-size:15px;letter-spacing:-.01em;margin-bottom:5px}
+.col p{font-size:12.6px;line-height:1.42;color:rgba(18,34,43,.88);margin-bottom:11px}
+.col p b{font-weight:600;color:var(--deep)}
+.box{background:var(--tint);border-radius:14px;padding:16px 18px}
+.box h3{margin-bottom:8px}
+.dates div{display:grid;grid-template-columns:1.15in 1fr;gap:10px;padding:6px 0;border-top:1px solid var(--rule);font-size:12.5px;line-height:1.3}
+.dates b{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:13.5px}
+.dates i{font-style:normal;color:rgba(18,34,43,.66)}
+.qr{display:flex;gap:14px;align-items:center;margin-top:16px}
+.qr img{width:1.3in;height:1.3in;display:block}
+.qr b{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:13px;display:block;margin-bottom:3px}
+.qr span{font-size:11.5px;color:rgba(18,34,43,.72);line-height:1.35}
+footer{border-top:1px solid var(--rule);padding-top:10px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:rgba(18,34,43,.72);line-height:1.45}
+footer b{font-weight:600;color:var(--deep)}
+</style></head><body>
+
+<div class="wm">Soundline</div>
+<div class="tag">Depth with direction.</div>
+<hr>
+
+<h1>Is your kid doing fine on paper and quietly checked out?</h1>
+<p class="sub">Or bored, waiting for everyone else. Or working hard, and nobody's noticed. Middle school is three years and they go fast. We're opening a school for exactly those three years.</p>
+
+<div class="cols">
+  <div class="col">
+    <h3>What Soundline is</h3>
+    <p>A new independent school for grades six through eight, opening September 2027 in Miller Place and adding a grade a year through twelfth. <b>Ten to twelve students in a grade.</b> Two hours of practice every morning: math, reading, writing, at a table with a guide. Four hours of making: seminar, lab, studio, the Quest. One advisor who stays with your child for all three years. Every adult in the building knows your kid by name.</p>
+    <p>Students are grouped by what they can do, not by age. Nobody moves on until they've got it, and nobody waits once they have. Every six weeks they make something and defend it in front of people who matter to them. That folder of work goes with them wherever they go next.</p>
+    <h3>What it costs, in plain numbers</h3>
+    <p>$1,500 a month, paid over twelve. <b>Founding families pay $1,350, and that rate holds through twelfth grade.</b> No fees on top. Real financial aid in the first budget. A new federal scholarship tax credit begins January 2027, the same school year we open; everything we know is at soundlineschool.com/cost.</p>
+    <h3>The part you'd want to know</h3>
+    <p>We don't have a lease yet. We announce the building the day it's signed, not before. The <b>$500 that reserves a founding seat sits with an independent escrow agent</b>, not with us, and comes back in full, for any reason, until that day.</p>
+  </div>
+  <div class="col">
+    <div class="box">
+      <h3>See it before you hear about it</h3>
+      <p>Free Saturday builds for ages ten to thirteen, run by Adam King, who has run instrument labs and escape rooms in libraries across Long Island for years. Drop off at ten. Come back at 11:15 and watch your own child explain something they made to a room.</p>
+      <div class="dates" id="dates"></div>
+      <div class="qr">
+        <img id="qr" src="qr/flyer.svg" alt="QR code">
+        <div><b>soundlineschool.com/build</b><span>Save a spot. Or fifteen minutes on the phone about your child, not the school: soundlineschool.com/talk</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div><b>Founded by Nicole Galante</b>, with Adam King, Gina Dimichino and Izzy Galante. Non-sectarian, independent, five days a week, with a three-day Collaborative for homeschooling families.</div>
+  <div style="text-align:right;white-space:nowrap"><b>hello@soundlineschool.com</b><br>soundlineschool.com</div>
+</footer>
+
+<script>
+(function(){
+  var tag = (new URLSearchParams(location.search).get('tag') || 'flyer').replace(/[^a-z0-9_.-]/gi,'');
+  document.getElementById('qr').src = 'qr/' + tag + '.svg';
+  var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function p(s){ var a = s.split('-'); return new Date(+a[0], +a[1]-1, +a[2]); }
+  var el = document.getElementById('dates');
+  (window.BUILDS || []).forEach(function(b){
+    var d = p(b.date), label = M[d.getMonth()] + ' ' + d.getDate();
+    if (b.end) { var e = p(b.end); label += ' to ' + e.getDate(); }
+    var row = document.createElement('div');
+    row.innerHTML = '<b>' + label + '</b><div>' + b.title + ' <i>' + b.time + '</i></div>';
+    el.appendChild(row);
+  });
+})();
+</script>
+</body></html>

@@ -133,6 +133,7 @@ Three doors, all now carrying the same source tag.
 | Survey | `/survey/` | The default. A few minutes; puts them first in line. |
 | RSVP | `/rsvp/` | Event pages. "Send me the number" with no room required. |
 | **Talk** | `/talk/` | **New today.** Fifteen minutes about their child. The phone is the channel that converts and until now the site had no way to ask for one except a bare email address. Linked from the Join page. |
+| **Build** | `/build/` | **New today.** The Saturday builds, with dates in `build/builds.js` (one list, shared with the two flyers in `print/`). Past dates drop off by themselves. The home and Join pages point here now instead of at November 11. |
 
 **Source tags.** Any link into the site can carry a tag, and the site remembers it for the visit and writes it onto all three doors:
 
@@ -167,6 +168,8 @@ The one number that is allowed to go down is "Families in the pipeline", when Mo
 ---
 
 ## 6. Today, in order
+
+0. Book the rooms. Every date on `/build/` says "address with your confirmation" until Adam has a library room for it; `build/builds.js` is the one place to change a date or a place. Print the flyers (`node tools/flyers.js`, then per wall with a tag), post the six dates to both Patch editions, and call TBR for the calendar address: all in `PRESS.md` and `ASKS.md`.
 
 1. Open the sheet. Delete the two example rows. Put in every family we already know: the 25 October caller and their second conversation, everyone from the 11 November room, every survey response to date, with a stage, a source and a next-step date each.
 2. Add the code question to the survey form and set `FORM_SOURCE_ENTRY`.

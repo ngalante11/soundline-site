@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Come build with us — Soundline School</title>
+<meta name="description" content="Free Saturday builds for ages 10 to 13 on the North Shore: instrument labs, a Quest, world percussion. Make something that works, then explain it to the grown-ups. Run by Soundline School, opening September 2027 in Miller Place.">
+<meta property="og:title" content="Come build something. Saturday. Free. — Soundline School">
+<meta property="og:description" content="Free Saturday builds for ages 10 to 13. Make something that works, then explain it to the grown-ups. That last part is the school.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soundlineschool.com/build/">
+<meta property="og:image" content="https://soundlineschool.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%2312222B'/%3E%3Cpath d='M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z' fill='%23F2C14E' stroke='%23F7F5F0' stroke-width='7' stroke-linejoin='round'/%3E%3Cpath d='M12 122 H148' stroke='%23F7F5F0' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M14 144 C28 134, 40 154, 54 144 S80 134, 94 144 S120 154, 134 144 L146 136' stroke='%237FE0C9' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+
+<!-- ===================================================================
+     The Saturday builds: the shadow day for a school with no building.
+     Dates live in builds.js (one list, shared with the flyers). Past
+     dates drop off by themselves.
+       BUILD_FORM_URL  optional short Google Form (child's first name and
+                       grade, parent, phone, which Saturday). Empty, and
+                       every "save a spot" button opens an email instead,
+                       with the date already in the subject line.
+     Pixel: ViewContent on load; Schedule when a spot is asked for. The
+     source tag (?s= from a flyer's QR code) rides along via ../site.js.
+     =================================================================== -->
+<script>var SOUNDLINE_PIXEL_ID = "29033437216289568";</script>
+<script>var BUILD_FORM_URL = "";</script>
+<script src="builds.js"></script>
+
+<style>
+.build-lede{max-width:var(--measure,38rem)}
+.dates{list-style:none;margin:0;padding:0;display:grid;gap:1rem;max-width:960px;margin-inline:auto}
+.dates li{border:1px solid var(--rule,rgba(18,34,43,.16));border-radius:18px;padding:1.5rem 1.6rem;
+  display:grid;gap:.4rem 2rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:48rem){.dates li{grid-template-columns:11rem minmax(0,1fr) auto;align-items:start}}
+.dates .d{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;letter-spacing:-.03em;font-size:1.6rem;line-height:1.05}
+.dates .d small{display:block;font-family:'Instrument Sans',Arial,sans-serif;font-weight:500;font-size:.95rem;letter-spacing:0;color:rgba(18,34,43,.72);margin-top:.3rem}
+.dates h3{margin:0 0 .25rem}
+.dates p{margin:0;max-width:var(--measure,38rem);color:rgba(18,34,43,.82)}
+.dates .place{font-size:.92rem;color:rgba(18,34,43,.66);margin-top:.4rem}
+.dates .btn{align-self:center;justify-self:start}
+.dates li.first{border-color:var(--beacon,#F2C14E);border-width:3px}
+.block{max-width:960px;margin:3.4rem auto 0}
+.block h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;letter-spacing:-.03em;margin:0 0 .6rem}
+.block p{max-width:var(--measure,38rem)}
+.three{display:grid;gap:1.2rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:52rem){.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.three div{border-top:3px solid var(--deep,#12222B);padding-top:.9rem}
+.three h3{margin:0 0 .35rem}
+.three p{margin:0;font-size:1rem;color:rgba(18,34,43,.82)}
+.kicker{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:1.2rem;color:var(--channel,#1B4B6E);margin:0 0 1.2rem}
+.none{border:1px dashed var(--rule,rgba(18,34,43,.3));border-radius:18px;padding:1.5rem;max-width:960px;margin:0 auto}
+.form-frame{width:100%;height:1000px;border:1px solid var(--rule,rgba(18,34,43,.16));border-radius:16px;background:#fff;display:block;margin-top:1.2rem}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="dark">
+  <header class="wrap">
+    <div class="top">
+      <a class="lockup" href="/" aria-label="Soundline School home">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <path d="M80 24 L88 56 L120 64 L88 72 L80 104 L72 72 L40 64 L72 56 Z" fill="#F2C14E" stroke="#F7F5F0" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M44 24 L52 32 M116 24 L108 32 M80 6 V12" stroke="#F7F5F0" stroke-width="6" stroke-linecap="round"/>
+          <path d="M12 122 H148" stroke="#F7F5F0" stroke-width="9" stroke-linecap="round"/>
+          <path d="M14 144 C28 134, 40 154, 54 144 S80 134, 94 144 S120 154, 134 144 L146 136" stroke="#7FE0C9" stroke-width="8" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="name"><span class="wordmark">Soundline</span><span class="label">Miller Place, NY</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Main">
+        <a class="nav-link" href="/day.html">A day here</a>
+        <a class="nav-link" href="/sample-day.html">A Tuesday</a>
+        <a class="nav-link" href="/vision.html">Our vision</a>
+        <a class="nav-link" href="/about.html">About us</a>
+        <a class="nav-link" href="/join.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero wrap" id="top">
+    <h1>Come build something. Saturday. Free.</h1>
+    <p class="lede build-lede">Ninety minutes, a room of ten-to-thirteen-year-olds, and Adam, who has run instrument labs and escape rooms in libraries across Long Island for years. You make a thing that works. At the end your parents come in and you explain how it works. That last part is the school.</p>
+  </section>
+</div>
+
+<main>
+  <section class="wrap">
+    <p class="kicker" style="max-width:960px;margin-inline:auto">Saturdays this winter. Ages ten to thirteen. Nothing to pay, nothing to bring.</p>
+    <ol class="dates" id="dates"></ol>
+    <div class="none" id="none" hidden>
+      <p style="margin:0">The winter builds are done. Write to <a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a> and we'll tell you the next one first.</p>
+    </div>
+
+    <div class="block" id="form-block" hidden>
+      <h2>Save a spot here.</h2>
+      <p>Your child's first name and grade, your name and number, and which Saturday. We confirm by email with the address.</p>
+      <iframe class="form-frame" id="form" title="Save a spot at a Saturday build" loading="lazy">Loading…</iframe>
+    </div>
+
+    <div class="block">
+      <h2>What a build is.</h2>
+      <p>Each Saturday is one piece of a day at Soundline, run the way it will be run there. Groups of ten to twelve. Adults who learn your name in the first ten minutes. No worksheet.</p>
+      <div class="three">
+        <div><h3>The Lab</h3><p>A real problem with real materials. You find out what you don't know yet by hitting it, and then you fix that.</p></div>
+        <div><h3>The Quest</h3><p>One problem, a team, and a way out that nobody hands you. Thinking you can see.</p></div>
+        <div><h3>The Showcase</h3><p>The last fifteen minutes, every time. Parents come in. You stand up and say what you made, what went wrong, and what you'd do next. That is a Friday at Soundline.</p></div>
+      </div>
+      <p style="margin-top:1.4rem">Every child leaves with the thing they built and one page about it: what I made, what I'd do next, and a line from Adam about what he saw. Keep the pages. By January they're a folder.</p>
+    </div>
+
+    <div class="block" id="crew">
+      <h2>Come to three and you're Crew.</h2>
+      <p>Soundline opens in September with ten to twelve students in each of three grades, and the first of them are being chosen now. Children who come to three builds are Founding Crew: their first name goes on the shoreline on this site, they help pick what the first Quest will be, and they're the ones who show the new kids around in September. Being first at something that doesn't exist yet is the best part of this whole thing, and we'd rather share it than keep it.</p>
+    </div>
+
+    <div class="block" id="parents">
+      <h2>For parents.</h2>
+      <p>You'll see the method before you hear about it. Drop off at the start, come back for the last fifteen minutes, and watch your own child explain something they made to a room. Afterwards, if you want it, fifteen minutes with Nicole about your child specifically: <a href="/talk/">ask for a call</a>.</p>
+      <p>The December 12 build ends with the information session we'd otherwise have held on a weeknight: the day hour by hour, what it costs, the new federal scholarship that starts in January, and where the school will be, or exactly what happens if we can't say yet. Everything on cost is <a href="/cost.html">already written down</a>. The $500 that reserves a founding seat sits with an independent escrow agent, not with us, and comes back in full until the day a lease is signed.</p>
+      <p>Homeschooling? The three-morning Winter Quest runs on the <a href="/collaborative.html">Collaborative's</a> hours, which is the point.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="dark">
+  <div class="wrap row">
+    <div><span class="wordmark">Soundline School</span><span class="tag">Depth with direction.</span></div>
+    <div class="meta">Miller Place, NY<br><a href="mailto:hello@soundlineschool.com">hello@soundlineschool.com</a><br><a href="/talk/">Fifteen minutes about your kid</a></div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+<script>
+(function () {
+  var id = (typeof SOUNDLINE_PIXEL_ID === 'string' ? SOUNDLINE_PIXEL_ID : '').trim();
+  var formUrl = (typeof BUILD_FORM_URL === 'string' ? BUILD_FORM_URL : '').trim();
+  var src = window.SOUNDLINE_SOURCE || { track: function () { return 'unknown'; }, label: function () { return 'direct'; }, prefill: function (u) { return u; } };
+  var track = src.track(), label = src.label();
+
+  if (id) {
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id); fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'build', content_category: track, source: label });
+  }
+
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function parse(iso) { var p = iso.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function when(b) {
+    var d = parse(b.date);
+    var s = DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate();
+    if (b.end) { var e = parse(b.end); s = MONTHS[d.getMonth()] + ' ' + d.getDate() + ' to ' + (e.getMonth() === d.getMonth() ? '' : MONTHS[e.getMonth()] + ' ') + e.getDate(); }
+    return s;
+  }
+  function short(b) { var d = parse(b.date); return MONTHS[d.getMonth()].slice(0, 3) + ' ' + d.getDate(); }
+  function mail(b) {
+    var subject = 'Build, ' + short(b) + (label !== 'direct' ? ' (' + label + ')' : '');
+    var body = 'Child’s first name and grade this year:\n\nParent’s name and number:\n\nWhich Saturday: ' + when(b) + ', ' + b.title + '\n';
+    return 'mailto:hello@soundlineschool.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var list = document.getElementById('dates');
+  var shown = 0;
+  (window.BUILDS || []).forEach(function (b) {
+    var last = parse(b.end || b.date);
+    if (last < today) return;
+    var li = document.createElement('li');
+    if (!shown) li.className = 'first';
+    shown++;
+    li.innerHTML =
+      '<div class="d">' + when(b) + '<small>' + b.time + '</small></div>' +
+      '<div><h3>' + b.title + '</h3><p>' + b.note + '</p><p class="place">' + b.place + '</p></div>' +
+      '<a class="btn" href="' + (formUrl ? '#form-block' : mail(b)) + '" data-build="' + b.date + '">Save a spot</a>';
+    list.appendChild(li);
+  });
+  if (!shown) { list.hidden = true; document.getElementById('none').hidden = false; }
+
+  list.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[data-build]') : null;
+    if (!a) return;
+    if (id && window.fbq) fbq('track', 'Schedule', { content_name: 'build-' + a.getAttribute('data-build'), content_category: track, source: label });
+  });
+
+  if (formUrl) {
+    var full = src.prefill(formUrl);
+    document.getElementById('form').src = full + (full.indexOf('?') === -1 ? '?' : '&') + 'embedded=true';
+    document.getElementById('form-block').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
