@@ -431,7 +431,7 @@ REMIND = ('mailto:hello@soundlineschool.com?subject=A%20reminder%20call%20from%2
 
 def later_section():
     """For the parent whose child is too young for next September, or who is thinking about a later year."""
-    rows = [('Younger than sixth grade.', 'A new sixth grade starts every September. Tell us what grade your child is in now, and we will call you before sign-up opens for their year.'),
+    rows = [('Younger than sixth grade.', 'A new sixth grade starts every September. Sign-up for September 2028 opens in August 2027. Tell us what grade your child is in now, and we will call you before sign-up opens for their year.'),
             ('Thinking about a later year.', 'Tell us the year you have in mind. We will call you before sign-up opens, and tell you whether your child’s grade has a seat.'),
             ('High school.', 'Ninth grade opens in September 2028, and we add a grade every year after that, through twelfth. That means we will not have a grade for students who are in eighth grade or higher this school year.')]
     return f'''<section id="later" style="background: #FFFFFF; border-top: 1px solid {RULE_P}; border-bottom: 1px solid {RULE_P}; padding: {PAD} 0">

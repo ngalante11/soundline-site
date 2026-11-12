@@ -222,6 +222,7 @@ def admissions():
              ('Mar 1', 'The last day to pay for the whole year and take 3% off.', False),
              ('Apr 1', 'Your bus request to your own district is due. We send you the form already filled in.', False),
              ('Jun 1', 'If your child has an IEP, your request for services is due to the district. We help you with it.', False),
+             ('Aug 2027', 'Sign-up opens for September 2028.', False),
              ('Sept 2027', 'The first day of school.', False)]
     dt = ''
     for d, t, now in dates:
