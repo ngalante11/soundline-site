@@ -19,7 +19,7 @@ def home_plain():
 <span style="display: block; margin-top: 0.18em; font-family: {SAY}; font-style: italic; font-weight: 400; letter-spacing: -0.02em; line-height: 1.08; color: {BEACON}; text-wrap: balance">And it is not school as usual.</span>
 </p>
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px 64px">
-<p style="margin: 0; flex: 1 1 420px; min-width: 0; max-width: 640px; font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; color: {DIM_D}">Every morning there are two hours of math, reading and writing, at your child’s own level. The rest of the day is classes, labs and real projects. Every adult in the building knows your kid. Soundline is a private school for grades 6, 7 and 8, opening September 2027 on Long Island’s North Shore, most likely in Port Jefferson Station.</p>
+<p style="margin: 0; flex: 1 1 420px; min-width: 0; max-width: 640px; font-size: clamp(17px, 1.3vw, 19px); line-height: 1.55; color: {DIM_D}">Every morning there are two hours of math, reading and writing, at your child’s own level. The rest of the day is classes, labs and real projects. Every adult in the building knows your kid. Soundline is a private school for grades 6, 7 and 8, opening September 2027 on Long Island’s North Shore, most likely in Port Jefferson Station. Is your child younger or older? {quiet('Get a reminder call', '#later', dark=True)}.</p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px">
 {btn('Ask for a call', CALL, 'beacon')}
 {quiet('See what it costs', 'join.html#tuition', dark=True)}
@@ -245,6 +245,7 @@ def home_plain():
 </section>
 '''
 
+    o += later_section()
     o += call_section('home')
     o += footer() + '</div>\n' + tail()
     return o, 0, 0

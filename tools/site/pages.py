@@ -272,6 +272,7 @@ def admissions():
 </div>
 </section>
 '''
+    o += later_section()
     o += call_section() + footer() + '</div>\n' + tail(1440, H)
     return o, 1440, H
 

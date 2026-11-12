@@ -177,7 +177,7 @@ def chrome_top(current):
 
 def footer():
     cols = [('The school', [('A day here', 'day.html'), ('One seventh grader’s Tuesday', 'day.html#tuesday'), ('Our vision', 'vision.html'), ('The research, with sources', 'research.html')]),
-            ('Joining', [('Tuition and admissions', 'join.html'), ('The Collaborative', 'collaborative.html'), ('Questions parents ask', 'join.html#questions'), ('Download our informational packet', 'soundline-school-information.pdf')]),
+            ('Joining', [('Tuition and admissions', 'join.html'), ('The Collaborative', 'collaborative.html'), ('Questions parents ask', 'join.html#questions'), ('Younger or older child?', 'join.html#later'), ('Download our informational packet', 'soundline-school-information.pdf')]),
             ('Us', [('About us', 'about.html'), ('hello@soundlineschool.com', 'mailto:hello@soundlineschool.com'), ('Ask for a call', CALL)])]
     html = ''
     for title, links in cols:
@@ -420,6 +420,27 @@ def call_section(prefix='', sid='call'):
 {btn('Ask for a call', CALL, 'deep')}
 <p style="margin: 0; font-size: 16px; line-height: 1.55; color: {DIM_P}; max-width: 520px">The button opens an email to hello@soundlineschool.com with four lines to fill in: your name, the best number, good times to reach you, and your child’s grade next September. One of the four of us calls you back.</p>
 <p style="margin: 0; font-size: 15px; color: {DIM_P}">Prefer to start in writing? {quiet('Take the survey', 'https://soundlineschool.com/survey/')}.</p>
+</div>
+</div>
+</section>
+'''
+
+
+REMIND = ('mailto:hello@soundlineschool.com?subject=A%20reminder%20call%20from%20Soundline%20School&amp;body=Hi%2C%20please%20call%20me%20when%20sign-up%20opens%20for%20my%20child%E2%80%99s%20year.%0D%0A%0D%0AMy%20name%3A%0D%0ABest%20number%3A%0D%0AMy%20child%E2%80%99s%20grade%20this%20school%20year%20%282026%E2%80%9327%29%3A%0D%0AOur%20town%3A%0D%0AI%20would%20also%20like%20information%20now%20%28yes%20or%20no%29%3A')
+
+
+def later_section():
+    """For the parent whose child is too young for next September, or who is thinking about a later year."""
+    rows = [('Younger than sixth grade.', 'A new sixth grade starts every September. Tell us what grade your child is in now, and we will call you before sign-up opens for their year.'),
+            ('Thinking about a later year.', 'Tell us the year you have in mind. We will call you before sign-up opens, and tell you whether your child’s grade has a seat.'),
+            ('High school.', 'Ninth grade opens in September 2028, and we add a grade every year after that, through twelfth. That means we will not have a grade for students who are in eighth grade or higher this school year.')]
+    return f'''<section id="later" style="background: #FFFFFF; border-top: 1px solid {RULE_P}; border-bottom: 1px solid {RULE_P}; padding: {PAD} 0">
+<div style="{WP}">
+{ph2('Is your child younger, or older?', maxw='14ch')}
+{psub('We open in September 2027 with grades 6, 7 and 8. If the timing is not right for your child, tell us, and we will call you when it is.')}
+{ledger(rows)}<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 40px">
+<a class="btn" href="{REMIND}" style="display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 48px; padding: 12px 24px; border-radius: 999px; background: transparent; border: 3px solid {DEEP}; color: {DEEP}; font-family: {SHOUT}; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; white-space: nowrap">Get a reminder call</a>
+<span style="font-size: 16px; line-height: 1.55; color: {DIM_P}; max-width: 560px">The button opens an email to hello@soundlineschool.com. Tell us your name, your number and your child’s grade this year. We call you when it is time. If you want information now, say so and we will send it.</span>
 </div>
 </div>
 </section>
