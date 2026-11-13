@@ -15,7 +15,7 @@ Log the answer in Sources the same day: Yes, No, or Waiting, and the date. A yes
 **Email:**
 > Subject: A free Saturday program for your 10-to-13s, November through January
 >
-> [Name], I'd like to offer the library a Saturday series this winter at no cost: ninety-minute builds for ages ten to thirteen, the same instrument lab and escape-room formats I've run at [libraries he's run them at], ending each time with the children presenting to their parents. I'd need the meeting room from 9:30 to 12:00 on [dates], and a line in the calendar and the newsletter. The series is run by Soundline, the new middle school opening in Miller Place next September, which I'm part of; the sessions themselves are programs, not presentations. Could we take [first date]?
+> [Name], I'd like to offer the library a Saturday series this winter at no cost: ninety-minute builds for ages ten to thirteen, the same instrument lab and escape-room formats I've run at [libraries he's run them at], ending each time with the children presenting to their parents. I'd need the meeting room from 9:30 to 12:00 on [dates], and a line in the calendar and the newsletter. The series is run by Soundline, the new middle school opening on Long Island’s North Shore next September, which I'm part of; the sessions themselves are programs, not presentations. Could we take [first date]?
 
 The library is the one place where "free program" is the gift and the ask in one sentence. Ask for the newsletter line explicitly; the calendar listing alone reaches people already in the building.
 
@@ -24,7 +24,7 @@ The library is the one place where "free program" is the gift and the ask in one
 **Email:**
 > Subject: A build night for [troop/pack/den], free, that counts toward something
 >
-> [Name], I run a new middle school opening in Miller Place next September, and one of our guides, Adam King, runs instrument labs and escape rooms for libraries across Long Island. I'd like to give the [troop / Arrow of Light den / Cadettes] a ninety-minute build night at no cost, on a date you pick, and you decide what it counts toward; we'll shape it to fit. Children build something that works and present it. No pitch; the school comes up if a parent asks. Would [date] or [date] work for a meeting?
+> [Name], I run a new middle school opening on Long Island’s North Shore next September, and one of our guides, Adam King, runs instrument labs and escape rooms for libraries across Long Island. I'd like to give the [troop / Arrow of Light den / Cadettes] a ninety-minute build night at no cost, on a date you pick, and you decide what it counts toward; we'll shape it to fit. Children build something that works and present it. No pitch; the school comes up if a parent asks. Would [date] or [date] work for a meeting?
 
 Arrow of Light scouts are sixth graders in September 2027. Cadettes are grades six through eight exactly. The leader decides what the build counts toward; never claim it yourself.
 
@@ -47,7 +47,7 @@ This replaces the information night. The seminar is the demonstration; the debri
 ## Orthodontist or pediatrician front desk (Gina)
 
 **In person, with both flyers in hand:**
-> I'm from Soundline, the new middle school opening in Miller Place next September. We're running free Saturday builds for ten-to-thirteen-year-olds this winter. Could these two go on your board? One's for the kids in the waiting room and one's for the parents. I'll come by and swap them when the dates change.
+> I'm from Soundline, the new middle school opening on Long Island’s North Shore next September. We're running free Saturday builds for ten-to-thirteen-year-olds this winter. Could these two go on your board? One's for the kids in the waiting room and one's for the parents. I'll come by and swap them when the dates change.
 
 Nearly every child in the grade band sits in one of these rooms this winter with a parent and twenty minutes. Each practice gets its own tag.
 
@@ -67,14 +67,14 @@ For Gina's own families, the ask is a personal note, not a flyer: one paragraph,
 **Email to the PTA president, not the school:**
 > Subject: One line for the November bulletin: a free Saturday build for middle schoolers
 >
-> [Name], would the bulletin take one line? "Free Saturday builds for ages 10 to 13, instruments out of junk, 10:00 to 11:30 from November 21, soundlineschool.com/build." It's run by Soundline, a new independent middle school opening in Miller Place next September. Happy to send a flyer for the table too.
+> [Name], would the bulletin take one line? "Free Saturday builds for ages 10 to 13, instruments out of junk, 10:00 to 11:30 from November 21, soundlineschool.com/build." It's run by Soundline, a new independent middle school opening on Long Island’s North Shore next September. Happy to send a flyer for the table too.
 
 A PTA will carry a free community event for children. It will not carry a school advertisement. Write the line so that it is the first thing.
 
 ## Homeschool co-op or group admin (Nicole)
 
 **Post or email:**
-> For the families here with ten-to-thirteen-year-olds: three free mornings over winter break, December 29 to 31, 9:15 to 12:30, one build across the three days and a presentation to parents on the 31st. Run by Adam King (library instrument labs and escape rooms across the Island) and Izzy Galante. It's from Soundline, the new school opening in Miller Place next September, whose three-day Collaborative runs on exactly these hours; the Quest is a way to try the shape of it with no commitment. Spots: soundlineschool.com/build.
+> For the families here with ten-to-thirteen-year-olds: three free mornings over winter break, December 29 to 31, 9:15 to 12:30, one build across the three days and a presentation to parents on the 31st. Run by Adam King (library instrument labs and escape rooms across the Island) and Izzy Galante. It's from Soundline, the new school opening on Long Island’s North Shore next September, whose three-day Collaborative runs on exactly these hours; the Quest is a way to try the shape of it with no commitment. Spots: soundlineschool.com/build.
 
 Lead with the hours. For a homeschool family the schedule is the pitch, and "by the term, not the year" is the close when they ask.
 

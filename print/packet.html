@@ -1,17 +1,20 @@
 <!doctype html>
 <!--
-  Source for soundline-school-information.pdf, the nine-page family packet.
+  Source for soundline-school-information.pdf, the ten-page family packet.
 
   Regenerate: node tools/packet.js  (or open in Chrome, print to PDF,
   Letter, margins None, Background graphics on).
 
   Every fact here must match the live site. The ones that move:
-    ten to twelve in a grade          about.html, join.html, sample-day.html
-    founding rate holds through 12th  join.html, cost.html
-    Saturday builds, dates           build/builds.js, join.html
-    tuition published Nov 12          cost.html
-  Tuition figures are deliberately NOT printed here while cost.html still
-  says the number arrives on the 12th. Add the table and reprint that day.
+    The wording follows the plain-language site (12 Nov 2026): tools/site/plain.py and pages.py.
+    ten to twelve in a grade          index.html, about.html, join.html
+    founding price holds through 12th join.html
+    Extended Day $330 / $297          join.html
+    sign-up for Sept 2028: Aug 2027   index.html, join.html
+    the location line                 every page (North Shore; Port Jefferson Station likeliest)
+    the tuition table                 cost.html (published 12 Nov 2026; data-tuition="show")
+    the action is a call              index.html, join.html (no reservation form yet)
+    the build dates                   build/builds.js, join.html
 -->
 <html lang="en" data-tuition="show"><head><meta charset="utf-8">
 <title>Soundline School — information packet</title>
@@ -96,229 +99,257 @@ tr:last-child td,tr:last-child th{border-bottom:0}
 <section class="page cover">
   <div>
     <div class="wm">Soundline</div>
-    <div class="where">School · Miller Place, NY</div>
+    <div class="where">School · North Shore, Long Island</div>
   </div>
   <div>
-    <h1><span>Two hours of practice.</span><span class="b">Four hours of making.</span><span class="c">Every adult knows your kid.</span></h1>
-    <p class="lede">Soundline is a school on the Sound for grades six through eight, opening September 2027 in Miller Place — and it adds a grade a year through twelfth.</p>
+    <p style="font-size:11px;color:var(--glow);margin-bottom:10px">A new private middle school · Grades 6–8 · Opening September 2027</p>
+    <h1 style="font-size:56px;max-width:16ch"><span>Soundline School is a new middle school.</span><span class="c" style="font-family:var(--reassure);font-style:italic;font-weight:400;letter-spacing:-.02em;line-height:1.08;margin-top:.12em">And it is not school as usual.</span></h1>
+    <p class="lede">Every morning there are two hours of math, reading and writing, at your child’s own level. The rest of the day is classes, labs and real projects. Every adult in the building knows your kid. Soundline opens in September 2027 on Long Island’s North Shore, most likely in Port Jefferson Station.</p>
     <div class="bar">
-      <div><b>Practice</b><span>8:30 · two hours · math, reading, writing</span></div>
-      <div><b>Making</b><span>Four hours, to 3:00 · seminar, lab, studio, the quest</span></div>
-      <div><b>Extended Day</b><span>3:00 to 5:30, if you need it</span></div>
+      <div><b>Morning</b><span>8:30 to 10:30 · math, reading and writing. We call it practice.</span></div>
+      <div><b>The rest of the day</b><span>10:30 to 3:00 · classes, science lab and a long project. We call it making.</span></div>
+      <div><b>After school</b><span>To 5:30, if you need it. We call it Extended Day.</span></div>
     </div>
   </div>
   <div>
     <p class="say">Depth with direction.</p>
-    <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · hello@soundlineschool.com</span></div>
+    <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · hello@soundlineschool.com</span></div>
   </div>
 </section>
 
-<!-- 2 ───────────────────────────────────────────── why soundline -->
+<!-- 2 ───────────────────────────────────────────── what makes it different -->
 <section class="page">
   <p class="eyebrow">Why Soundline</p>
-  <h1>Every child has a soundline.</h1>
-  <div class="cols2" style="margin-top:16px">
-    <div>
-      <p>Middle school is three years. They go fast. Your child might be doing fine on paper and quietly checked out. Or bored, waiting for everyone else. Or working hard, and nobody's noticed.</p>
-    </div>
-    <div>
-      <p>Before sonar, sailors dropped a sounding line over the side: a rope marked in fathoms, weighted with lead. It told them how deep the water was, and a dab of tallow in the weight brought up a piece of the bottom, so they knew what was underneath, too. Only then did they set a course.</p>
-      <p>That's where we start with your child. Not only where they are, skill by skill, but what sparks them and how deep it runs. Then we set a direction together: the next skill, the next project, the next thing worth showing their town. Nobody moves on until they've got it, and nobody waits once they have.</p>
-      <p class="say" style="font-size:13px;margin-top:4px">Depth with direction.</p>
-    </div>
+  <h1>What makes this school different.</h1>
+  <div class="cols3" style="margin-top:16px">
+    <div class="card"><div class="num" style="font-size:24px;color:var(--deep)">2 hours</div><p class="say" style="font-size:12.5px;margin:4px 0 6px">of math, reading and writing, every morning</p><p>Each child works at their own level, with a guide (our word for a teacher) at the table. A kid who is ahead moves ahead. A kid who is behind gets caught up. Nobody waits, and nobody gets left.</p></div>
+    <div class="card"><div class="num" style="font-size:24px;color:var(--deep)">4 hours</div><p class="say" style="font-size:12.5px;margin:4px 0 6px">of classes, labs and projects, every day</p><p>Science lab, history, books, art and music. Every six weeks your child finishes a real project and shows it to the people it was made for.</p></div>
+    <div class="card"><div class="num" style="font-size:24px;color:var(--deep)">Every adult</div><p class="say" style="font-size:12.5px;margin:4px 0 6px">knows your kid</p><p>There are ten to twelve students in a grade. One adult stays with your child for all three years, and knows what they are good at and what is hard for them.</p></div>
   </div>
 
   <div class="band">
-    <h2>Ten to twelve in a grade. Nobody's stuck in it.</h2>
-    <p>Students work by skill across the school, and on Fridays the whole school builds one thing together. Small enough there's nowhere to hide, big enough for a real seminar.</p>
-    <div class="cols3">
-      <div><h3>One advisor, three years.</h3><p>Every student has the same guide as their advisor from the day they start, in a group of ten to twelve.</p></div>
-      <div><h3>Grouped by skill, not age.</h3><p>A sixth grader and an eighth grader can work the same skill at the same table. Each moves on when it's mastered.</p></div>
-      <div><h3>Three grades, one building.</h3><p>And a grade added every year through twelfth, starting with ninth. The older students are out in town on apprenticeships.</p></div>
+    <h2>You know your kid. School should too.</h2>
+    <p>If one of these sounds like your house, this school was built for you.</p>
+    <div class="cols2" style="margin-top:12px;gap:12px 30px">
+      <div><h3>Bored.</h3><p>They finish early and wait for the class. Here they move on the day they are ready.</p></div>
+      <div><h3>Behind, and nobody noticed.</h3><p>Here a guide sits with them every morning, knows exactly what they can’t do yet, and works on it with them.</p></div>
+      <div><h3>Doing fine, and that’s all.</h3><p>Good grades, no spark. Here they build things for real people and explain them out loud.</p></div>
+      <div><h3>Lost in the crowd.</h3><p>Here there are ten to twelve kids in a grade, and the same adult looks out for yours for three years.</p></div>
     </div>
   </div>
 
+  <p class="eyebrow" style="margin-top:6px">Where the name comes from</p>
+  <p style="margin-top:6px;max-width:92ch">Before sonar, sailors dropped a sounding line over the side of the boat. It was a rope with a lead weight on the end, and it told them how deep the water was before they picked a direction. We do the same with your child. First we find out where they really are in each subject, and what they love. Then we pick a direction together.</p>
+
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
-<!-- 3 ───────────────────────────────────────────── a day here -->
+<!-- 3 ───────────────────────────────────────────── the six -->
+<section class="page">
+  <p class="eyebrow">What students learn</p>
+  <h1 style="max-width:26ch">Nobody knows what work will look like when your child is thirty.</h1>
+  <p class="lede" style="font-size:12px">So we teach what will matter no matter what. By the end of eighth grade, a Soundline student can do six things.</p>
+  <div class="six" style="margin-top:14px">
+    <div><div class="n">01</div><h3>Learn something hard.</h3><p>And show they really know it, not just that they sat through it.</p></div>
+    <div><div class="n">02</div><h3>Make something new.</h3><p>A video game, a robot, a short film, a song. Finished, on a deadline, for a real person in town.</p></div>
+    <div><div class="n">03</div><h3>Think it through in writing.</h3><p>Clear writing is clear thinking. They write every day.</p></div>
+    <div><div class="n">04</div><h3>Stand up and explain it.</h3><p>Every six weeks, in front of adults who ask questions. No slides.</p></div>
+    <div><div class="n">05</div><h3>Do something for their town.</h3><p>One project a year is for the community they live in.</p></div>
+    <div><div class="n">06</div><h3>Know what they are good at.</h3><p>And have a folder of real work that proves it.</p></div>
+  </div>
+
+  <div class="hi" style="margin-top:16px">
+    <h2 style="font-size:15px">New York has decided a diploma should stand for six things a graduate can do, not only test scores. We built the school around those six.</h2>
+    <p>Every six weeks your child adds real work to a folder: something they made, something they explained out loud, and proof that they grew. By eighth grade the folder shows what they can do.</p>
+  </div>
+
+  <div class="rule"></div>
+  <p class="eyebrow">How you will know it is working</p>
+  <div class="cols2" style="margin-top:10px">
+    <div><h3>We test growth three times a year.</h3><p>Every student takes a test called NWEA MAP in fall, winter and spring. We publish how much the whole school grew, counting every student. No child’s score is public. Your child’s comes home to you.</p></div>
+    <div><h3>You will see the work.</h3><p>The robot, the performance, and your child explaining how they did it.</p></div>
+    <div><h3>We teach AI as a subject.</h3><p>Kids learn to use it well. It is never allowed to do their thinking for them.</p></div>
+    <div><h3>We answer to New York.</h3><p>We register with the state, and the district reviews what we teach. We are not accredited yet. That starts once we are open.</p></div>
+  </div>
+
+  <div class="sp"></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+</section>
+
+<!-- 4 ───────────────────────────────────────────── a day here -->
 <section class="page">
   <p class="eyebrow">A day here</p>
-  <h1>Students do real work, finish it, and show it to someone.</h1>
-  <div class="cols3" style="margin-top:16px">
-    <div class="card"><h3>Mornings are practice.</h3><p>Math, reading, and writing at each student's own pace, with a guide in the room. Nobody waits for the class to catch up, and nobody gets left behind it. Two hours, done well, and done.</p></div>
-    <div class="card"><h3>Afternoons are for making.</h3><p>History, literature, and science are taught by a person with a book, never by an app. Studio runs in six-week projects with a real audience: a video game, a robot, a sculpture, a short documentary, a zine the school press publishes, a song the ensemble performs.</p></div>
-    <div class="card"><h3>Big work gets defended out loud.</h3><p>No slides, no screen. A student, their work, and good questions.</p></div>
+  <h1>What a school day looks like.</h1>
+  <p class="lede" style="font-size:12px">School runs 8:30 to 3:00, Monday to Friday.</p>
+  <div class="cols3" style="margin-top:14px">
+    <div class="card"><p class="eyebrow">8:30 to 10:30</p><h3 style="margin-top:4px">Math, reading and writing.</h3><p>We call it practice. Each child works at their own level, with a guide at the table. It is hands-on. The only screen in the room is the guide’s.</p></div>
+    <div class="card"><p class="eyebrow">10:30 to 3:00</p><h3 style="margin-top:4px">Classes, labs and projects.</h3><p>We call it making. History, literature and science are taught by a person, with books, not by an app. There is lunch, time outside, and the arts every day.</p></div>
+    <div class="card"><p class="eyebrow">Every six weeks</p><h3 style="margin-top:4px">Then they show it.</h3><p>Each project lasts six weeks and is made for a real person in town. At the end your child stands up and explains it. No slides.</p></div>
   </div>
 
   <div class="rule"></div>
   <p class="eyebrow">A week at Soundline</p>
-  <h2 style="font-size:19px;margin-top:6px">Same rhythm every week, so the work can be different.</h2>
-  <table style="margin-top:10px">
-    <tr><th style="width:1.05in">Monday</th><td style="width:1.35in"><b>Launch</b></td><td>8:45. One question, one goal, one plan for the week.</td></tr>
-    <tr><th>Tuesday</th><td><b>Lab, then studio</b></td><td>Ninety minutes, hands on, written up before studio. Then everyone makes something: a video game, a robot, a portrait, a sculpture, a song for the ensemble.</td></tr>
-    <tr><th>Wednesday</th><td><b>Seminar</b></td><td>A novel, a question, a paragraph. Every seminar ends in writing.</td></tr>
-    <tr><th>Thursday</th><td><b>Apprenticeships</b></td><td>Grades 7 and 8 work alongside someone who does it for a living. Younger students build their quest.</td></tr>
-    <tr><th>Friday</th><td><b>All In, then Showcase</b></td><td>The whole school takes on one thing together. A song, a mural, a project for someone in town. At 2:00, someone presents and something is performed. Usually loud. Families welcome.</td></tr>
+  <h2 style="font-size:19px;margin-top:6px">The schedule is the same every week, so the work can change.</h2>
+  <p style="max-width:92ch">Every morning at 10:30 the whole school sits down together with one real problem from town.</p>
+  <table style="margin-top:8px">
+    <tr><th style="width:1.05in">Monday</th><td style="width:1.6in"><b>The plan</b></td><td>At 8:45 each student sets one goal and one plan for the week.</td></tr>
+    <tr><th>Tuesday</th><td><b>Science lab, then projects</b></td><td>Ninety minutes of hands-on science, written up before they leave the lab. Then everyone works on their project: a video game, a robot, a portrait, a sculpture, a song.</td></tr>
+    <tr><th>Wednesday</th><td><b>Books</b></td><td>The long discussion of the week: a novel, a question, and a paragraph. Every discussion ends in writing.</td></tr>
+    <tr><th>Thursday</th><td><b>Apprenticeships</b></td><td>Seventh and eighth graders work alongside an adult who does a job for a living. Sixth graders work on their project.</td></tr>
+    <tr><th>Friday</th><td><b>One big build, then the show</b></td><td>The whole school builds one thing together: a song, a mural, a project for someone in town. At 2:00 students present their work and something is performed. It is usually loud. Families are welcome.</td></tr>
   </table>
 
+  <div class="rule"></div>
+  <p class="eyebrow">After school</p>
+  <p style="margin-top:6px;max-width:92ch"><b>Extended Day, 3:00 to 5:30.</b> A lesson at 3:15, then a homework desk until 5:30. It is for five-day students. It costs $330 a month over twelve months, or $297 for Founding Families, and you pay only if you use it.</p>
+
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
-<!-- 4 ───────────────────────────────────────────── a Tuesday -->
+<!-- 5 ───────────────────────────────────────────── a tuesday -->
 <section class="page">
   <p class="eyebrow">A Tuesday</p>
-  <h1>One seventh grader. One day. Hour by hour.</h1>
-  <p class="lede" style="font-size:11.5px;margin-top:8px">September, the first six-week cycle. The Tuesday we'll run, followed through one student's day. No name, because it isn't any one child's day yet.</p>
+  <h1>One seventh grader’s Tuesday, hour by hour.</h1>
+  <p class="lede" style="font-size:11.5px;margin-top:8px">This is a Tuesday in September, the way we plan to run it. We follow one student from the door to pickup. There is no name, because our first students start in September 2027.</p>
   <div class="tl" style="margin-top:14px">
     <div class="when">8:30<small>Arrival</small></div>
-    <div class="what"><b>The door.</b><p>The same face every morning. Bag on the hook, phone in the box, a word about the weekend.</p></div>
+    <div class="what"><b>The door.</b><p>The same adult greets them every morning. Bag on the hook, phone in the box, a word about the weekend.</p></div>
 
-    <div class="when">8:45<small>Launch</small></div>
-    <div class="what"><b>Advisory, fifteen minutes.</b><p>Ten to twelve students, one guide for three years. Today's goal: clear the proportions gate, draft the lab question.</p></div>
+    <div class="when">8:45<small>Morning meeting</small></div>
+    <div class="what"><b>Fifteen minutes with their guide.</b><p>A guide is our word for a teacher. Ten to twelve students meet with the guide who stays with them for three years. Each sets a goal for the day. Today’s: pass the check on proportions, and draft a question for science lab.</p></div>
 
     <div class="when">9:00<small>Practice · 50 min</small></div>
-    <div class="what"><b>Math, at their own gate.</b><p>The gate opens when they can show it to a guide, not when the unit ends. Across the table, a sixth grader is on a gate this student cleared in week one; beside them, an eighth grader is on one they'll reach by winter.</p></div>
+    <div class="what"><b>Math, at their own level.</b><p>A student moves to the next skill when they can show a guide they have it, not when the calendar says so. Across the table, a sixth grader is working on a skill this student passed in week one. Beside them, an eighth grader is on one they will reach by winter.</p></div>
 
     <div class="when">9:50<small>Practice · 40 min</small></div>
-    <div class="what"><b>Reading and writing.</b><p>Today's text: how ice carved the Sound, because the lab needs it. Two paragraphs, one an argument.</p></div>
+    <div class="what"><b>Reading and writing.</b><p>Today they read about how ice carved Long Island Sound, because science lab needs it. Then they write two paragraphs. One has to make an argument.</p></div>
 
-    <div class="when">10:30<small>Seminar · 30 min</small></div>
-    <div class="what"><b>Math seminar.</b><p>The whole school, problems out loud. Someone proves why the shortcut works; this student finds the case where it doesn't. The fourth try lands.</p></div>
+    <div class="when">10:30<small>Whole school · 30 min</small></div>
+    <div class="what"><b>Everyone together. Today, math.</b><p>Every morning at 10:30 the whole school sits down with one real problem from town and talks it through. We call it seminar. Tuesday is math. One student proves why a shortcut works. This student finds the case where it doesn’t, on the fourth try.</p></div>
 
     <div class="when">11:00<small>Outside · 40 min</small></div>
-    <div class="what"><b>Lunch and the walk.</b><p>Outside, every day, whatever the weather. Most of what a guide learns about a student, they learn here.</p></div>
+    <div class="what"><b>Lunch and outside.</b><p>Kids go outside every day, whatever the weather. A guide learns a lot about a student out here.</p></div>
 
-    <div class="when">11:40<small>Lab · 95 min</small></div>
-    <div class="what"><b>The sounder.</b><p>A sensor on a line that reads the depth of a tank: the sounding line, rebuilt. Today is calibration, and the graph bends where it shouldn't. Defended Friday.</p></div>
+    <div class="when">11:40<small>Science lab · 95 min</small></div>
+    <div class="what"><b>Building a depth sensor.</b><p>They are building a sensor on a line that measures how deep a tank of water is. Today they test it, and the graph bends where it shouldn’t. On Friday they explain why, out loud.</p></div>
 
-    <div class="when">1:15<small>Studio · 60 min</small></div>
-    <div class="what"><b>The Quest.</b><p>Week three of six. The client is the children's librarian: an exhibit on how sound travels through water. The group has a plan, forty dollars, and a speaker that won't stay sealed. A guide is in the room and does not fix it. From the second cycle, Tuesday afternoons are apprenticeships for grades 7 and 8.</p></div>
+    <div class="when">1:15<small>Project time · 60 min</small></div>
+    <div class="what"><b>The six-week project.</b><p>We call it a Quest. This is week three of six. The children’s librarian asked for an exhibit on how sound travels through water. The group has a plan, forty dollars, and a speaker that won’t stay sealed. A guide is in the room and does not fix it for them.</p></div>
 
-    <div class="when">2:15<small>Ensemble · 45 min</small></div>
-    <div class="what"><b>The ensemble.</b><p>Everyone plays something; nobody has to be good yet. The bass part is this student's.</p></div>
+    <div class="when">2:15<small>Music · 45 min</small></div>
+    <div class="what"><b>The school band.</b><p>Everyone plays something. Nobody has to be good yet. This student has the bass part.</p></div>
 
     <div class="when">3:00<small>Extended Day</small></div>
-    <div class="what"><b>Home, or not yet.</b><p>A lesson at 3:15, then the homework desk until 5:30. Or the carline. The quest stays at school.</p></div>
+    <div class="what"><b>Home, or Extended Day.</b><p>Pickup is at 3:00. Or your child stays: a lesson at 3:15, then a homework desk until 5:30. The project stays at school.</p></div>
   </div>
   <div class="sp"></div>
   <p style="font-size:9.5px;color:var(--dim)">Imagined. Our first students arrive in September 2027.</p>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
-<!-- 5 ───────────────────────────────────────────── our vision -->
+<!-- 6 ───────────────────────────────────────────── a real school, and why it works -->
 <section class="page">
-  <p class="eyebrow">Our vision</p>
-  <h1>By eighth grade, a student who can:</h1>
-  <div class="six" style="margin-top:16px">
-    <div><div class="n">01</div><h3>Learn something hard.</h3><p>And prove it.</p></div>
-    <div><div class="n">02</div><h3>Make something new.</h3><p>For a client in town, on a deadline.</p></div>
-    <div><div class="n">03</div><h3>Think it through.</h3><p>In writing, first.</p></div>
-    <div><div class="n">04</div><h3>Say it out loud.</h3><p>And defend it, no screen.</p></div>
-    <div><div class="n">05</div><h3>Show up for their town.</h3><p>One project a year is for the town.</p></div>
-    <div><div class="n">06</div><h3>Know where they're headed.</h3><p>And how they got there.</p></div>
-  </div>
-
-  <div class="hi" style="margin-top:16px">
-    <h2 style="font-size:15px">New York just decided a diploma should mean six things, not a set of test scores. We built the school on those six.</h2>
-    <p>Every six weeks, your child adds to a folder of proof: made, defended, grown. By eighth grade it's a portfolio.</p>
+  <p class="eyebrow">Is it a real school?</p>
+  <h1>Yes, it’s a real school.</h1>
+  <p class="lede" style="font-size:12px">It is different on purpose. It is still a school, and it answers to New York like any other.</p>
+  <div class="cols2" style="margin-top:14px;gap:12px 30px">
+    <div><h3>Every subject New York requires.</h3><p>Math, English, science and history every year, plus art, music, PE and health.</p></div>
+    <div><h3>Five days a week.</h3><p>You enroll your child and that’s it. There is no homeschool paperwork. Homeschooling families can come three days a week instead.</p></div>
+    <div><h3>Every adult is background-checked.</h3><p>Fingerprinted through New York State, with a state and FBI check, before they start.</p></div>
+    <div><h3>We answer to New York.</h3><p>We register with the state, and the district reviews what we teach. Students take the state tests in the spring. We are not accredited yet. That starts once we are open.</p></div>
+    <div><h3>It continues through high school.</h3><p>Ninth grade opens in September 2028. Then we add a grade each year through twelfth.</p></div>
+    <div><h3>And it is new.</h3><p>Our first students start in September 2027, so we have no results to show you yet. We can show you the plan, the people, and the day, hour by hour.</p></div>
   </div>
 
   <div class="rule"></div>
-  <p class="eyebrow">How you'll know it's working</p>
-  <div class="cols2" style="margin-top:10px">
-    <div><h3>We measure growth three times a year and publish it.</h3><p>NWEA MAP, three times a year. We publish whole-school growth, counting everyone. No child's score is public; yours comes home.</p></div>
-    <div><h3>You'll see the work.</h3><p>The robot, the performance, your child explaining it.</p></div>
-    <div><h3>AI is a subject here.</h3><p>Taught on purpose. Never a shortcut in seminar, lab, or the defense.</p></div>
-    <div><h3>We answer to New York.</h3><p>We register with the state, the district reviews our program, and accreditation starts once we're open.</p></div>
-  </div>
-
-  <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
-</section>
-
-<!-- 6 ───────────────────────────────────────────── why it works -->
-<section class="page">
   <p class="eyebrow">Why it works</p>
-  <h1>None of this is new. Putting it in one building is.</h1>
-  <div class="cols2" style="margin-top:16px">
-    <div class="card"><p class="eyebrow">Mornings</p><h3 style="margin-top:4px">You don't move on until you've got it.</h3><p>Mastery before moving on beats the calendar, in over a hundred studies. Struggling students gain most.</p></div>
-    <div class="card"><p class="eyebrow">Afternoons</p><h3 style="margin-top:4px">Real projects raise real scores.</h3><p>In randomized trials, long projects beat the usual way on state tests.</p></div>
-    <div class="card"><p class="eyebrow">Seminar</p><h3 style="margin-top:4px">Writing it down is how it sticks.</h3><p>Writing about it, and saying it out loud, is how it sticks.</p></div>
-    <div class="card"><p class="eyebrow">Advisory</p><h3 style="margin-top:4px">Being known changes how hard a student works.</h3><p>One close teacher relationship is among the strongest predictors of effort, more so with age. Hence one advisor for three years.</p></div>
+  <h2 style="font-size:19px;margin-top:6px;max-width:44ch">Each part has been studied for decades. Putting them in one school is new.</h2>
+  <div class="cols2" style="margin-top:10px">
+    <div class="card"><h3>A child moves on when they have it.</h3><p>More than a hundred studies show this works better than moving the whole class on a schedule. Students who struggle gain the most.</p></div>
+    <div class="card"><h3>Long projects raise test scores.</h3><p>In controlled studies, students who learned through long projects scored higher on state tests than students taught the usual way.</p></div>
+    <div class="card"><h3>Writing and talking make it stick.</h3><p>Students remember what they have to write about and explain out loud.</p></div>
+    <div class="card"><h3>Kids work harder for an adult who knows them.</h3><p>One close relationship with a teacher is among the strongest predictors of how hard a student tries, and it matters more as kids get older. That is why one adult stays with your child for three years.</p></div>
   </div>
   <p style="margin-top:10px;font-size:10px;color:var(--dim)">The studies, with sources: soundlineschool.com/research.html</p>
 
-  <div class="rule"></div>
-  <p class="eyebrow">Two ways in</p>
-  <div class="cols2" style="margin-top:10px">
-    <div class="band" style="margin:0"><p class="eyebrow" style="color:var(--glow)">The School · five days</p><h2 style="font-size:16px;margin-top:5px">For families ready to make the move.</h2><p>Monday to Friday, 8:30 to 3:00, with Extended Day until 5:30. Enroll, and that's it. No homeschool paperwork.</p></div>
-    <div class="band" style="margin:0"><p class="eyebrow" style="color:var(--glow)">The Collaborative · three days</p><h2 style="font-size:16px;margin-top:5px">For homeschooling families.</h2><p>Monday and Wednesday, 9:15 to 12:30, and Friday, 9:15 to 2:45. Same guides, same rooms, same studio. You keep your homeschool plan, and we hand you the course descriptions and hours logs to go with it.</p></div>
-  </div>
-
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 7 ───────────────────────────────────────────── about us -->
 <section class="page">
   <p class="eyebrow">About us</p>
-  <h1>Who's building it.</h1>
-  <p class="lede" style="font-size:12px">Ten to twelve in a grade, one advisor for three years, and four people who will know your child by name.</p>
+  <h1>The people starting it.</h1>
+  <p class="lede" style="font-size:12px">There are ten to twelve students in a grade. One adult stays with your child for three years. And the four people starting the school will know your child by name.</p>
   <div class="cols2" style="margin-top:18px">
-    <div class="card"><p class="eyebrow">Founder</p><h3 style="font-size:14px;margin-top:4px">Nicole Galante</h3><p>An educator who has spent over twenty years helping teachers and schools get better. She led the statewide team that wrote New York's framework and handbook for virtual schools.</p></div>
-    <div class="card"><p class="eyebrow">Lead guide</p><h3 style="font-size:14px;margin-top:4px">Adam King</h3><p>A musician and teacher. He designs and runs music and STEAM programs for libraries across Long Island (escape rooms, instrument labs, world percussion) and teaches private lessons. He'll know your child by Wednesday.</p></div>
+    <div class="card"><p class="eyebrow">Founder</p><h3 style="font-size:14px;margin-top:4px">Nicole Galante, Ph.D.</h3><p>An educator for over twenty years. She started as a classroom teacher, coached teachers in New York City schools for more than fifteen of them, and led the state team that wrote New York’s Quality Remote and Hybrid Teaching Framework and its Handbook for Virtual Schools.</p></div>
+    <div class="card"><p class="eyebrow">Lead guide</p><h3 style="font-size:14px;margin-top:4px">Adam King</h3><p>A musician and teacher. He designs and runs music and STEAM programs for libraries across Long Island (escape rooms, instrument labs, world percussion) and teaches private lessons. He’ll know your child by Wednesday.</p></div>
     <div class="card"><p class="eyebrow">Operations</p><h3 style="font-size:14px;margin-top:4px">Gina Dimichino</h3><p>For more than thirty-five years she has taught dance to North Shore kids, many of them right at this age, and she has run businesses here her whole life, including her own salon. She makes sure every family feels seen, and handles every detail in between.</p></div>
-    <div class="card"><p class="eyebrow">Academic systems</p><h3 style="font-size:14px;margin-top:4px">Izzy Galante</h3><p>Designs how the school teaches: the sequence, the mastery gates, and how we know it worked. Co-wrote New York's framework and handbook for virtual schools. Teaches a live seminar every week.</p></div>
+    <div class="card"><p class="eyebrow">Academic systems</p><h3 style="font-size:14px;margin-top:4px">Izzy Galante</h3><p>Designs how the school teaches: what comes first, how we know a child is ready to move on, and how we know it worked. Co-wrote New York’s Quality Remote and Hybrid Teaching Framework and its Handbook for Virtual Schools. Teaches a live class every week.</p></div>
   </div>
+  <p style="margin-top:12px;max-width:92ch">We are hiring a math and science guide and a humanities guide for September 2027. You will meet them before the first day.</p>
+
+  <div class="rule"></div>
+  <p class="eyebrow">Two ways to come</p>
+  <div class="cols2" style="margin-top:10px">
+    <div class="band" style="margin:0"><p class="eyebrow" style="color:var(--glow)">Five days a week</p><h2 style="font-size:16px;margin-top:5px">The full school.</h2><p>Monday to Friday, 8:30 to 3:00. Your child can stay until 5:30 if you need it. You enroll, and that’s it. There is no homeschool paperwork.</p></div>
+    <div class="band" style="margin:0"><p class="eyebrow" style="color:var(--glow)">Three days a week</p><h2 style="font-size:16px;margin-top:5px">For homeschooling families.</h2><p>Monday and Wednesday, 9:15 to 12:30, and Friday, 9:15 to 2:45. We call it the Collaborative. You stay your child’s teacher, and we hand you course descriptions and hours logs for your district reports.</p></div>
+  </div>
+
   <div class="sp"></div>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 8 ───────────────────────────────────────────── questions -->
 <section class="page">
-  <p class="eyebrow">Questions families ask</p>
+  <p class="eyebrow">Questions parents ask</p>
   <h1 style="font-size:26px">The ones that come up first.</h1>
   <div class="cols2 faq" style="margin-top:16px;gap:0 30px">
     <div>
+      <h3>Is this a real school or a homeschool program?</h3>
+      <p>It is a school. Your child is enrolled here five days a week, we teach every subject New York requires, and you file no homeschool paperwork. We also run a separate three-day program for families who homeschool.</p>
       <h3>How many students will there be?</h3>
-      <p>Ten to twelve in a grade — and nobody's stuck in their grade. Students work by skill across the school, and on Fridays the whole school builds one thing together. Small enough there's nowhere to hide, big enough for a real seminar.</p>
-      <h3>Isn't that too small?</h3>
-      <p>It's three grades in one building, and it adds a grade every year through twelfth. Your child's working group changes by subject, the whole school is together on Fridays, and the older students are out in town on apprenticeships. And every adult in the building knows your child by name.</p>
+      <p>Ten to twelve in a grade. Nobody is stuck in their grade, because students work at their own level across the school. On Fridays the whole school builds one thing together. It is few enough that no child gets overlooked, and enough for a real class discussion.</p>
       <h3>What does it cost?</h3>
-      <p>$1,500 a month, paid over twelve months, and $1,350 for founding families, a rate that holds through twelfth grade — not just through eighth. The Collaborative is $900, or $810 founding. No fees on top. The full table is on the tuition page of this packet and at soundlineschool.com/cost.html.</p>
+      <p>Five days a week is $1,500 a month, $18,000 a year. Founding Families, the first families to join, pay $1,350 a month. Three days a week is $900 a month, and Founding Families pay $810. It is paid monthly over twelve months, and Founding Families keep their price through twelfth grade. Every price is two pages on.</p>
+      <h3>Do students take the state tests?</h3>
+      <p>Yes. The state tests are in the spring and take three mornings. We do not do test prep. New York uses the tests to check that a new school is teaching what it should. All year long you will also see how much your own child has grown, three times a year.</p>
       <h3>What about high school?</h3>
-      <p>We add ninth grade in our second year, then a grade every year through twelfth. New York has moved to a diploma built on evidence of six things a graduate can do, and every one of them is something your child makes, defends, or shows here, every six weeks. That folder of work goes with them wherever they go next.</p>
+      <p>Ninth grade opens here in September 2028. Then we add a grade every year through twelfth. Your child can stay, or move on with a folder of real work that shows what they can do.</p>
       <h3>Is Soundline approved by New York?</h3>
-      <p>New York doesn't license private schools. You register with the state, and the district reviews that what you teach is equivalent. We do all of it, then start accreditation once we're open.</p>
+      <p>New York does not license private schools. A private school registers with the state, and the local district reviews what it teaches. We do both. We are not accredited yet. We start that process once we are open.</p>
+      <h3>How much screen time is there?</h3>
+      <p>Very little. Morning math, reading and writing are hands-on, at a table with a guide. The only screen in the morning belongs to the guide. Class discussions, science lab and presentations happen without screens.</p>
     </div>
     <div>
-      <h3>We homeschool. Can we join?</h3>
-      <p>Yes. The Collaborative is three days a week: Monday and Wednesday, 9:15 to 12:30, and Friday, 9:15 to 2:45, with the same guides, rooms, and studio. You keep your homeschool plan, and we hand you the course descriptions and hours logs to go with it. Every child who takes classes here, three days or five, has to meet New York's school immunization requirements.</p>
-      <h3>Will our district bus my child?</h3>
-      <p>Most likely. New York districts provide transportation to private schools up to fifteen miles away. You request it from your own district by April 1, and we'll send you the request already filled in.</p>
-      <h3>My child has an IEP. What happens to services?</h3>
-      <p>Your child can still receive services from the public school district. You request them from the district where the school is located by June 1, and we'll help you do it.</p>
-      <h3>Can my child still play school sports?</h3>
-      <p>New York requires students to be enrolled in the district to play on district teams, so town and club teams are the way to go — and they're where most students this age already play. We have PE in the day, and Extended Day runs until 5:30.</p>
-      <h3>How much screen time is there?</h3>
-      <p>Less than you'd think. Morning practice is hands-on, at a table with a guide; the only screen in the morning belongs to the guide. Seminar, lab, and the defense happen without screens. AI is taught as a subject, never used as a shortcut.</p>
       <h3>Where will the school be?</h3>
-      <p>We are looking along the Miller Place and Port Jefferson Station corridor, and Port Jefferson Station is the likeliest. We do not have a lease yet — which is exactly why the $500 that reserves a seat sits with an independent escrow agent instead of with us. It comes back in full, for any reason, until the day we sign. We announce the building that day, and you will have the address in hand before you are ever asked for the deposit.</p>
+      <p>On the North Shore, along the Miller Place–Port Jefferson Station corridor. Port Jefferson Station is the likeliest. We announce the address the day we sign the lease.</p>
+      <h3>What if the school doesn’t open?</h3>
+      <p>You get your money back. Your $500 is kept by an independent escrow agent, not by us, and it comes back in full, for any reason, until the day we sign a lease. If the school doesn’t open after that, we mail you a check.</p>
+      <h3>We homeschool. Can we join?</h3>
+      <p>Yes. The Collaborative is three days a week: Monday and Wednesday, 9:15 to 12:30, and Friday, 9:15 to 2:45, with the same guides and the same rooms. You keep your homeschool plan, and we hand you course descriptions and hours logs to go with it. Every child who takes classes here, three days or five, has to meet New York’s school immunization requirements.</p>
+      <h3>Will our district bus my child?</h3>
+      <p>Most likely. New York districts bus students to private schools up to fifteen miles away. You ask your own district by April 1, and we send you the request already filled in.</p>
+      <h3>My child has an IEP. What happens to services?</h3>
+      <p>Your child can still receive services from the public school district. You request them from the district where the school is located by June 1, and we will help you do it.</p>
+      <h3>Can my child still play school sports?</h3>
+      <p>New York requires students to be enrolled in the district to play on district teams, so town and club teams are the way to go. That is where most students this age already play. We have PE in the school day, and Extended Day runs until 5:30.</p>
+      <h3>My child is younger, or older. Can we still talk?</h3>
+      <p>Yes. A new sixth grade starts every September, and sign-up for September 2028 opens in August 2027. Write to us and we will call you before sign-up opens for your child’s year. We will not have a grade for students who are in eighth grade or higher this school year.</p>
     </div>
   </div>
   <div class="sp"></div>
-  <p style="font-size:10px;color:var(--dim)">Something we didn't answer? Write to hello@soundlineschool.com. If we don't know, we'll find out and tell you.</p>
-  <div class="foot"><span>Soundline School · Miller Place, NY</span><span>soundlineschool.com · <span class="pg"></span></span></div>
+  <p style="font-size:10px;color:var(--dim)">Something we didn’t answer? Write to hello@soundlineschool.com. If we don’t know, we will find out and tell you.</p>
+  <div class="foot"><span>Soundline School · North Shore, Long Island</span><span>soundlineschool.com · <span class="pg"></span></span></div>
 </section>
 
 <!-- 9 ───────────────────────────────────────────── what it costs -->
 <section class="page page--tuition">
   <p class="eyebrow">What it costs</p>
-  <h1>Tuition, 2027&ndash;28</h1>
-  <p class="lede" style="font-size:12px">Twelve monthly payments. Here is the whole table. We publish it before anyone is asked to commit, and the founding rate holds through twelfth grade.</p>
+  <h1>Here is what it costs, 2027&ndash;28.</h1>
+  <p class="lede" style="font-size:12px">Prices are per month, paid over twelve months. Founding Families are the first families to join. They pay 10% less and keep that price through twelfth grade.</p>
 
   <table style="margin-top:18px">
     <tr>
@@ -327,69 +358,93 @@ tr:last-child td,tr:last-child th{border-bottom:0}
       <th><span style="font-family:var(--shout);font-weight:800;font-size:15px;text-transform:none;letter-spacing:-.02em">The Collaborative</span><br><span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">Three days a week, for homeschooling families</span></th>
     </tr>
     <tr>
-      <td style="font-weight:600">A month</td>
+      <td style="font-weight:600">Regular price, a month</td>
       <td><span class="num" style="font-size:26px;color:var(--deep)">$1,500</span><br><span style="font-size:10px;color:var(--dim)">$18,000 a year</span></td>
       <td><span class="num" style="font-size:26px;color:var(--deep)">$900</span><br><span style="font-size:10px;color:var(--dim)">$10,800 a year</span></td>
     </tr>
   </table>
   <div class="hi" style="margin-top:0;border-radius:0 0 9px 9px">
     <div style="display:grid;grid-template-columns:1.9in 1fr 1fr;gap:10px;align-items:start">
-      <div><b style="font-size:11px">Founding Families</b><p style="font-size:9.5px;color:var(--dim);margin:3px 0 0">10% off, and your rate holds through twelfth grade</p></div>
+      <div><b style="font-size:11px">Founding Families</b><p style="font-size:9.5px;color:var(--dim);margin:3px 0 0">The first families to join. 10% off, and you keep that price through twelfth grade.</p></div>
       <div><span class="num" style="font-size:26px;color:var(--deep)">$1,350</span><br><span style="font-size:10px;color:var(--dim)">$16,200 a year</span></div>
       <div><span class="num" style="font-size:26px;color:var(--deep)">$810</span><br><span style="font-size:10px;color:var(--dim)">$9,720 a year</span></div>
     </div>
   </div>
 
-  <div class="cols2" style="margin-top:18px">
-    <div><h3>What&rsquo;s included</h3><p>Everything in the day: the two hours of practice, the four hours of making, the Quest, the arts, Showcase Friday. There is no materials fee on top of tuition.</p></div>
-    <div><h3>Paying in full</h3><p>Pay the year by March 1 and take 3% off, on top of the founding rate.</p></div>
-    <div><h3>Extended Day</h3><p>Until 5:30, priced separately. Founding Families pay 10% less for it too.</p></div>
-    <div><h3>Two kids</h3><p>10% off the second.</p></div>
+  <div class="cols3" style="margin-top:18px">
+    <div><h3>What&rsquo;s included</h3><p>Everything in the school day: classes, science labs, projects, art and music. There is no materials fee.</p></div>
+    <div><h3>Extended Day</h3><p>After school, 3:00 to 5:30, for five-day students. It is $330 a month over twelve months, or $297 for Founding Families. You pay only if you use it.</p></div>
+    <div><h3>Two kids</h3><p>The second child is 10% off.</p></div>
+    <div><h3>Paying in full</h3><p>Pay for the whole year by March 1 and take another 3% off.</p></div>
+    <div><h3>No application fee</h3><p>It costs nothing to apply. Anything you pay now counts toward tuition.</p></div>
+    <div><h3>Class size</h3><p>Ten to twelve students in a grade. One adult stays with your child for all three years.</p></div>
   </div>
 
   <div class="band">
-    <h2 style="font-size:17px">What you pay now is $500, and it isn&rsquo;t ours.</h2>
-    <p>It is held in escrow by an independent escrow agent, not by us, and it is refundable in full until we sign a lease. It counts toward your $2,500 deposit, and the deposit counts toward tuition. Nothing you pay now is on top of anything.</p>
-    <p style="margin-top:7px;color:var(--beacon)">A place in line is placed in the order families join.</p>
+    <h2 style="font-size:17px">What you pay, and when.</h2>
+    <p>There are no extra fees. Each payment counts toward the next one.</p>
+    <div class="cols3">
+      <div><h3>$500 holds a seat.</h3><p>It is kept by an independent escrow agent, not by us. You get all of it back, for any reason, until the day we sign a lease.</p></div>
+      <div><h3>$2,500 is your deposit.</h3><p>It is due when you sign the enrollment contract. Your $500 counts toward it. You will know the school&rsquo;s address before we ask for it.</p></div>
+      <div><h3>Then twelve monthly payments.</h3><p>Your deposit counts toward tuition. Payments start the summer before school opens.</p></div>
+    </div>
+    <p style="margin-top:10px;color:var(--beacon)">If the school doesn&rsquo;t open, your money comes back. We mail you a check.</p>
   </div>
 
   <div class="sp"></div>
-  <p style="font-size:10px;color:var(--dim)">The current figures are always at soundlineschool.com/cost.html</p>
-  <div class="foot"><span>Soundline School &middot; Miller Place, NY</span><span>soundlineschool.com &middot; <span class="pg"></span></span></div>
+  <p style="font-size:10px;color:var(--dim)">The current prices are always at soundlineschool.com/cost.html</p>
+  <div class="foot"><span>Soundline School &middot; North Shore, Long Island</span><span>soundlineschool.com &middot; <span class="pg"></span></span></div>
 </section>
 
-<!-- 9 ───────────────────────────────────────────── join -->
+<!-- 10 ───────────────────────────────────────────── how to start -->
 <section class="page">
-  <p class="eyebrow">Join</p>
-  <h1>Be one of our Founding Families.</h1>
-  <p class="lede" style="font-size:12px">Three grades under one roof, grouped by skill, not age — and we're taking founding families now. A rate that holds through twelfth grade. A seat on the Family Council. A say in what Soundline becomes.</p>
+  <p class="eyebrow">How to start</p>
+  <h1>Be one of our first families.</h1>
+  <p class="lede" style="font-size:12px">We are signing up our first families now. We call them Founding Families. They pay less, keep that price for as long as their child is enrolled, and help shape the school.</p>
 
-  <div class="band">
-    <p class="eyebrow" style="color:var(--glow)">Saturday builds · free · ages ten to thirteen</p>
-    <h2 style="font-size:23px;margin-top:6px">Come build something. Saturday. Free.</h2>
-    <p>Ninety minutes with Adam: instruments out of junk, a Quest, world percussion. At 11:15 parents come in and the kids explain what they made. That last part is the school. The December 12 build ends with the information session: the day hour by hour, what it costs, and where the school will be.</p>
-    <p style="margin-top:8px;color:var(--beacon);font-weight:600">Dates and a spot: soundlineschool.com/build</p>
+  <div class="cols3" style="margin-top:18px">
+    <div><div class="n">1</div><h3 style="margin-top:4px">Call us.</h3><p>Twenty minutes on the phone with one of the four of us. Ask anything, including about money. Write to <b>hello@soundlineschool.com</b> and we will find a time.</p></div>
+    <div><div class="n">2</div><h3 style="margin-top:4px">Look at the price.</h3><p>Every price is on the page before this one. You see what it costs before anyone asks you for anything.</p></div>
+    <div><div class="n">3</div><h3 style="margin-top:4px">Hold a seat.</h3><p>$500 holds your child&rsquo;s seat. Each grade has ten to twelve seats, and they fill in the order families reserve. We set it up with you on the call.</p></div>
   </div>
 
-  <div class="cols3" style="margin-top:4px">
-    <div><div class="n">1</div><h3 style="margin-top:4px">Take the survey.</h3><p>A few minutes. Your answers shape the school, and you hear from us first.<br><b>soundlineschool.com/survey</b></p></div>
-    <div><div class="n">2</div><h3 style="margin-top:4px">Come build with us.</h3><p>Your kid builds something and explains it to the room. You watch. Then ask anything.</p>
+  <div class="band">
+    <h2 style="font-size:17px">Founding families help shape the school.</h2>
+    <p>They sit on the Family Council. The Council helps pick the projects students take on, and brings people from town into the school. It does the fun things. It never fundraises.</p>
+    <div class="cols2" style="margin-top:10px;gap:6px 30px">
+      <div><p style="color:var(--paper)">Reserved seats at every student show.</p></div>
+      <div><p style="color:var(--paper)">A first look at each new project before it starts.</p></div>
+      <div><p style="color:var(--paper)">Brothers and sisters go first when a grade fills.</p></div>
+      <div><p style="color:var(--paper)">Your family&rsquo;s name on the founders&rsquo; wall.</p></div>
+    </div>
+  </div>
+
+  <div class="cols2" style="margin-top:4px">
+    <div>
+      <p class="eyebrow">Dates to know</p>
       <table style="margin-top:6px">
-        <tr><th style="width:.62in">Nov 21</th><td>Instrument lab, 10:00 to 11:30</td></tr>
-        <tr><th>Dec 5</th><td>The Quest, Dickens Festival weekend</td></tr>
-        <tr><th>Dec 12</th><td>Build, then the information session</td></tr>
-        <tr><th>Dec 19</th><td>World percussion, the Showcase</td></tr>
-        <tr><th>Dec 29–31</th><td>Winter Quest, three mornings</td></tr>
-        <tr><th>Jan 9</th><td>Bring a friend</td></tr>
-        <tr><th>Jan 14</th><td>Information night, the last before seats are allocated</td></tr>
+        <tr><th style="width:.8in">Nov 21</th><td>The first free Saturday build for ages 10 to 13. Dates and a spot: soundlineschool.com/build</td></tr>
+        <tr><th>Dec 12</th><td>Saturday build, then the information session: cost, the scholarship, the building.</td></tr>
+        <tr><th>Dec 29&ndash;31</th><td>Winter Quest, three mornings.</td></tr>
+        <tr><th>Jan 14</th><td>Information night, the last before seats are allocated.</td></tr>
+        <tr><th>Mar 1</th><td>The last day to pay for the whole year and take 3% off.</td></tr>
+        <tr><th>Apr 1</th><td>Your bus request to your own district is due. We send you the form already filled in.</td></tr>
+        <tr><th>Jun 1</th><td>If your child has an IEP, your request for services is due to the district. We help you with it.</td></tr>
+        <tr><th>Aug 2027</th><td>Sign-up opens for September 2028.</td></tr>
+        <tr><th>Sept 2027</th><td>The first day of school.</td></tr>
       </table>
     </div>
-    <div><div class="n">3</div><h3 style="margin-top:4px">Reserve a founding seat.</h3><p>Founding enrollment is open. $500 reserves a seat — held in escrow by an independent agent, not by us, and refundable in full until we sign a lease. Write to hello@soundlineschool.com with the subject "Founding seat".</p></div>
+    <div>
+      <p class="eyebrow">Is your child younger, or older?</p>
+      <p style="margin-top:6px">We open with grades 6, 7 and 8. If the timing is not right for your child, tell us, and we will call you when it is.</p>
+      <p><b>Younger than sixth grade.</b> A new sixth grade starts every September. Write to us with the grade your child is in now, and we will call you before sign-up opens for their year.</p>
+      <p><b>High school.</b> Ninth grade opens in September 2028, and we add a grade every year after that. We will not have a grade for students who are in eighth grade or higher this school year.</p>
+    </div>
   </div>
 
   <div class="sp"></div>
-  <p style="font-size:10px;color:var(--dim)">Prefer to talk? Fifteen minutes on the phone about your child, not the school: soundlineschool.com/talk</p>
-  <div class="foot"><span><b>Soundline School</b> · Miller Place, NY</span><span class="say" style="font-size:11px">Depth with direction.</span></div>
+  <p style="font-size:10px;color:var(--dim)">Ask for a call, or a reminder call: hello@soundlineschool.com</p>
+  <div class="foot"><span><b>Soundline School</b> · North Shore, Long Island</span><span class="say" style="font-size:11px">Depth with direction.</span></div>
 </section>
 
 </body></html>

@@ -24,7 +24,7 @@ Rule from `ENGINE.md`: every one of these gets a Sources-tab row before it is se
 
 ## 1. The calendar listing (60 words, for every calendar)
 
-> **Saturday builds for ages 10 to 13.** Free. Build an instrument out of junk and make it play, then explain how it works to the grown-ups. Saturdays 10:00 to 11:30, starting November 21; a three-morning Winter Quest December 29 to 31. Run by Soundline School, a new middle school opening in Miller Place in September 2027. Save a spot at soundlineschool.com/build.
+> **Saturday builds for ages 10 to 13.** Free. Build an instrument out of junk and make it play, then explain how it works to the grown-ups. Saturdays 10:00 to 11:30, starting November 21; a three-morning Winter Quest December 29 to 31. Run by Soundline School, a new middle school opening on Long Island’s North Shore in September 2027. Save a spot at soundlineschool.com/build.
 
 Give each calendar one listing per date, not one listing for the series; series listings get buried.
 
@@ -59,7 +59,7 @@ For the TBR editor, LongIsland.com, and anyone who asks "why is this news."
 >
 > As of this month, every organization preparing to be listed in New York serves a religious school network. For a Long Island family choosing an independent, non-sectarian school, and for any family whose child is in middle school, there is no organization to apply to.
 >
-> Soundline, an independent, non-sectarian school for grades six through eight opening in Miller Place in September 2027, is working to close that gap before the February deadline, in partnership with national scholarship organizations and other Long Island independent schools.
+> Soundline, an independent, non-sectarian school for grades six through eight opening on Long Island’s North Shore in September 2027, is working to close that gap before the February deadline, in partnership with national scholarship organizations and other Long Island independent schools.
 >
 > "The credit costs a donor nothing. Forty neighbors giving $1,700 is a $68,000 scholarship fund raised out of federal tax bills, not out of anyone's pocket," said Nicole Galante, Soundline's founder. "That money is going to flow somewhere in 2027. Right now, on Long Island, none of it can flow to a child at a secular independent school, and none of it can flow to a middle schooler at all. We'd like to change that in time."
 >

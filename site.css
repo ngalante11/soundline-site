@@ -301,3 +301,8 @@
   .honest{font-family:var(--reassure); font-style:italic; font-size:1.1rem; color:var(--on-paper-dim)}
   .plate.proofs h2{color:var(--beacon); max-width:22ch}
   .plate.proofs p{max-width:var(--measure)}
+
+  /* ---------- Nov 12: the tuition table on What it costs ---------- */
+  .track .price{display:block; font-family:var(--shout); font-weight:800; font-size:clamp(2.6rem,1.9rem + 2.6vw,3.9rem); letter-spacing:-.045em; line-height:1; margin:1rem 0 .7rem}
+  .track .price small{display:block; font-family:var(--read); font-weight:600; font-size:1rem; letter-spacing:0; line-height:1.3; margin-top:.45rem}
+  .track .std{margin-top:.9rem; padding-top:.9rem; border-top:1px solid currentColor; font-size:1rem}

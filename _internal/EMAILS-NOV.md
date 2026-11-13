@@ -15,11 +15,11 @@ Written 29 Oct 2026. Companion to `ADS-NOV11.md` and `CALL-GUIDE.md`.
 | The Collaborative, three days | $900 | $10,800 |
 | **Founding Families** | **$810** | **$9,720** |
 
-Founding rate is 10% off and holds through twelfth grade. Second child 10% off. Pay the year by 1 March and take a further 3%. Extended Day priced separately, founding families 10% less there too.
+Founding rate is 10% off and holds through twelfth grade. Second child 10% off. Pay the year by 1 March and take a further 3%. Extended Day, 3:00 to 5:30, is $330 a month over twelve; founding families pay $297.
 
 **$500 reserves a seat**, held by an independent escrow agent rather than by Soundline, refundable in full until the lease is signed. It counts toward the $2,500 deposit, and the deposit counts toward tuition.
 
-Two things still to fill: `[EXTDAY]` and `[LINK]`, the page where a family actually reserves.
+One thing still to fill: `[LINK]`, the page where a family actually reserves. (Extended Day was priced Nov 12: $330 a month, $297 founding.)
 
 **Send them yourself, from Gmail, one at a time.** The list is small enough. A plain personal send from `hello@soundlineschool.com` lands in the inbox and gets replies; a Mailchimp template to forty people lands in Promotions and gets none. Below about fifty recipients, bulk tooling costs you more than it saves. Never BCC a batch — if one person replies-all to a BCC list you have leaked your entire inquiry list to each other.
 
@@ -70,7 +70,7 @@ The most important email you will send this year. The number goes in the first l
 
 Hi [Name],
 
-Tuition at Soundline is **$1,500 a month** — $18,000 a year, paid over twelve months. **Founding families pay $1,350**, which is $16,200. The Collaborative, three days a week, is $900 a month, or **$810 for founding families**. Extended Day, to 5:30, is [EXTDAY] and only charged to families who use it, with the same 10% off for founding families.
+Tuition at Soundline is **$1,500 a month** — $18,000 a year, paid over twelve months. **Founding families pay $1,350**, which is $16,200. The Collaborative, three days a week, is $900 a month, or **$810 for founding families**. Extended Day, to 5:30, is $330 a month and only charged to families who use it; founding families pay $297.
 
 That's the whole price. No application fee, no registration fee, no materials fee, no technology fee, no annual fundraising minimum. Everything in the day is in it: the two hours of practice, the four hours of making, the Quest, the arts, Showcase Friday. If a cost appears later that isn't on this list, it will be because you chose it.
 
