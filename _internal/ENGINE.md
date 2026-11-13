@@ -154,6 +154,21 @@ The tag reaches the pixel on every event, the subject line of every call request
 
 ---
 
+## 4a. Paper
+
+Everything prints from `print/` through one of four scripts; each refuses to write a sheet that overflows, and every QR code carries a source tag.
+
+| Piece | Source | Print | Where it goes |
+|---|---|---|---|
+| Kid flyer | `print/flyer-kids.html` | `node tools/flyers.js [tag…]` | Kid-height walls: studios, lobbies, shop windows |
+| Parent flyer | `print/flyer-parents.html` | same | Boards parents read: coffee shops, libraries, waiting rooms |
+| School flyer (no dates, all winter) | `print/flyer-school.html` | same (QR to the home page) | Anywhere a dated flyer would go stale |
+| Booklet, 8 half-letter pages | `print/booklet.html` | `node tools/booklet.js` | Hand out at builds and the parents' half hour. `-Imposed.pdf` prints at home: duplex, landscape, flip on the short edge, fold. Give a print shop the sequential one and say "saddle-stitched, 5.5 by 8.5". |
+| Postcard, 6 by 4, two sides | `print/postcard.html` | `node tools/postcards.js [tag…]` | Counters: orthodontists, pediatricians, bagel shops, the bookstore. `-2up.pdf` prints two a sheet at home, duplex, flip on the long edge. |
+| Packet, 10 letter pages | `print/packet.html` | `node tools/packet.js packet` | The site's PDF; now shows the tuition page and the build dates |
+
+A new wall: `python3 tools/qr.py <tag>` (and `--path / <tag>` for the school flyer), then the print script with that tag. Dates on all of them come from `build/builds.js`.
+
 ## 5. The numbers, and how to read them when they are bad
 
 The Scoreboard's blue targets are PLAN-35 §4, unchanged: 310 surveys, 125 in a room, 41 deposits, 35 enrolled, and 20 calls by 14 January. §0 of the same file already said the 310 will not come from cold channels. The target stays on the board anyway, because the gap between it and reality is the argument for every Thursday ask.

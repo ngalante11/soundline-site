@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+  The general flyer: the school, not a date. Letter, one page. Nothing on it
+  goes stale when the build calendar does, so it can sit on a board all winter.
+  Print: node tools/flyers.js  (prints with the kid and parent flyers)
+  QR points at the home page: print/qr/home-<tag>.svg, from
+  python3 tools/qr.py --path / <tag>. Facts must match the site.
+-->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+@page{size:Letter;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#12222B;--channel:#1B4B6E;--paper:#F7F5F0;--beacon:#F2C14E;--glow:#7FE0C9;--making:#FF5A7A;--tint:#F6E7CB;--rule:rgba(18,34,43,.16)}
+body{width:8.5in;height:11in;background:var(--paper);color:var(--deep);font-family:'Instrument Sans',Arial,sans-serif;display:flex;flex-direction:column;-webkit-print-color-adjust:exact;print-color-adjust:exact;overflow:hidden}
+.hero{background:var(--deep);color:var(--paper);padding:.55in .8in .48in}
+.top{display:flex;justify-content:space-between;align-items:baseline}
+.wm{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.03em}
+.wm small{font-family:'Instrument Sans',Arial,sans-serif;font-weight:500;font-size:11px;letter-spacing:.02em;color:var(--glow);margin-left:10px}
+.open{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:15px;color:var(--glow)}
+h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:52px;letter-spacing:-.05em;line-height:.95;margin-top:20px}
+h1 .a{color:var(--beacon)}h1 .b{color:var(--making)}
+.lede{font-size:15.5px;line-height:1.45;color:rgba(247,245,240,.82);max-width:6.6in;margin-top:16px}
+.bar{display:grid;grid-template-columns:2fr 4fr 2.5fr;gap:6px;margin-top:20px}
+.bar div{border-radius:8px;padding:9px 11px;font-size:11.5px;line-height:1.3;color:var(--deep)}
+.bar b{display:block;font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:14px;letter-spacing:-.02em;margin-bottom:2px}
+.bar .p{background:var(--beacon)}.bar .m{background:var(--making);color:var(--paper)}.bar .e{background:var(--glow)}
+.body{padding:.42in .8in .45in;flex:1;display:flex;flex-direction:column}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+h3{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:700;font-size:15px;letter-spacing:-.01em;margin-bottom:6px}
+.cols p{font-size:12.4px;line-height:1.45;color:rgba(18,34,43,.88);margin-bottom:9px}
+.cols b{font-weight:600}
+.band{margin-top:auto;background:var(--tint);border-radius:14px;padding:16px 20px;display:grid;grid-template-columns:1fr 1.25in;gap:22px;align-items:center}
+.band h3{margin-bottom:5px}
+.band p{font-size:12.4px;line-height:1.45;color:rgba(18,34,43,.88);margin-bottom:6px}
+.band p:last-child{margin:0}
+.band img{width:1.25in;height:1.25in;display:block}
+footer{border-top:1px solid var(--rule);margin-top:16px;padding-top:10px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:rgba(18,34,43,.72);line-height:1.45}
+footer b{font-weight:600;color:var(--deep)}
+</style></head><body>
+
+<div class="hero">
+  <div class="top"><div class="wm">Soundline<small>MILLER PLACE, NY</small></div><div class="open">Opening September 2027 · grades six through eight</div></div>
+  <h1><span class="a">Two hours of practice.</span><br><span class="b">Four hours of making.</span><br>Every adult knows your kid.</h1>
+  <p class="lede">A new independent middle school on the North Shore, with ten to twelve students in a grade, one advisor who stays with your child for three years, and a grade added each year through twelfth.</p>
+  <div class="bar">
+    <div class="p"><b>Practice</b>8:30, two hours: math, reading, writing, at your child's own pace</div>
+    <div class="m"><b>Making</b>Four hours, to 3:00: seminar, lab, studio, the Quest. Defended out loud every six weeks</div>
+    <div class="e"><b>Extended Day</b>3:00 to 5:30, if you need it</div>
+  </div>
+</div>
+
+<div class="body">
+  <div class="cols">
+    <div>
+      <h3>How it works</h3>
+      <p><b>Grouped by skill, not age.</b> Nobody moves on until they've got it, and nobody waits once they have.</p>
+      <p><b>Real work, finished, shown to someone.</b> A robot, a documentary, a song for the ensemble. Every six weeks, a defense. No slides.</p>
+      <p><b>Fridays, the whole school builds one thing.</b> At 2:00 someone presents and something is performed. Families welcome.</p>
+    </div>
+    <div>
+      <h3>Who's building it</h3>
+      <p><b>Nicole Galante</b>, founder. Twenty years helping schools get better; led the team that wrote New York's framework for virtual schools.</p>
+      <p><b>Adam King</b>, lead guide. Runs instrument labs and escape rooms for libraries across Long Island.</p>
+      <p><b>Gina Dimichino</b>, operations. Thirty-five years teaching North Shore kids to dance. <b>Izzy Galante</b>, academic systems.</p>
+    </div>
+    <div>
+      <h3>What it costs</h3>
+      <p><b>$1,500 a month</b>, paid over twelve. <b>Founding families pay $1,350</b>, and that rate holds through twelfth grade. The three-day Collaborative for homeschooling families is $900, or $810 founding. No fees on top.</p>
+      <p>We don't have a lease yet. The <b>$500 that reserves a seat sits with an independent escrow agent</b>, not with us, and comes back in full until the day one is signed.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div>
+      <h3>See it before you hear about it.</h3>
+      <p>Free Saturday builds for ages ten to thirteen all winter: instruments out of junk, a Quest, world percussion. Drop off at ten, come back at 11:15 and watch your own child explain something they made to a room. Dates and a spot at <b>soundlineschool.com/build</b>.</p>
+      <p>Or fifteen minutes on the phone about your child, not the school: <b>soundlineschool.com/talk</b></p>
+    </div>
+    <img id="qr" src="qr/home-flyer.svg" alt="QR code">
+  </div>
+
+  <footer>
+    <div>A federal scholarship tax credit begins January 2027, the school year we open. Everything we know is at soundlineschool.com/cost. Non-sectarian, independent, five days a week.</div>
+    <div style="text-align:right;white-space:nowrap"><b>hello@soundlineschool.com</b><br>soundlineschool.com</div>
+  </footer>
+</div>
+<script>
+(function(){ var tag=(new URLSearchParams(location.search).get('tag')||'flyer').replace(/[^a-z0-9_.-]/gi,''); document.getElementById('qr').src='qr/home-'+tag+'.svg'; })();
+</script>
+</body></html>
