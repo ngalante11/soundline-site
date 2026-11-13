@@ -52,7 +52,7 @@ const CARDS = {
     pillar: 'trust',
     head: ["We'll keep", 'your hours log.'],
     foot: ['Course descriptions, hours, the quarterly report.',
-           'The Collaborative · three days a week'],
+           'Three days a week, for homeschooling families.'],
   },
   h4: {
     track: 'home',
@@ -95,7 +95,7 @@ const CARDS = {
     pillar: 'trust',
     head: ['Eleven minutes', 'in a folding chair,', 'twice a year.'],
     foot: ['An 88 does not tell you what your child can do.',
-           'A folder of proof does.'],
+           'A folder of real work does.'],
   },
   p4: {
     track: 'public',
@@ -240,8 +240,8 @@ const CARDS = {
     pillar: 'significance',
     head: ['Depth', 'with direction.'],
     sub: 'Every child has a soundline.',
-    foot: ['Where they are, skill by skill —',
-           'and what sparks them, and how deep it runs.'],
+    foot: ['We find out where your child really is.',
+           'Then we pick a direction together.'],
   },
   s3: {
     track: 'shared',

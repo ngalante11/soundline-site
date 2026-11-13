@@ -242,7 +242,7 @@ def admissions():
     money = (faq('What is a Founding Family?', 'One of the first families to join. Founding Families pay 10% less, and the price they start at is the price they pay every year their child is here, through twelfth grade. It does not go up when our costs go up, and it does not go up when the school fills.', True)
              + faq('How is it paid?', 'Monthly, over twelve months, starting the summer before school opens. You do not owe two big payments in August and January.')
              + faq('What if the school doesn’t open?', 'You get your money back. Your $500 comes back in full, for any reason, until the day we sign a lease. If the school doesn’t open after that, we mail you a check.')
-             + faq('Is there financial aid of your own?', 'Yes, and it is a real line in our first budget rather than an afterthought. Tell us that cost is the question for you. It changes how we build the aid pool, and it does not count against your child.')
+             + faq('Is there financial aid?', 'Not yet. We do not have a scholarship fund, and we will not promise one before it exists. Scholarships are a goal for us. If cost is the question for you, tell us. It does not count against your child, and it tells us how much help families need.')
              + faq('Is the bus really free?', 'In most cases, yes. Your own district buses students to private schools up to fifteen miles from home, and the district pays for it. You have to ask by April 1. We send you the form already filled in.'))
     school = (faq('How many students will there be?', 'Ten to twelve in a grade. Nobody is stuck in their grade, because students work at their own level across the school. On Fridays the whole school builds one thing together. It is few enough that no child gets overlooked, and enough for a real class discussion.', True)
               + faq('Where will the school be?', 'On the North Shore, along the Miller Place–Port Jefferson Station corridor. Port Jefferson Station is the likeliest. We announce the address the day we sign the lease.')
@@ -266,8 +266,8 @@ def admissions():
     o += f'''<section id="scholarship" style="background: #FFFFFF; border-top: 1px solid {RULE_P}; border-bottom: 1px solid {RULE_P}; padding: {HALF} 0">
 <div style="{WP}; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 64px">
 <div style="flex: 1 1 460px; min-width: 0">
-<h2 style="margin: 0 0 12px; font-family: {SHOUT}; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.02; letter-spacing: -0.04em; max-width: 22ch">A federal scholarship starts the January before we open.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: {DIM_P}; max-width: 640px">A new federal tax credit for private school scholarships begins January 1, 2027. New York has said it will opt in and has not yet filed. We have written up everything we know.</p>
+<h2 style="margin: 0 0 12px; font-family: {SHOUT}; font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.02; letter-spacing: -0.04em; max-width: 22ch">A new federal scholarship may help with tuition.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: {DIM_P}; max-width: 640px">A federal tax credit for private school scholarships begins January 1, 2027. New York has said it will take part and has not filed yet. Nothing is final. We wrote up what we know.</p>
 </div>
 {quiet('The federal scholarship, in full', 'scholarship.html')}
 </div>
@@ -475,12 +475,12 @@ def collaborative():
 # ------------------------------------------------------------------ THE FEDERAL SCHOLARSHIP (the copy that lived on What it costs)
 def scholarship():
     o = head('The federal scholarship tax credit | Soundline School') + root_open(0) + chrome('adm')
-    o += page_hero('The federal scholarship tax credit, starting January 1, 2027', ['A federal scholarship starts', 'the January before we open.'],
-                   'For the first time, there is federal money for private school tuition — and it arrives in the same school year your child would start here.')
-    body = ['Last year’s federal tax law created a scholarship tax credit that begins <strong>January 1, 2027</strong>. It works through non-profit scholarship granting organizations: a taxpayer gives to one and takes a dollar-for-dollar credit on their federal return, up to $1,700 a person. The organization awards the money to families as tuition scholarships.',
-            'Two things make this matter on the North Shore. The first is the income line: a household qualifies at or below <strong>300% of area median gross income</strong>. On Long Island the area median for a family of four runs around $164,000, which puts the ceiling near half a million dollars. This is not a low-income program here. It is most families.',
-            'The second is the calendar. Each state has to opt in, and New York’s governor said on October 9 that <strong>New York will</strong>. The state’s election has to be filed with the IRS by January 1, and the list of approved organizations is due February 15 — weeks after you would be choosing a school for September.',
-            'We are not going to overpromise a program that is not final. New York has announced and not yet filed. What we will do is tell you the day it is official, name the scholarship organization we work with the day the state’s list is published, and sit down with you and the actual numbers before you sign anything.']
+    o += page_hero('The federal scholarship tax credit, starting January 1, 2027', ['A new federal scholarship', 'may help with tuition.'],
+                   'A federal tax credit for private school scholarships starts January 1, 2027. Here is what we know so far, and what is still not decided.')
+    body = ['A 2025 federal tax law created a scholarship tax credit that begins <strong>January 1, 2027</strong>. It works through non-profit groups called scholarship granting organizations. A taxpayer gives to one of these groups and gets the same amount taken off their federal taxes, up to $1,700 a person. The group then gives the money to families as tuition scholarships.',
+            'Many North Shore families would qualify. A household qualifies if it earns up to <strong>300% of the area’s median income</strong>. On Long Island the median for a family of four is around $164,000, so the limit is close to half a million dollars. Here, this is not only a program for low-income families.',
+            'The timing is tight. Each state has to choose to take part. New York’s governor said on October 9 that <strong>New York will</strong>. The state has to file that choice with the IRS by January 1, and its list of approved scholarship groups is due February 15. That is a few weeks after you would be choosing a school for September.',
+            'We will not promise what is not final. New York has announced its choice and has not filed it yet. No scholarship group is working with us yet, and we do not have a scholarship fund of our own. Scholarships are a goal for us, not a promise. We will tell you the day anything is official, and we will go through the real numbers with you before you sign anything.']
     o += f'''<section style="padding: {PAD} 0">
 <div style="{WP}; display: flex; flex-wrap: wrap; gap: 36px 88px; align-items: flex-start">
 <div style="flex: 1 1 340px; min-width: 0">
@@ -493,9 +493,9 @@ def scholarship():
 </section>
 <section id="donors" style="background: #FFFFFF; border-top: 1px solid {RULE_P}; border-bottom: 1px solid {RULE_P}; padding: {PAD} 0">
 <div style="{WP}">
-{ph2('Your federal taxes can pay for a neighbor’s seat.', maxw='18ch')}
-{psub('Not a donation in the usual sense. A dollar-for-dollar federal credit of up to $1,700 a taxpayer means the money leaves your taxes instead of your pocket, and lands on a local family’s tuition. Twenty neighbors is a scholarship. A hundred is a scholarship fund.')}
-{ledger([('It has to go through an approved organization.', 'Not to us. We will name the one we work with as soon as New York publishes its list.'), ('It is a credit, not a deduction.', 'Up to $1,700 a person, dollar for dollar, non-refundable, starting with the 2027 tax year.'), ('Tell us now if you are in.', 'Write to hello@soundlineschool.com and we will come back to you in January with the paperwork, not a pitch.')])}<div style="margin-top: 36px">{quiet('Write to us about the scholarship fund', 'mailto:hello@soundlineschool.com?subject=The%20scholarship%20fund')}</div>
+{ph2('If you would like to help a local family.', maxw='18ch')}
+{psub('Under the new credit, a taxpayer can give up to $1,700 to an approved scholarship group and take the same amount off their federal taxes. The money goes to families as tuition scholarships.')}
+{ledger([('The gift goes to an approved group, not to us.', 'The group decides who gets a scholarship. A gift cannot be set aside for one particular child.'), ('It comes straight off the tax you owe.', 'It is a credit, not a deduction: up to $1,700 a person, starting with the 2027 tax year.'), ('Nothing is set up yet.', 'New York has not published its list of approved groups. If you want to hear when there is a way to give, write to hello@soundlineschool.com and we will tell you.')])}<div style="margin-top: 36px">{quiet('Write to us about scholarships', 'mailto:hello@soundlineschool.com?subject=Scholarships')}</div>
 </div>
 </section>
 '''

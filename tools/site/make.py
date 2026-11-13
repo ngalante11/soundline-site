@@ -30,7 +30,7 @@ PAGES = [
     ('collaborative.html', 'collaborative.html', pages.collaborative,
      'The Collaborative is Soundline three days a week for homeschooling families on Long Island’s North Shore: Monday, Wednesday and Friday, with the paperwork your district reads.'),
     ('scholarship.html', 'scholarship.html', pages.scholarship,
-     'What Soundline families should know about the federal scholarship tax credit that begins January 1, 2027, and where New York stands on it.'),
+     'What parents should know about the federal scholarship tax credit that begins January 1, 2027, where New York stands, and what is still not decided.'),
 ]
 
 SCHOOL = {
