@@ -288,7 +288,10 @@ const CARDS = {
 
 // ------------------------------------------------------------ the schedule
 // A proposal, not gospel — the board names which posts belong to a phase but
-// not which date each lands on. Edit freely; the weekday check below keeps
+// not which date each lands on. The posts actually queued (Facebook, Instagram,
+// Threads) live in the scheduler; on 12 Nov 2026 the queue through Dec 4 was
+// given these images and plain-language captions. n4 (the reminder call) is
+// drawn and not yet scheduled. Edit freely; the weekday check below keeps
 // an edit from quietly drifting off the wheel.
 const SCHEDULE = {
   // Phase One ran on hand-drawn art; only the information-night card is
@@ -307,7 +310,7 @@ const SCHEDULE = {
     ['2026-11-23', 'mechanism', 'p8'],
     ['2026-11-25', 'mirror',    'h5'],
     ['2026-11-27', 'place',     's1'],
-    ['2026-11-29', 'ask',       'n4'],
+    ['2026-11-29', 'ask',       'p9v2'],
     ['2026-11-30', 'mechanism', 'p5'],
   ]},
   3: { window: 'Dec 1 – Dec 12 · report card', slots: [
