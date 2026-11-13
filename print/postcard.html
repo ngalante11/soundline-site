@@ -1,0 +1,86 @@
+<!doctype html>
+<!--
+  The counter postcard: 6 x 4 in, two sides. Front for the kid, back for the parent.
+  Print: node tools/postcards.js            -> print/Soundline-Postcard.pdf (two pages, 6x4, for a print shop)
+                                              print/Soundline-Postcard-2up.pdf (letter, two cards a sheet, duplex, flip on the long edge)
+         node tools/postcards.js orthodontist -> the same pair in print/postcards/, QR tagged for that wall
+  ?tag=<name> picks print/qr/<name>.svg; ?sheet=2up lays two cards on a letter page.
+  Dates come from ../build/builds.js. Facts must match the site.
+-->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script src="../build/builds.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#12222B;--channel:#1B4B6E;--paper:#F7F5F0;--beacon:#F2C14E;--glow:#7FE0C9;--making:#FF5A7A;--tint:#F6E7CB;--rule:rgba(18,34,43,.16)}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Instrument Sans',Arial,sans-serif;color:var(--deep);background:#fff}
+/* one card per page */
+body.single{width:6in}
+body.single .sheet{width:6in;height:4in;page-break-after:always;break-after:page;overflow:hidden}
+body.single .sheet:last-child{page-break-after:auto;break-after:auto}
+/* two cards a letter sheet, stacked, with cut marks */
+body.twoup .sheet{width:8.5in;height:11in;page-break-after:always;break-after:page;overflow:hidden;position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+body.twoup .sheet:last-child{page-break-after:auto;break-after:auto}
+body.twoup .card{outline:.5px solid rgba(18,34,43,.25)}
+.card{width:6in;height:4in;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.front{background:var(--deep);color:var(--paper);padding:.3in .34in .26in}
+.front .top{display:flex;justify-content:space-between;align-items:center}
+.front .wm{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:15px;letter-spacing:-.03em}
+.front .wm small{font-family:'Instrument Sans',Arial,sans-serif;font-weight:500;font-size:8.5px;letter-spacing:.02em;color:var(--glow);margin-left:7px}
+.front .free{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:10px;background:var(--beacon);color:var(--deep);padding:4px 9px;border-radius:999px}
+.front h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:39px;letter-spacing:-.05em;line-height:.92;margin-top:16px}
+.front h1 .a{color:var(--beacon)}.front h1 .c{color:var(--making)}
+.front .then{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:12.5px;line-height:1.3;color:var(--glow);margin-top:9px;max-width:3.6in}
+.front .row{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.front .facts{font-size:9.5px;line-height:1.5;color:rgba(247,245,240,.85)}
+.front .facts b{display:block;font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:12px;color:var(--paper);letter-spacing:-.01em}
+.front .qr{background:var(--paper);padding:5px;border-radius:7px;position:absolute;right:.34in;top:.72in}
+.front .qr img{width:1.05in;height:1.05in;display:block}
+.back{background:var(--paper);padding:.28in .34in .24in;display:grid;grid-template-columns:1fr 1.75in;gap:16px}
+.back h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:16.5px;letter-spacing:-.04em;line-height:1.02}
+.back p{font-size:8.9px;line-height:1.42;color:rgba(18,34,43,.88);margin-top:6px}
+.back b{font-weight:600;color:var(--deep)}
+.back .side{background:var(--tint);border-radius:8px;padding:9px 10px;font-size:8.6px;line-height:1.35}
+.back .side h3{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:700;font-size:10px;letter-spacing:-.01em;margin-bottom:5px}
+.back .side div{display:grid;grid-template-columns:.62in 1fr;gap:5px;padding:2.5px 0;border-top:1px solid var(--rule)}
+.back .side div b{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800}
+.back .foot{grid-column:1/-1;align-self:end;display:flex;justify-content:space-between;border-top:1px solid var(--rule);padding-top:5px;font-size:8px;color:rgba(18,34,43,.72)}
+.back .foot b{color:var(--deep)}
+</style></head><body>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var tag = (q.get('tag') || 'postcard').replace(/[^a-z0-9_.-]/gi,'');
+  var twoup = q.get('sheet') === '2up';
+  document.body.className = twoup ? 'twoup' : 'single';
+  var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function p(s){ var a = s.split('-'); return new Date(+a[0], +a[1]-1, +a[2]); }
+  var dates = (window.BUILDS || []).map(function(b){
+    var d = p(b.date), l = M[d.getMonth()] + ' ' + d.getDate(); if (b.end) l += '–' + p(b.end).getDate();
+    return '<div><b>' + l + '</b><span>' + b.title + '</span></div>';
+  }).join('');
+  var front = '<div class="card front">' +
+    '<div class="top"><div class="wm">Soundline<small>NORTH SHORE, LONG ISLAND</small></div><div class="free">Free · Ages 10 to 13</div></div>' +
+    '<h1><span class="a">Build an instrument</span><br>out of junk.<br><span class="c">Make it play.</span></h1>' +
+    '<p class="then">Then explain to a room full of grown-ups exactly why it works. That part is the point.</p>' +
+    '<div class="qr"><img src="qr/' + tag + '.svg" alt="QR code"></div>' +
+    '<div class="row"><div class="facts"><b>Saturdays, 10 to 11:30, this winter</b>Nothing to bring. Parents come at 11:15.<br>Save a spot: <b style="display:inline;font-size:10px">soundlineschool.com/build</b></div></div>' +
+    '</div>';
+  var back = '<div class="card back">' +
+    '<div><h2>Is your kid doing fine on paper and quietly checked out?</h2>' +
+    '<p><b>Soundline</b> is a new independent middle school opening on Long Island’s North Shore in September 2027: grades six through eight, <b>ten to twelve in a grade</b>, two hours of practice every morning and four hours of making, one advisor who stays with your child for all three years. Grouped by skill, not age. Every six weeks, something made and defended out loud.</p>' +
+    '<p><b>$1,500 a month; founding families $1,350</b>, held through twelfth grade. No fees on top. We don’t have a lease yet, so the $500 that reserves a seat sits with an independent escrow agent and comes back in full until the day one is signed.</p>' +
+    '<p>Fifteen minutes on the phone about your child, not the school: <b>soundlineschool.com/talk</b></p></div>' +
+    '<div class="side"><h3>See it first. Free Saturday builds.</h3>' + dates + '<div style="border-top:0;display:block;margin-top:5px">Drop off at ten; come back at 11:15 and watch your own child explain what they made.</div></div>' +
+    '<div class="foot"><span><b>hello@soundlineschool.com</b> · soundlineschool.com</span><span>Non-sectarian · independent · a three-day Collaborative for homeschoolers</span></div>' +
+    '</div>';
+  var sheets = twoup
+    ? '<div class="sheet">' + front + front + '</div><div class="sheet">' + back + back + '</div>'
+    : '<div class="sheet">' + front + '</div><div class="sheet">' + back + '</div>';
+  document.write(sheets);
+})();
+</script>
+</body></html>

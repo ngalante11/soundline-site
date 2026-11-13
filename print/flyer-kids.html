@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  Source for the kid-facing flyer. Letter, one page, portrait.
+  Print: node tools/flyers.js            -> print/Soundline-Flyer-Kids.pdf (QR tagged "flyer")
+         node tools/flyers.js library    -> print/flyers/Soundline-Flyer-Kids-library.pdf
+  Open with ?tag=<name> to preview a placement's QR code (print/qr/<name>.svg,
+  made by tools/qr.py). Dates come from ../build/builds.js: change them there.
+  Facts here must match build/index.html and join.html.
+-->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script src="../build/builds.js"></script>
+<style>
+@page{size:Letter;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#12222B;--channel:#1B4B6E;--paper:#F7F5F0;--beacon:#F2C14E;--glow:#7FE0C9;--making:#FF5A7A;--rule:rgba(247,245,240,.22)}
+body{width:8.5in;height:11in;background:var(--deep);color:var(--paper);font-family:'Instrument Sans',Arial,sans-serif;
+  padding:.7in .75in .6in;display:flex;flex-direction:column;-webkit-print-color-adjust:exact;print-color-adjust:exact;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.wm{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.03em}
+.wm small{display:block;font-family:'Instrument Sans',Arial,sans-serif;font-weight:500;font-size:11px;letter-spacing:.02em;color:var(--glow);margin-top:2px}
+.free{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:16px;letter-spacing:-.02em;background:var(--beacon);color:var(--deep);padding:7px 14px;border-radius:999px}
+h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:76px;letter-spacing:-.05em;line-height:.92;margin-top:40px}
+h1 .a{color:var(--beacon)}h1 .b{color:var(--paper)}h1 .c{color:var(--making)}
+.then{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:25px;line-height:1.25;color:var(--glow);margin-top:22px;max-width:9.2in}
+.facts{display:flex;gap:26px;margin-top:26px;font-weight:600;font-size:15px}
+.facts span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--beacon);margin-right:9px;vertical-align:1px}
+.grid{display:grid;grid-template-columns:1fr 2.1in;gap:34px;margin-top:30px;flex:1;align-items:start}
+.dates{display:flex;flex-direction:column}
+.dates div{display:grid;grid-template-columns:1.55in 1fr;gap:12px;padding:9px 0;border-top:1px solid var(--rule);font-size:14.5px;line-height:1.3}
+.dates div:last-child{border-bottom:1px solid var(--rule)}
+.dates b{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:16px;letter-spacing:-.02em}
+.dates i{font-style:normal;color:rgba(247,245,240,.7);display:block;font-size:12.5px;margin-top:1px}
+.qr{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.qr .box{background:var(--paper);padding:11px;border-radius:14px}
+.qr img{width:1.75in;height:1.75in;display:block}
+.qr b{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:14px;letter-spacing:-.01em}
+.qr span{font-size:11.5px;color:rgba(247,245,240,.72);line-height:1.35}
+footer{border-top:2px solid var(--beacon);padding-top:12px;display:flex;justify-content:space-between;gap:24px;font-size:11.5px;line-height:1.45;color:rgba(247,245,240,.8)}
+footer b{color:var(--paper);font-weight:600}
+footer .r{text-align:right;white-space:nowrap}
+</style></head><body>
+
+<div class="top">
+  <div class="wm">Soundline<small>NORTH SHORE, LONG ISLAND</small></div>
+  <div class="free">Free · Ages 10 to 13</div>
+</div>
+
+<h1><span class="a">Build an instrument</span><br><span class="b">out of junk.</span><br><span class="c">Make it play.</span></h1>
+<p class="then">Then stand up and explain to a room full of grown-ups exactly why it works. (That part is harder. That part is the point.)</p>
+
+<div class="facts"><span>Saturdays, 10 to 11:30</span><span>Nothing to bring</span><span>Your parents come at 11:15</span></div>
+
+<div class="grid">
+  <div class="dates" id="dates"></div>
+  <div class="qr">
+    <div class="box"><img id="qr" src="qr/flyer.svg" alt="QR code"></div>
+    <b>soundlineschool.com/build</b>
+    <span>Scan to save a spot. The address comes with your confirmation.</span>
+  </div>
+</div>
+
+<footer>
+  <div><b>Soundline is a new school for grades six through eight</b>, opening on Long Island’s North Shore next September: ten to twelve in a grade, two hours of practice, four hours of making. These Saturdays are what a Friday there looks like. Run by Adam King, who has run instrument labs and escape rooms in libraries across Long Island for years.</div>
+  <div class="r"><b>hello@soundlineschool.com</b><br>soundlineschool.com</div>
+</footer>
+
+<script>
+(function(){
+  var tag = (new URLSearchParams(location.search).get('tag') || 'flyer').replace(/[^a-z0-9_.-]/gi,'');
+  document.getElementById('qr').src = 'qr/' + tag + '.svg';
+  var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function p(s){ var a = s.split('-'); return new Date(+a[0], +a[1]-1, +a[2]); }
+  var el = document.getElementById('dates');
+  (window.BUILDS || []).forEach(function(b){
+    var d = p(b.date), label = M[d.getMonth()] + ' ' + d.getDate();
+    if (b.end) { var e = p(b.end); label += ' to ' + e.getDate(); }
+    var row = document.createElement('div');
+    row.innerHTML = '<b>' + label + '</b><div>' + b.title + '<i>' + b.time + '</i></div>';
+    el.appendChild(row);
+  });
+})();
+</script>
+</body></html>

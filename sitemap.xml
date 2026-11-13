@@ -7,5 +7,7 @@
   <url><loc>https://soundlineschool.com/about.html</loc><priority>0.8</priority></url>
   <url><loc>https://soundlineschool.com/collaborative.html</loc><priority>0.8</priority></url>
   <url><loc>https://soundlineschool.com/scholarship.html</loc><priority>0.8</priority></url>
+  <url><loc>https://soundlineschool.com/build/</loc><priority>0.8</priority></url>
+  <url><loc>https://soundlineschool.com/talk/</loc><priority>0.6</priority></url>
   <url><loc>https://soundlineschool.com/research.html</loc><priority>0.5</priority></url>
 </urlset>

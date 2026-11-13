@@ -216,9 +216,11 @@ def admissions():
 </div>
 </section>
 '''
-    dates = [('Nov 12', 'Prices are published. Sign-up opens for our first families.', True),
-             ('Dec 12', 'Information night, Saturday. Details to follow.', False),
-             ('Jan 14', 'Information night. Details to follow.', False),
+    dates = [('Nov 12', 'Prices are published. Sign-up opens for our first families.', False),
+             ('Nov 21', 'The first free Saturday build for ages 10 to 13: instruments out of junk, with Adam. Then most Saturdays through January 9. ' + quiet('All the dates', 'build/'), True),
+             ('Dec 12', 'Saturday build, then the information session: what it costs, the scholarship, and where the school will be.', False),
+             ('Dec 29–31', 'Winter Quest: three mornings, one build, and a presentation to parents on the 31st.', False),
+             ('Jan 14', 'Information night, the last before seats are allocated.', False),
              ('Mar 1', 'The last day to pay for the whole year and take 3% off.', False),
              ('Apr 1', 'Your bus request to your own district is due. We send you the form already filled in.', False),
              ('Jun 1', 'If your child has an IEP, your request for services is due to the district. We help you with it.', False),

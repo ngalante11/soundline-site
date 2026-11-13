@@ -191,9 +191,10 @@ def home_plain():
                 f'<span style="font-family: {SHOUT}; font-weight: 800; font-size: 66px; line-height: 0.9; letter-spacing: -0.045em; color: {BEACON}">{n}</span>\n'
                 f'<h3 style="margin: 6px 0 0; font-family: {SHOUT}; font-weight: 800; font-size: 26px; line-height: 1.05; letter-spacing: -0.035em">{title}</h3>\n'
                 f'<p style="margin: 0 0 8px; font-size: 16.5px; line-height: 1.6; color: {DIM_D}; flex: 1 0 auto; max-width: 340px">{body}</p>\n<div>{cta}</div>\n</li>\n')
-    steps = (pstep('1', 'Call us.', 'Twenty minutes on the phone with one of the four of us. Ask anything, including about money.', btn('Ask for a call', CALL, 'beacon', small=True))
-             + pstep('2', 'Look at the price.', 'All of it is published. You see what it costs before anyone asks you for anything.', quiet('See what it costs', 'join.html#tuition', dark=True))
-             + pstep('3', 'Hold a seat.', '$500 holds your child’s seat. It is kept by an independent escrow agent, not by us. You get all of it back, for any reason, until the day we sign a lease.', '<span style="font-size: 16px; color: ' + DIM_D + '">We set it up with you on the call.</span>'))
+    steps = (pstep('1', 'See it first.', 'Free Saturday builds for ages ten to thirteen, most Saturdays from November 21. Your kid builds something with Adam and explains it to the room. You watch.', quiet('The dates, and a spot', 'build/', dark=True))
+             + pstep('2', 'Call us.', 'Twenty minutes on the phone with one of the four of us. Ask anything, including about money.', btn('Ask for a call', CALL, 'beacon', small=True))
+             + pstep('3', 'Look at the price.', 'All of it is published. You see what it costs before anyone asks you for anything.', quiet('See what it costs', 'join.html#tuition', dark=True))
+             + pstep('4', 'Hold a seat.', '$500 holds your child’s seat. It is kept by an independent escrow agent, not by us. You get all of it back, for any reason, until the day we sign a lease.', '<span style="font-size: 16px; color: ' + DIM_D + '">We set it up with you on the call.</span>'))
     perks = ['Reserved seats at every student show.', 'A first look at each new project before it starts.', 'Brothers and sisters go first when a grade fills.', 'Your family’s name on the founders’ wall.']
     perk_html = ''.join('<li style="border-top: 1px solid ' + RULE_D + '; padding: 14px 0; font-size: 17px; color: ' + PAPER + '">' + x + '</li>\n' for x in perks)
     o += f'''<section id="founding" class="on-dark" style="background: {DEEP}; color: {PAPER}; padding: {PAD} 0">

@@ -4,7 +4,7 @@ core.py   tokens, the header and footer, shared pieces
 plain.py  Home
 pages.py  A day here, Tuition and admissions, Our vision, About us, The Collaborative, the federal scholarship
 make.py   writes them to the repo root, moves the old addresses, puts the new header and footer on the
-          research and survey pages, and writes sitemap.xml and robots.txt
+          research, survey, build and talk pages, and writes sitemap.xml and robots.txt
 
 The pages carry their layout inline; premium.css holds the rest. Edit the copy in core.py / pages.py and run this again.
 """
@@ -138,7 +138,9 @@ def main():
     redirect('sample-day.html', 'day.html#tuesday', 'A Tuesday now lives on A day here.')
     rechrome('research.html', '', 'vision')
     rechrome('survey/index.html', '/', '')
-    urls = [(p[1], '1.0' if not p[1] else '0.8') for p in PAGES] + [('research.html', '0.5')]
+    rechrome('build/index.html', '/', '')     # the Saturday builds; dates in build/builds.js
+    rechrome('talk/index.html', '/', '')      # fifteen minutes about your kid
+    urls = [(p[1], '1.0' if not p[1] else '0.8') for p in PAGES] + [('build/', '0.8'), ('talk/', '0.6'), ('research.html', '0.5')]
     write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + ''.join(f'  <url><loc>{SITE}{u}</loc><priority>{pr}</priority></url>\n' for u, pr in urls) + '</urlset>\n')
     write('robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
